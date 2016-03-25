@@ -171,6 +171,7 @@
             this.btnRenew.TabIndex = 106;
             this.btnRenew.Text = "Renewal";
             this.btnRenew.UseVisualStyleBackColor = false;
+            this.btnRenew.Click += new System.EventHandler(this.btnRenew_Click);
             // 
             // tabControl1
             // 

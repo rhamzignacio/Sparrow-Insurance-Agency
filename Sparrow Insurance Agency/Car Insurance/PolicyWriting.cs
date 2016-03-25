@@ -264,6 +264,58 @@ namespace Sparrow_Insurance_Agency
         #region FunctionsPolicy
         //Functions
 
+        private void Save()
+        {
+            string errorMessage = "";
+
+            if (txtBoxPolicyNo.Text == "")
+                errorMessage += "Policy No. is required\n";
+
+            if (txtBoxAssured.Text == "")
+                errorMessage += "Assured is required\n";
+
+            if (txtBoxYearModel.Text == "")
+                errorMessage += "Year Model is required\n";
+
+            if (txtBoxSerialNo.Text == "")
+                errorMessage += "Serial No is required\n";
+
+            if (txtBoxMotorNo.Text == "")
+                errorMessage += "Motor No is required\n";
+
+            if (txtBoxPlateNo.Text == "")
+                errorMessage += "Plate No is required\n";
+
+            if (txtBoxNet.Text == "")
+                errorMessage += "Net is required \n";
+
+            if (txtBoxTotalAnnualPremium.Text == "")
+                errorMessage += "Net Remitance is required \n";
+
+            if (txtBoxGross.Text == "")
+                errorMessage += "Gross is required \n";
+
+            if (decimal.Parse(txtBoxNet.Text) < decimal.Parse(txtBoxTotalAnnualPremium.Text))
+                errorMessage += "Actual Total must be greater than or equal to Total Annual Premium \n";
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to save ?", "", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (var db = new SparrowEntities())
+                {
+                    if (errorMessage != "")
+                    {
+                        MessageBox.Show(errorMessage, "Error on Saving");
+                    }
+                    else
+                    {
+                        SavePolicy(); //Save Car insurance Policy
+                    }
+                }
+            }
+        }
+
         public void SavePolicy()
         {
             var db = new SparrowEntities();
@@ -616,6 +668,7 @@ namespace Sparrow_Insurance_Agency
         {
             //stand by function to be deleted if not used
             btnCancel.Enabled = input;
+            btnRenew.Enabled = input;
         }
 
         //Enable textbox if the checkbox is ticked
@@ -633,54 +686,7 @@ namespace Sparrow_Insurance_Agency
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string errorMessage = "";
-
-            if (txtBoxPolicyNo.Text == "")
-                errorMessage += "Policy No. is required\n";
-
-            if (txtBoxAssured.Text == "")
-                errorMessage += "Assured is required\n";
-
-            if (txtBoxYearModel.Text == "")
-                errorMessage += "Year Model is required\n";
-
-            if (txtBoxSerialNo.Text == "")
-                errorMessage += "Serial No is required\n";
-
-            if (txtBoxMotorNo.Text == "")
-                errorMessage += "Motor No is required\n";
-
-            if (txtBoxPlateNo.Text == "")
-                errorMessage += "Plate No is required\n";
-
-            if (txtBoxNet.Text == "")
-                errorMessage += "Net is required \n";
-
-            if (txtBoxTotalAnnualPremium.Text == "")
-                errorMessage += "Net Remitance is required \n";
-
-            if (txtBoxGross.Text == "")
-                errorMessage += "Gross is required \n";
-
-            if (decimal.Parse(txtBoxNet.Text) < decimal.Parse(txtBoxTotalAnnualPremium.Text))
-                errorMessage += "Actual Total must be greater than or equal to Total Annual Premium \n";
-
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to save ?", "", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                using (var db = new SparrowEntities())
-                {
-                    if (errorMessage != "")
-                    {
-                        MessageBox.Show(errorMessage, "Error on Saving");
-                    }
-                    else
-                    {
-                        SavePolicy(); //Save Car insurance Policy
-                    }
-                }
-            }
+            Save();
         }
 
         private void GetTotal()
@@ -1133,6 +1139,32 @@ namespace Sparrow_Insurance_Agency
             InsurancePaymentSummary reportForm = new InsurancePaymentSummary(reportParameter);
 
             reportForm.Show();
+        }
+
+        private void btnRenew_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Renew";
+
+            //Clear Computation
+            txtBoxPLossAndDamage.Text = txtBoxPCPTL.Text = txtBoxPExcessBodilyInjury.Text =
+            txtBoxPVolPropertyDamage.Text = txtBoxPPersonalAccident.Text = txtBoxTotalAnnualPremium.Text =
+            txtBoxNet.Text = txtBoxGross.Text = "";
+
+            //Clear Payments
+            CreatePaymentColumn("CASH");
+
+            //Change Dates
+            datePickerEffectivity.Value = DateTime.Now;
+            datePickerExpiryDate.Value = DateTime.Now.AddYears(1);
+            datePickerWritingDate.Value = DateTime.Now;
+
+            //Clear Policy No
+            txtBoxPolicyNo.Text = "";
+
+            //To determine as new data
+            policyID = Guid.Empty;
+
+            Save();
         }
     }
 }
