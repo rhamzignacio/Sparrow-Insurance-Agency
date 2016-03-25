@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{712BE449-E57F-46E2-8989-2FA42837721A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sparrow_Insurance_Agency</RootNamespace>
+    <AssemblyName>Sparrow Insurance Agency</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Royce\Desktop\Sparrow Insurance Agency\Installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>901A058DF2844CFED2066F7E7AFE6F398850D0CC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sparrow Insurance Agency_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\src\sparrow.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankProfile.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\AddCashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\AddCashPayment.Designer.cs">
+      <DependentUpon>AddCashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\AddCheckPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\AddCheckPayment.Designer.cs">
+      <DependentUpon>AddCheckPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\AdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\AdvancedSearch.Designer.cs">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Agent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Agent.Designer.cs">
+      <DependentUpon>Agent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\PolicyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\PolicyList.Designer.cs">
+      <DependentUpon>PolicyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Report\CarInsuranceSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Report\CarInsuranceSummary.Designer.cs">
+      <DependentUpon>CarInsuranceSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Report\InsurancePaymentSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Report\InsurancePaymentSummary.Designer.cs">
+      <DependentUpon>InsurancePaymentSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Report\SalesAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Report\SalesAgent.Designer.cs">
+      <DependentUpon>SalesAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Report\SalesAgentIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Report\SalesAgentIncome.Designer.cs">
+      <DependentUpon>SalesAgentIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\Report\Total Income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\Report\Total Income.Designer.cs">
+      <DependentUpon>Total Income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsuranceCommission.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsuranceCoverage.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsurancePolicy.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsurrancePayment.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\AdminModel.cs" />
+    <Compile Include="Class\PaymentReportParameters.cs" />
+    <Compile Include="Class\PolicyWritingModel.cs" />
+    <Compile Include="Class\TransactionHistoryModel.cs" />
+    <Compile Include="GetCarInsurancePolicyReport_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetIncomeReport_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetInsurancePaymentReport_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSalesAgentReport_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car Insurance\PolicyWriting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Insurance\PolicyWriting.Designer.cs">
+      <DependentUpon>PolicyWriting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeProfile.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAgent.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Agent\AgentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Agent\AgentList.Designer.cs">
+      <DependentUpon>AgentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Agent\OpenAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Agent\OpenAgent.Designer.cs">
+      <DependentUpon>OpenAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Bank\BankList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Bank\BankList.Designer.cs">
+      <DependentUpon>BankList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Bank\OpenBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Bank\OpenBank.Designer.cs">
+      <DependentUpon>OpenBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Make\MakeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Make\MakeList.Designer.cs">
+      <DependentUpon>MakeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Make\OpenMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\Make\OpenMake.Designer.cs">
+      <DependentUpon>OpenMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\UserProfile\OpenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\UserProfile\OpenUser.Designer.cs">
+      <DependentUpon>OpenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\UserProfile\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\UserProfile\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SparrowDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparrowDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SparrowEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparrowEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SparrowEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SparrowEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparrowEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction History\TransHistoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction History\TransHistoryList.Designer.cs">
+      <DependentUpon>TransHistoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionHistory.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>SparrowEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\TextboxUtilities.cs" />
+    <Compile Include="Utilities\TransHistory.cs" />
+    <EmbeddedResource Include="Car Insurance\AddCashPayment.resx">
+      <DependentUpon>AddCashPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\AddCheckPayment.resx">
+      <DependentUpon>AddCheckPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\AdvancedSearch.resx">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Agent.resx">
+      <DependentUpon>Agent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\PolicyList.resx">
+      <DependentUpon>PolicyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Report\CarInsuranceSummary.resx">
+      <DependentUpon>CarInsuranceSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Report\InsurancePaymentSummary.resx">
+      <DependentUpon>InsurancePaymentSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Report\SalesAgent.resx">
+      <DependentUpon>SalesAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Report\SalesAgentIncome.resx">
+      <DependentUpon>SalesAgentIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\Report\Total Income.resx">
+      <DependentUpon>Total Income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Insurance\PolicyWriting.resx">
+      <DependentUpon>PolicyWriting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\CarInsuranceListReport.rdlc" />
+    <EmbeddedResource Include="Reports\PaymentSummary.rdlc" />
+    <EmbeddedResource Include="Reports\SalesAgentIncomeReport.rdlc" />
+    <EmbeddedResource Include="Reports\TotalIncomeReport.rdlc" />
+    <EmbeddedResource Include="Setup\Agent\AgentList.resx">
+      <DependentUpon>AgentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Agent\OpenAgent.resx">
+      <DependentUpon>OpenAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Bank\BankList.resx">
+      <DependentUpon>BankList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Bank\OpenBank.resx">
+      <DependentUpon>OpenBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Make\MakeList.resx">
+      <DependentUpon>MakeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\Make\OpenMake.resx">
+      <DependentUpon>OpenMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\UserProfile\OpenUser.resx">
+      <DependentUpon>OpenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\UserProfile\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction History\TransHistoryList.resx">
+      <DependentUpon>TransHistoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\GetCarInsurancePolicyReport_Result.datasource" />
+    <None Include="Properties\DataSources\GetIncomeReport_Result.datasource" />
+    <None Include="Properties\DataSources\GetInsurancePaymentReport_Result.datasource" />
+    <None Include="Properties\DataSources\GetSalesAgentReport_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Sparrow Insurance Agency_TemporaryKey.pfx" />
+    <EntityDeploy Include="SparrowEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SparrowEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SparrowDataSet.xsc">
+      <DependentUpon>SparrowDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SparrowDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SparrowDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SparrowDataSet.xss">
+      <DependentUpon>SparrowDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SparrowEntities.edmx.diagram">
+      <DependentUpon>SparrowEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\src\sparrow.ico" />
+    <Content Include="Image\src\sparrow.jpg" />
+    <Content Include="Notes.txt" />
+    <Content Include="Database Schema.sql" />
+    <Content Include="SparrowEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SparrowEntities.edmx</DependentUpon>
+      <LastGenOutput>SparrowEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SparrowEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SparrowEntities.edmx</DependentUpon>
+      <LastGenOutput>SparrowEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
