@@ -226,8 +226,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OpenUser";
-            this.Text = "OpenUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "User Information";
             this.ResumeLayout(false);
             this.PerformLayout();
 

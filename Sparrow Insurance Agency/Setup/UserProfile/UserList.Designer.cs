@@ -137,7 +137,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBoxEdit);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UserList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserList";
             this.ResumeLayout(false);
             this.PerformLayout();

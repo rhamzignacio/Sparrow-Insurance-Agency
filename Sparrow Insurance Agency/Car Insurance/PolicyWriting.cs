@@ -132,6 +132,16 @@ namespace Sparrow_Insurance_Agency
                 txtBoxUnit.Text = policy.Unit;
                 txtBoxYearModel.Text = policy.YearModel;
 
+                //Status
+                if(policy.Status == "Canceled")
+                {
+                    lblStatus.ForeColor = Color.Red;
+                    btnAdd.Enabled = btnRenew.Enabled = btnPrintPayment.Enabled =
+                        btnCancel.Enabled = btnSave.Enabled = btnDelete.Enabled = false;
+                }
+
+                lblStatus.Text = policy.Status;
+
                 //Amounts
                 
                 txtBoxPCPTL.Text = string.Format("{0:0.00}", policy.P_CTPL);
@@ -789,6 +799,9 @@ namespace Sparrow_Insurance_Agency
                             db.SaveChanges();
 
                             MessageBox.Show("Policy No: " + policy.PolicyNo + " successfully canceled");
+
+                            lblStatus.Text = "Canceled";
+                            lblStatus.BackColor = Color.Red;
                         }
                         catch
                         {
@@ -1172,8 +1185,6 @@ namespace Sparrow_Insurance_Agency
 
                 //To determine as new data
                 policyID = Guid.Empty;
-
-                Save();
             }
             catch
             {
