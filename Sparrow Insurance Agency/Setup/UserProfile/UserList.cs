@@ -38,7 +38,8 @@ namespace Sparrow_Insurance_Agency.Setup.UserProfile
 
                 userList.ToList().ForEach(item =>
                 {
-                    ListViewItem lvi = new ListViewItem(item.Role);
+                    ListViewItem lvi = new ListViewItem(item.ID.ToString());
+                    lvi.SubItems.Add(item.Role);
                     lvi.SubItems.Add(item.Username);
                     lvi.SubItems.Add(item.FullName);
 
@@ -64,6 +65,24 @@ namespace Sparrow_Insurance_Agency.Setup.UserProfile
             newUserForm.ShowDialog();
 
             GetUserList(); //Refresh list
+        }
+
+        private void txtBoxEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Guid userID = Guid.Parse(lstViewUser.SelectedItems[0].SubItems[0].Text);
+
+                OpenUser userForm = new OpenUser(userID);
+
+                userForm.Show();
+
+                GetUserList();
+            }
+            catch
+            {
+                MessageBox.Show("Please select data from list", "Error");
+            }
         }
     }
 }

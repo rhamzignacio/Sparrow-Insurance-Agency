@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.lstViewUser = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstViewUser
             // 
             this.lstViewUser.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
@@ -52,6 +54,21 @@
             this.lstViewUser.TabIndex = 16;
             this.lstViewUser.UseCompatibleStateImageBehavior = false;
             this.lstViewUser.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Role";
+            this.columnHeader1.Width = 84;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Username";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Full Name";
+            this.columnHeader3.Width = 221;
             // 
             // btnSearch
             // 
@@ -91,6 +108,7 @@
             this.txtBoxEdit.TabIndex = 18;
             this.txtBoxEdit.Text = "Edit";
             this.txtBoxEdit.UseVisualStyleBackColor = true;
+            this.txtBoxEdit.Click += new System.EventHandler(this.txtBoxEdit_Click);
             // 
             // btnAdd
             // 
@@ -103,20 +121,10 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // columnHeader1
+            // columnHeader4
             // 
-            this.columnHeader1.Text = "Role";
-            this.columnHeader1.Width = 84;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Username";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Full Name";
-            this.columnHeader3.Width = 221;
+            this.columnHeader4.Text = "ID";
+            this.columnHeader4.Width = 0;
             // 
             // UserList
             // 
@@ -147,5 +155,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

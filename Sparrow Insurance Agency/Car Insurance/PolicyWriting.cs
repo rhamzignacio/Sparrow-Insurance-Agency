@@ -1125,46 +1125,60 @@ namespace Sparrow_Insurance_Agency
 
         private void btnPrintPayment_Click(object sender, EventArgs e)
         {
-            PaymentReportParameters reportParameter = new PaymentReportParameters
+            try
             {
-                PolicyNo = txtBoxPolicyNo.Text,
-                PolicyID = policyID,
-                Assured = txtBoxAssured.Text,
-                PlateNo = txtBoxPlateNo.Text,
-                SerialNo = txtBoxSerialNo.Text,
-                EngineNo = txtBoxMotorNo.Text,
-                Gross = txtBoxGross.Text
-            };
+                PaymentReportParameters reportParameter = new PaymentReportParameters
+                {
+                    PolicyNo = txtBoxPolicyNo.Text,
+                    PolicyID = policyID,
+                    Assured = txtBoxAssured.Text,
+                    PlateNo = txtBoxPlateNo.Text,
+                    SerialNo = txtBoxSerialNo.Text,
+                    EngineNo = txtBoxMotorNo.Text,
+                    Gross = txtBoxGross.Text
+                };
 
-            InsurancePaymentSummary reportForm = new InsurancePaymentSummary(reportParameter);
+                InsurancePaymentSummary reportForm = new InsurancePaymentSummary(reportParameter);
 
-            reportForm.Show();
+                reportForm.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Can't load payment summary\n There was some kind of error", "Error");
+            }
         }
 
         private void btnRenew_Click(object sender, EventArgs e)
         {
-            lblStatus.Text = "Renew";
+            try
+            {
+                lblStatus.Text = "Renew";
 
-            //Clear Computation
-            txtBoxPLossAndDamage.Text = txtBoxPCPTL.Text = txtBoxPExcessBodilyInjury.Text =
-            txtBoxPVolPropertyDamage.Text = txtBoxPPersonalAccident.Text = txtBoxTotalAnnualPremium.Text =
-            txtBoxNet.Text = txtBoxGross.Text = "";
+                //Clear Computation
+                txtBoxPLossAndDamage.Text = txtBoxPCPTL.Text = txtBoxPExcessBodilyInjury.Text =
+                txtBoxPVolPropertyDamage.Text = txtBoxPPersonalAccident.Text = txtBoxTotalAnnualPremium.Text =
+                txtBoxNet.Text = txtBoxGross.Text = "";
 
-            //Clear Payments
-            CreatePaymentColumn("CASH");
+                //Clear Payments
+                CreatePaymentColumn("CASH");
 
-            //Change Dates
-            datePickerEffectivity.Value = DateTime.Now;
-            datePickerExpiryDate.Value = DateTime.Now.AddYears(1);
-            datePickerWritingDate.Value = DateTime.Now;
+                //Change Dates
+                datePickerEffectivity.Value = DateTime.Now;
+                datePickerExpiryDate.Value = DateTime.Now.AddYears(1);
+                datePickerWritingDate.Value = DateTime.Now;
 
-            //Clear Policy No
-            txtBoxPolicyNo.Text = "";
+                //Clear Policy No
+                txtBoxPolicyNo.Text = "";
 
-            //To determine as new data
-            policyID = Guid.Empty;
+                //To determine as new data
+                policyID = Guid.Empty;
 
-            Save();
+                Save();
+            }
+            catch
+            {
+                MessageBox.Show("There was some kind of error", "Error");
+            }
         }
     }
 }
