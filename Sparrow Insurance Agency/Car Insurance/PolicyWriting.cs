@@ -1163,32 +1163,37 @@ namespace Sparrow_Insurance_Agency
 
         private void btnRenew_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to renew ?", "", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
             {
-                lblStatus.Text = "Renew";
+                try
+                {
+                    lblStatus.Text = "Renew";
 
-                //Clear Computation
-                txtBoxPLossAndDamage.Text = txtBoxPCPTL.Text = txtBoxPExcessBodilyInjury.Text =
-                txtBoxPVolPropertyDamage.Text = txtBoxPPersonalAccident.Text = txtBoxTotalAnnualPremium.Text =
-                txtBoxNet.Text = txtBoxGross.Text = "";
+                    //Clear Computation
+                    txtBoxPLossAndDamage.Text = txtBoxPCPTL.Text = txtBoxPExcessBodilyInjury.Text =
+                    txtBoxPVolPropertyDamage.Text = txtBoxPPersonalAccident.Text = txtBoxTotalAnnualPremium.Text =
+                    txtBoxNet.Text = txtBoxGross.Text = "";
 
-                //Clear Payments
-                CreatePaymentColumn("CASH");
+                    //Clear Payments
+                    CreatePaymentColumn("CASH");
 
-                //Change Dates
-                datePickerEffectivity.Value = DateTime.Now;
-                datePickerExpiryDate.Value = DateTime.Now.AddYears(1);
-                datePickerWritingDate.Value = DateTime.Now;
+                    //Change Dates
+                    datePickerEffectivity.Value = DateTime.Now;
+                    datePickerExpiryDate.Value = DateTime.Now.AddYears(1);
+                    datePickerWritingDate.Value = DateTime.Now;
 
-                //Clear Policy No
-                txtBoxPolicyNo.Text = "";
+                    //Clear Policy No
+                    txtBoxPolicyNo.Text = "";
 
-                //To determine as new data
-                policyID = Guid.Empty;
-            }
-            catch
-            {
-                MessageBox.Show("There was some kind of error", "Error");
+                    //To determine as new data
+                    policyID = Guid.Empty;
+                }
+                catch
+                {
+                    MessageBox.Show("There was some kind of error", "Error");
+                }
             }
         }
     }

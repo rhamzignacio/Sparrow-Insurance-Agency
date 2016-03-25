@@ -122,7 +122,7 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
 
                 PolicyWriting form = new PolicyWriting(currentUser, ID);
 
-                form.Show();
+                form.ShowDialog();
 
                 GetPolicyList();
             }
@@ -130,6 +130,11 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
             {
                 MessageBox.Show("Please select data from list", "Error");
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            GetPolicyList();
         }
     }
 }
