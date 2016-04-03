@@ -842,19 +842,22 @@ namespace Sparrow_Insurance_Agency
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to Delete ?", "", MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                try
+                var temp = listViewPayment.SelectedItems[0].Text;
+
+                DialogResult result = MessageBox.Show("Are you sure you want to Delete ?", "", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
                 {
                     listViewPayment.SelectedItems[0].Remove();
                 }
-                catch
-                {
-                    MessageBox.Show("Please select data from grid", "Error on Deleting");
-                }
             }
+            catch
+            {
+                MessageBox.Show("Please select data from list", "Error");
+            }
+            
         }
 
         private void txtBoxPLossAndDamage_KeyPress(object sender, KeyPressEventArgs e)
@@ -1189,6 +1192,9 @@ namespace Sparrow_Insurance_Agency
 
                     //To determine as new data
                     policyID = Guid.Empty;
+
+                    lblPaid.Text = "0.00";
+                    lblPayable.Text = "0.00";
                 }
                 catch
                 {
