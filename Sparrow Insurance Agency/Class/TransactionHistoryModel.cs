@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace Sparrow_Insurance_Agency.Class
                     Remarks = remarks,
                     Date = DateTime.Now
                 };
-                db.Entry(trans).State = System.Data.EntityState.Added;
+                db.Entry(trans).State = EntityState.Added;
 
                 db.SaveChanges();
             }

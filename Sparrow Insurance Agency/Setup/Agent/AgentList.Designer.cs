@@ -51,12 +51,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(395, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 26);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
@@ -74,7 +77,9 @@
             this.columnHeader5,
             this.columnHeader6});
             this.lstViewAgent.FullRowSelect = true;
+            this.lstViewAgent.GridLines = true;
             this.lstViewAgent.Location = new System.Drawing.Point(16, 43);
+            this.lstViewAgent.MultiSelect = false;
             this.lstViewAgent.Name = "lstViewAgent";
             this.lstViewAgent.Size = new System.Drawing.Size(463, 547);
             this.lstViewAgent.TabIndex = 3;
@@ -98,24 +103,28 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(491, 43);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(67, 61);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtBoxEdit
             // 
+            this.txtBoxEdit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBoxEdit.FlatAppearance.BorderSize = 0;
             this.txtBoxEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBoxEdit.Location = new System.Drawing.Point(491, 110);
             this.txtBoxEdit.Name = "txtBoxEdit";
             this.txtBoxEdit.Size = new System.Drawing.Size(67, 61);
             this.txtBoxEdit.TabIndex = 6;
             this.txtBoxEdit.Text = "Edit";
-            this.txtBoxEdit.UseVisualStyleBackColor = true;
+            this.txtBoxEdit.UseVisualStyleBackColor = false;
             this.txtBoxEdit.Click += new System.EventHandler(this.txtBoxEdit_Click);
             // 
             // AgentList

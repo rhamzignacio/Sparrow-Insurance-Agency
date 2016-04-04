@@ -44,7 +44,9 @@
             this.columnHeader1,
             this.columnHeader2});
             this.lstViewBank.FullRowSelect = true;
+            this.lstViewBank.GridLines = true;
             this.lstViewBank.Location = new System.Drawing.Point(16, 44);
+            this.lstViewBank.MultiSelect = false;
             this.lstViewBank.Name = "lstViewBank";
             this.lstViewBank.Size = new System.Drawing.Size(463, 547);
             this.lstViewBank.TabIndex = 10;
@@ -63,12 +65,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(395, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 26);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
@@ -91,24 +96,28 @@
             // 
             // txtBoxEdit
             // 
+            this.txtBoxEdit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBoxEdit.FlatAppearance.BorderSize = 0;
             this.txtBoxEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBoxEdit.Location = new System.Drawing.Point(491, 111);
             this.txtBoxEdit.Name = "txtBoxEdit";
             this.txtBoxEdit.Size = new System.Drawing.Size(67, 61);
             this.txtBoxEdit.TabIndex = 12;
             this.txtBoxEdit.Text = "Edit";
-            this.txtBoxEdit.UseVisualStyleBackColor = true;
+            this.txtBoxEdit.UseVisualStyleBackColor = false;
             this.txtBoxEdit.Click += new System.EventHandler(this.txtBoxEdit_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(491, 44);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(67, 61);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // BankList

@@ -44,7 +44,9 @@
             this.columnHeader1,
             this.columnHeader2});
             this.lstViewMake.FullRowSelect = true;
+            this.lstViewMake.GridLines = true;
             this.lstViewMake.Location = new System.Drawing.Point(16, 44);
+            this.lstViewMake.MultiSelect = false;
             this.lstViewMake.Name = "lstViewMake";
             this.lstViewMake.Size = new System.Drawing.Size(463, 547);
             this.lstViewMake.TabIndex = 16;
@@ -63,12 +65,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(395, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 26);
             this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
@@ -91,24 +96,28 @@
             // 
             // txtBoxEdit
             // 
+            this.txtBoxEdit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBoxEdit.FlatAppearance.BorderSize = 0;
             this.txtBoxEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBoxEdit.Location = new System.Drawing.Point(491, 111);
             this.txtBoxEdit.Name = "txtBoxEdit";
             this.txtBoxEdit.Size = new System.Drawing.Size(67, 61);
             this.txtBoxEdit.TabIndex = 18;
             this.txtBoxEdit.Text = "Edit";
-            this.txtBoxEdit.UseVisualStyleBackColor = true;
+            this.txtBoxEdit.UseVisualStyleBackColor = false;
             this.txtBoxEdit.Click += new System.EventHandler(this.txtBoxEdit_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(491, 44);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(67, 61);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // MakeList

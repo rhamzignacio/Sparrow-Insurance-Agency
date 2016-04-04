@@ -57,6 +57,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(577, 90);
@@ -69,7 +70,8 @@
             // 
             // btnOkay
             // 
-            this.btnOkay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOkay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnOkay.FlatAppearance.BorderSize = 0;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOkay.Location = new System.Drawing.Point(10, 90);

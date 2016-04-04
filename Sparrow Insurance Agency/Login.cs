@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sparrow_Insurance_Agency
 {
     public partial class Login : Form
@@ -105,6 +106,11 @@ namespace Sparrow_Insurance_Agency
                 +"You can contact us at \n\n"
                 +"Email: ramil.charles.ignacio@gmail.com\n"
                 +"Contact No: 09175214703", "RSI Development Solutions");
+        }
+
+        private void btnDatabaseConfiguration_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTotalIncome = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,6 +63,19 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1142, 58);
             this.panelTop.TabIndex = 0;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.LightYellow;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(944, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(72, 34);
+            this.btnRefresh.TabIndex = 70;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnOpen
             // 
@@ -127,7 +140,9 @@
             this.columnHeader9});
             this.listViewPolicy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewPolicy.FullRowSelect = true;
+            this.listViewPolicy.GridLines = true;
             this.listViewPolicy.Location = new System.Drawing.Point(0, 0);
+            this.listViewPolicy.MultiSelect = false;
             this.listViewPolicy.Name = "listViewPolicy";
             this.listViewPolicy.Size = new System.Drawing.Size(1142, 567);
             this.listViewPolicy.TabIndex = 0;
@@ -206,19 +221,6 @@
             this.lblTotalIncome.Size = new System.Drawing.Size(153, 13);
             this.lblTotalIncome.TabIndex = 0;
             this.lblTotalIncome.Text = "Total Income: 100,000.00";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.LightYellow;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(944, 12);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(72, 34);
-            this.btnRefresh.TabIndex = 70;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // PolicyList
             // 

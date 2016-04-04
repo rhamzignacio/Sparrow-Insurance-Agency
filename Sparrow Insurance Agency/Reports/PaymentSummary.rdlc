@@ -438,8 +438,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>PaymentSummary</DataSetName>
-        <Top>0.155in</Top>
-        <Left>0.155in</Left>
+        <Top>0.03in</Top>
+        <Left>0.03in</Left>
         <Height>0.5in</Height>
         <Width>8.56896in</Width>
         <Style>
@@ -449,13 +449,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>4.40625in</Height>
+    <Height>1.29167in</Height>
     <Style />
   </Body>
-  <Width>9.45833in</Width>
+  <Width>8.61458in</Width>
   <Page>
     <PageHeader>
-      <Height>1.90625in</Height>
+      <Height>1.93972in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -468,7 +468,7 @@
                 <TextRun>
                   <Value>Payment Summary</Value>
                   <Style>
-                    <FontSize>20pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -479,9 +479,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.31771in</Top>
-          <Left>3.23438in</Left>
-          <Height>0.36458in</Height>
+          <Top>0.81771in</Top>
+          <Left>3.10938in</Left>
+          <Height>0.27083in</Height>
           <Width>3in</Width>
           <Style>
             <Border>
@@ -508,8 +508,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.93972in</Top>
-          <Left>0.155in</Left>
+          <Top>1.18972in</Top>
+          <Left>0.03in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>1</ZIndex>
@@ -538,8 +538,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.18972in</Top>
-          <Left>0.155in</Left>
+          <Top>1.43972in</Top>
+          <Left>0.03in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>2</ZIndex>
@@ -568,8 +568,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.43972in</Top>
-          <Left>0.155in</Left>
+          <Top>1.68972in</Top>
+          <Left>0.03in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>3</ZIndex>
@@ -598,8 +598,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.93972in</Top>
-          <Left>2.93924in</Left>
+          <Top>1.18972in</Top>
+          <Left>2.81424in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>4</ZIndex>
@@ -628,8 +628,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.18972in</Top>
-          <Left>2.93924in</Left>
+          <Top>1.43972in</Top>
+          <Left>2.81424in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>5</ZIndex>
@@ -658,14 +658,49 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.43972in</Top>
-          <Left>2.93924in</Left>
+          <Top>1.68972in</Top>
+          <Left>2.81424in</Left>
           <Height>0.25in</Height>
           <Width>2.78424in</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Sparrow Insurance Agency</Value>
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.125in</Top>
+          <Left>2.64063in</Left>
+          <Height>0.36458in</Height>
+          <Width>3.95833in</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -680,6 +715,61 @@
         </Border>
       </Style>
     </PageHeader>
+    <PageFooter>
+      <Height>0.375in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox14">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Powered by:</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>RSI Development Solutions</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>CornflowerBlue</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>0.05556in</Top>
+          <Left>6.02479in</Left>
+          <Height>0.25in</Height>
+          <Width>2.57417in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>8.5in</PageHeight>
     <PageWidth>11in</PageWidth>
     <LeftMargin>1in</LeftMargin>

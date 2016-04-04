@@ -62,12 +62,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(395, 7);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 26);
             this.btnSearch.TabIndex = 105;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // listViewAgent
@@ -77,7 +80,9 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listViewAgent.FullRowSelect = true;
+            this.listViewAgent.GridLines = true;
             this.listViewAgent.Location = new System.Drawing.Point(12, 62);
+            this.listViewAgent.MultiSelect = false;
             this.listViewAgent.Name = "listViewAgent";
             this.listViewAgent.Size = new System.Drawing.Size(467, 286);
             this.listViewAgent.TabIndex = 106;
@@ -100,12 +105,15 @@
             // 
             // btnOkay
             // 
+            this.btnOkay.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnOkay.FlatAppearance.BorderSize = 0;
+            this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOkay.Location = new System.Drawing.Point(395, 354);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(84, 26);
             this.btnOkay.TabIndex = 107;
             this.btnOkay.Text = "Okay";
-            this.btnOkay.UseVisualStyleBackColor = true;
+            this.btnOkay.UseVisualStyleBackColor = false;
             this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
             // 
             // radBtnAgentNo

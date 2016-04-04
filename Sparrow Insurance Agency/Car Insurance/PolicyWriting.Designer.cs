@@ -105,13 +105,13 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.datePickerEffectivity = new System.Windows.Forms.DateTimePicker();
-            this.txtBoxMortage = new System.Windows.Forms.TextBox();
             this.rchTxtBoxAddress = new System.Windows.Forms.RichTextBox();
             this.txtBoxAssured = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxMortage = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -875,6 +875,7 @@
             // listViewPayment
             // 
             this.listViewPayment.FullRowSelect = true;
+            this.listViewPayment.GridLines = true;
             this.listViewPayment.Location = new System.Drawing.Point(21, 50);
             this.listViewPayment.MultiSelect = false;
             this.listViewPayment.Name = "listViewPayment";
@@ -1016,16 +1017,6 @@
             this.datePickerEffectivity.ValueChanged += new System.EventHandler(this.datePickerEffectivity_ValueChanged);
             this.datePickerEffectivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.datePickerEffectivity_KeyUp);
             // 
-            // txtBoxMortage
-            // 
-            this.txtBoxMortage.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBoxMortage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMortage.Location = new System.Drawing.Point(125, 568);
-            this.txtBoxMortage.Name = "txtBoxMortage";
-            this.txtBoxMortage.Size = new System.Drawing.Size(316, 26);
-            this.txtBoxMortage.TabIndex = 26;
-            this.txtBoxMortage.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxMortage_KeyUp);
-            // 
             // rchTxtBoxAddress
             // 
             this.rchTxtBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1086,6 +1077,20 @@
             this.label1.TabIndex = 128;
             this.label1.Text = "Assured";
             // 
+            // txtBoxMortage
+            // 
+            this.txtBoxMortage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtBoxMortage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMortage.FormattingEnabled = true;
+            this.txtBoxMortage.Items.AddRange(new object[] {
+            "CV",
+            "PC",
+            "LTO"});
+            this.txtBoxMortage.Location = new System.Drawing.Point(140, 568);
+            this.txtBoxMortage.Name = "txtBoxMortage";
+            this.txtBoxMortage.Size = new System.Drawing.Size(317, 28);
+            this.txtBoxMortage.TabIndex = 210;
+            // 
             // PolicyWriting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1093,6 +1098,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(917, 623);
+            this.Controls.Add(this.txtBoxMortage);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.datePickerExpiryDate);
             this.Controls.Add(this.label34);
@@ -1105,7 +1111,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.txtBoxMortage);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtBoxAssured);
             this.Controls.Add(this.label1);
@@ -1173,7 +1178,6 @@
         private System.Windows.Forms.TextBox txtBoxUnit;
         private System.Windows.Forms.DateTimePicker datePickerEffectivity;
         private System.Windows.Forms.TextBox txtBoxDeductible;
-        private System.Windows.Forms.TextBox txtBoxMortage;
         private System.Windows.Forms.TextBox txtBoxPlateNo;
         private System.Windows.Forms.TextBox txtBoxMotorNo;
         private System.Windows.Forms.TextBox txtBoxSerialNo;
@@ -1220,6 +1224,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnPrintPayment;
+        private System.Windows.Forms.ComboBox txtBoxMortage;
     }
 }
 

@@ -13,6 +13,7 @@ using Sparrow_Insurance_Agency.Class;
 using Sparrow_Insurance_Agency.Car_Insurance;
 using Sparrow_Insurance_Agency.Utilities;
 using Sparrow_Insurance_Agency.Car_Insurance.Report;
+using System.Data.Entity;
 
 namespace Sparrow_Insurance_Agency
 {
@@ -30,6 +31,8 @@ namespace Sparrow_Insurance_Agency
             InitializeComponent();
 
             GetMakeDropDown();
+
+            GetMortageeDropDown();
 
             if (user != Guid.Empty)
                 currentUser = user;
@@ -54,6 +57,21 @@ namespace Sparrow_Insurance_Agency
 
                 txtBoxPolicyNo.Focus();
             }                   
+        }
+
+        private void GetMortageeDropDown()
+        {
+            txtBoxMortage.Items.Clear();
+
+            using (var db = new SparrowEntities())
+            {
+                var banks = db.BankProfile.ToList();
+
+                banks.ForEach(item =>
+                {
+                    txtBoxMortage.Items.Add(item.Name);
+                });
+            }
         }
 
         private void GetMakeDropDown()
@@ -131,6 +149,11 @@ namespace Sparrow_Insurance_Agency
                 txtBoxSerialNo.Text = policy.SerialNo;
                 txtBoxUnit.Text = policy.Unit;
                 txtBoxYearModel.Text = policy.YearModel;
+
+                //ComboBox
+                cmbBoxCategory.Text = policy.Category;
+                cmbBoxClass.Text = policy.Car_Class;
+                cmbBoxMake.Text = policy.Car_Make;
 
                 //Status
                 if(policy.Status == "Canceled")
@@ -1196,5 +1219,7 @@ namespace Sparrow_Insurance_Agency
                 }
             }
         }
+
+
     }
 }

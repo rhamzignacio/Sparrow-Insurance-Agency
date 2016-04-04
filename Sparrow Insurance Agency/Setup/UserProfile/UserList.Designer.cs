@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lstViewUser = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstViewUser
@@ -48,12 +48,19 @@
             this.columnHeader2,
             this.columnHeader3});
             this.lstViewUser.FullRowSelect = true;
+            this.lstViewUser.GridLines = true;
             this.lstViewUser.Location = new System.Drawing.Point(22, 44);
+            this.lstViewUser.MultiSelect = false;
             this.lstViewUser.Name = "lstViewUser";
             this.lstViewUser.Size = new System.Drawing.Size(463, 547);
             this.lstViewUser.TabIndex = 16;
             this.lstViewUser.UseCompatibleStateImageBehavior = false;
             this.lstViewUser.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ID";
+            this.columnHeader4.Width = 0;
             // 
             // columnHeader1
             // 
@@ -72,12 +79,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(401, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 26);
             this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
@@ -101,30 +111,29 @@
             // 
             // txtBoxEdit
             // 
+            this.txtBoxEdit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBoxEdit.FlatAppearance.BorderSize = 0;
             this.txtBoxEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBoxEdit.Location = new System.Drawing.Point(497, 111);
             this.txtBoxEdit.Name = "txtBoxEdit";
             this.txtBoxEdit.Size = new System.Drawing.Size(67, 61);
             this.txtBoxEdit.TabIndex = 18;
             this.txtBoxEdit.Text = "Edit";
-            this.txtBoxEdit.UseVisualStyleBackColor = true;
+            this.txtBoxEdit.UseVisualStyleBackColor = false;
             this.txtBoxEdit.Click += new System.EventHandler(this.txtBoxEdit_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(497, 44);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(67, 61);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "ID";
-            this.columnHeader4.Width = 0;
             // 
             // UserList
             // 

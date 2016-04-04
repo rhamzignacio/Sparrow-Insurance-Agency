@@ -112,7 +112,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(299, 239);
+            this.btnCancel.Location = new System.Drawing.Point(299, 262);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 35);
             this.btnCancel.TabIndex = 53;
@@ -125,7 +125,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.PaleGreen;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(14, 239);
+            this.btnAdd.Location = new System.Drawing.Point(13, 262);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 35);
             this.btnAdd.TabIndex = 52;
