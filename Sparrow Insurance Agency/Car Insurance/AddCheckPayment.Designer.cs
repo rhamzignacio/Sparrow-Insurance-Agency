@@ -115,6 +115,7 @@
             // 
             this.txtBoxCheckNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCheckNo.Location = new System.Drawing.Point(96, 38);
+            this.txtBoxCheckNo.MaxLength = 50;
             this.txtBoxCheckNo.Name = "txtBoxCheckNo";
             this.txtBoxCheckNo.Size = new System.Drawing.Size(261, 26);
             this.txtBoxCheckNo.TabIndex = 8;
@@ -143,6 +144,7 @@
             // 
             this.txtBoxRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxRemarks.Location = new System.Drawing.Point(96, 101);
+            this.txtBoxRemarks.MaxLength = 200;
             this.txtBoxRemarks.Name = "txtBoxRemarks";
             this.txtBoxRemarks.Size = new System.Drawing.Size(574, 26);
             this.txtBoxRemarks.TabIndex = 11;
@@ -180,6 +182,7 @@
             // 
             this.txtBoxCheckName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCheckName.Location = new System.Drawing.Point(96, 70);
+            this.txtBoxCheckName.MaxLength = 150;
             this.txtBoxCheckName.Name = "txtBoxCheckName";
             this.txtBoxCheckName.Size = new System.Drawing.Size(574, 26);
             this.txtBoxCheckName.TabIndex = 15;

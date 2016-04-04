@@ -112,12 +112,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxMortage = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
@@ -125,7 +127,7 @@
             this.btnSave.BackColor = System.Drawing.Color.PaleGreen;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(26, 12);
+            this.btnSave.Location = new System.Drawing.Point(12, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 34);
             this.btnSave.TabIndex = 67;
@@ -138,7 +140,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(787, 12);
+            this.btnCancel.Location = new System.Drawing.Point(797, 7);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 34);
             this.btnCancel.TabIndex = 81;
@@ -151,7 +153,7 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(254, 12);
+            this.btnBack.Location = new System.Drawing.Point(240, 7);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(108, 34);
             this.btnBack.TabIndex = 105;
@@ -165,7 +167,7 @@
             this.btnRenew.Enabled = false;
             this.btnRenew.FlatAppearance.BorderSize = 0;
             this.btnRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRenew.Location = new System.Drawing.Point(140, 12);
+            this.btnRenew.Location = new System.Drawing.Point(126, 7);
             this.btnRenew.Name = "btnRenew";
             this.btnRenew.Size = new System.Drawing.Size(108, 34);
             this.btnRenew.TabIndex = 106;
@@ -178,7 +180,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(20, 212);
+            this.tabControl1.Location = new System.Drawing.Point(16, 261);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(879, 350);
@@ -234,6 +236,7 @@
             // rchTextBoxOthers
             // 
             this.rchTextBoxOthers.Location = new System.Drawing.Point(15, 137);
+            this.rchTextBoxOthers.MaxLength = 200;
             this.rchTextBoxOthers.Name = "rchTextBoxOthers";
             this.rchTextBoxOthers.Size = new System.Drawing.Size(342, 57);
             this.rchTextBoxOthers.TabIndex = 17;
@@ -301,6 +304,7 @@
             // 
             this.txtBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxColor.Location = new System.Drawing.Point(116, 81);
+            this.txtBoxColor.MaxLength = 50;
             this.txtBoxColor.Name = "txtBoxColor";
             this.txtBoxColor.Size = new System.Drawing.Size(316, 26);
             this.txtBoxColor.TabIndex = 10;
@@ -392,6 +396,7 @@
             // 
             this.txtBoxUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUnit.Location = new System.Drawing.Point(116, 49);
+            this.txtBoxUnit.MaxLength = 150;
             this.txtBoxUnit.Name = "txtBoxUnit";
             this.txtBoxUnit.Size = new System.Drawing.Size(316, 26);
             this.txtBoxUnit.TabIndex = 9;
@@ -401,6 +406,7 @@
             // 
             this.txtBoxDeductible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDeductible.Location = new System.Drawing.Point(116, 277);
+            this.txtBoxDeductible.MaxLength = 50;
             this.txtBoxDeductible.Name = "txtBoxDeductible";
             this.txtBoxDeductible.Size = new System.Drawing.Size(316, 26);
             this.txtBoxDeductible.TabIndex = 16;
@@ -410,6 +416,7 @@
             // 
             this.txtBoxPlateNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPlateNo.Location = new System.Drawing.Point(116, 113);
+            this.txtBoxPlateNo.MaxLength = 50;
             this.txtBoxPlateNo.Name = "txtBoxPlateNo";
             this.txtBoxPlateNo.Size = new System.Drawing.Size(316, 26);
             this.txtBoxPlateNo.TabIndex = 11;
@@ -420,6 +427,7 @@
             // 
             this.txtBoxMotorNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMotorNo.Location = new System.Drawing.Point(116, 145);
+            this.txtBoxMotorNo.MaxLength = 50;
             this.txtBoxMotorNo.Name = "txtBoxMotorNo";
             this.txtBoxMotorNo.Size = new System.Drawing.Size(316, 26);
             this.txtBoxMotorNo.TabIndex = 12;
@@ -429,6 +437,7 @@
             // 
             this.txtBoxSerialNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSerialNo.Location = new System.Drawing.Point(115, 177);
+            this.txtBoxSerialNo.MaxLength = 50;
             this.txtBoxSerialNo.Name = "txtBoxSerialNo";
             this.txtBoxSerialNo.Size = new System.Drawing.Size(316, 26);
             this.txtBoxSerialNo.TabIndex = 13;
@@ -438,6 +447,7 @@
             // 
             this.txtBoxYearModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxYearModel.Location = new System.Drawing.Point(116, 17);
+            this.txtBoxYearModel.MaxLength = 4;
             this.txtBoxYearModel.Name = "txtBoxYearModel";
             this.txtBoxYearModel.Size = new System.Drawing.Size(79, 26);
             this.txtBoxYearModel.TabIndex = 7;
@@ -900,7 +910,7 @@
             // 
             this.datePickerExpiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerExpiryDate.Location = new System.Drawing.Point(657, 181);
+            this.datePickerExpiryDate.Location = new System.Drawing.Point(658, 204);
             this.datePickerExpiryDate.Name = "datePickerExpiryDate";
             this.datePickerExpiryDate.Size = new System.Drawing.Size(119, 26);
             this.datePickerExpiryDate.TabIndex = 6;
@@ -910,7 +920,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(600, 183);
+            this.label34.Location = new System.Drawing.Point(601, 206);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(51, 20);
             this.label34.TabIndex = 209;
@@ -919,7 +929,8 @@
             // txtBoxPolicyNo
             // 
             this.txtBoxPolicyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPolicyNo.Location = new System.Drawing.Point(139, 53);
+            this.txtBoxPolicyNo.Location = new System.Drawing.Point(140, 76);
+            this.txtBoxPolicyNo.MaxLength = 50;
             this.txtBoxPolicyNo.Name = "txtBoxPolicyNo";
             this.txtBoxPolicyNo.Size = new System.Drawing.Size(295, 26);
             this.txtBoxPolicyNo.TabIndex = 1;
@@ -931,7 +942,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(59, 56);
+            this.label21.Location = new System.Drawing.Point(60, 79);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 20);
             this.label21.TabIndex = 187;
@@ -939,7 +950,7 @@
             // 
             // btnAddAgent
             // 
-            this.btnAddAgent.Location = new System.Drawing.Point(361, 181);
+            this.btnAddAgent.Location = new System.Drawing.Point(362, 204);
             this.btnAddAgent.Name = "btnAddAgent";
             this.btnAddAgent.Size = new System.Drawing.Size(27, 26);
             this.btnAddAgent.TabIndex = 176;
@@ -951,7 +962,7 @@
             // 
             this.datePickerWritingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerWritingDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerWritingDate.Location = new System.Drawing.Point(679, 568);
+            this.datePickerWritingDate.Location = new System.Drawing.Point(675, 617);
             this.datePickerWritingDate.Name = "datePickerWritingDate";
             this.datePickerWritingDate.Size = new System.Drawing.Size(216, 26);
             this.datePickerWritingDate.TabIndex = 27;
@@ -960,7 +971,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(574, 573);
+            this.label18.Location = new System.Drawing.Point(570, 622);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(97, 20);
             this.label18.TabIndex = 174;
@@ -970,7 +981,7 @@
             // 
             this.txtBoxAgent.Enabled = false;
             this.txtBoxAgent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxAgent.Location = new System.Drawing.Point(139, 181);
+            this.txtBoxAgent.Location = new System.Drawing.Point(140, 204);
             this.txtBoxAgent.Name = "txtBoxAgent";
             this.txtBoxAgent.Size = new System.Drawing.Size(216, 26);
             this.txtBoxAgent.TabIndex = 4;
@@ -979,7 +990,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(79, 181);
+            this.label17.Location = new System.Drawing.Point(80, 204);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 20);
             this.label17.TabIndex = 172;
@@ -990,7 +1001,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblStatus.Location = new System.Drawing.Point(502, 56);
+            this.lblStatus.Location = new System.Drawing.Point(503, 79);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(43, 20);
             this.lblStatus.TabIndex = 156;
@@ -1000,7 +1011,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(440, 56);
+            this.label15.Location = new System.Drawing.Point(441, 79);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 20);
             this.label15.TabIndex = 155;
@@ -1010,7 +1021,7 @@
             // 
             this.datePickerEffectivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerEffectivity.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerEffectivity.Location = new System.Drawing.Point(482, 181);
+            this.datePickerEffectivity.Location = new System.Drawing.Point(483, 204);
             this.datePickerEffectivity.Name = "datePickerEffectivity";
             this.datePickerEffectivity.Size = new System.Drawing.Size(112, 26);
             this.datePickerEffectivity.TabIndex = 5;
@@ -1020,7 +1031,8 @@
             // rchTxtBoxAddress
             // 
             this.rchTxtBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rchTxtBoxAddress.Location = new System.Drawing.Point(139, 119);
+            this.rchTxtBoxAddress.Location = new System.Drawing.Point(140, 142);
+            this.rchTxtBoxAddress.MaxLength = 250;
             this.rchTxtBoxAddress.Name = "rchTxtBoxAddress";
             this.rchTxtBoxAddress.Size = new System.Drawing.Size(637, 56);
             this.rchTxtBoxAddress.TabIndex = 3;
@@ -1030,7 +1042,8 @@
             // txtBoxAssured
             // 
             this.txtBoxAssured.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxAssured.Location = new System.Drawing.Point(139, 87);
+            this.txtBoxAssured.Location = new System.Drawing.Point(140, 110);
+            this.txtBoxAssured.MaxLength = 150;
             this.txtBoxAssured.Name = "txtBoxAssured";
             this.txtBoxAssured.Size = new System.Drawing.Size(637, 26);
             this.txtBoxAssured.TabIndex = 2;
@@ -1040,7 +1053,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(399, 186);
+            this.label8.Location = new System.Drawing.Point(400, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 135;
@@ -1050,7 +1063,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 571);
+            this.label7.Location = new System.Drawing.Point(42, 620);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 20);
             this.label7.TabIndex = 134;
@@ -1060,7 +1073,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 133);
+            this.label2.Location = new System.Drawing.Point(66, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 129;
@@ -1071,7 +1084,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(65, 90);
+            this.label1.Location = new System.Drawing.Point(66, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 128;
@@ -1086,10 +1099,23 @@
             "CV",
             "PC",
             "LTO"});
-            this.txtBoxMortage.Location = new System.Drawing.Point(140, 568);
+            this.txtBoxMortage.Location = new System.Drawing.Point(136, 617);
             this.txtBoxMortage.Name = "txtBoxMortage";
             this.txtBoxMortage.Size = new System.Drawing.Size(317, 28);
             this.txtBoxMortage.TabIndex = 210;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnRenew);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(917, 48);
+            this.panel1.TabIndex = 211;
             // 
             // PolicyWriting
             // 
@@ -1097,15 +1123,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(917, 623);
+            this.ClientSize = new System.Drawing.Size(917, 663);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtBoxMortage);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.datePickerExpiryDate);
             this.Controls.Add(this.label34);
-            this.Controls.Add(this.btnRenew);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtBoxPolicyNo);
             this.Controls.Add(this.datePickerWritingDate);
             this.Controls.Add(this.label18);
@@ -1135,6 +1158,7 @@
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1225,6 +1249,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnPrintPayment;
         private System.Windows.Forms.ComboBox txtBoxMortage;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

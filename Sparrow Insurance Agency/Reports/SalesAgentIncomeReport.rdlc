@@ -533,7 +533,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Sales Agent Commission </Value>
+                  <Value>Income Report</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -546,10 +546,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.89174in</Top>
+          <Top>0.90215in</Top>
           <Left>3.47917in</Left>
           <Height>0.36458in</Height>
-          <Width>3.02083in</Width>
+          <Width>2.48958in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -581,11 +581,54 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.07006in</Top>
+          <Top>0.08048in</Top>
           <Left>2.88542in</Left>
           <Height>0.36458in</Height>
           <Width>3.95833in</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>641 Sto Nino St. Brgy Plainview Mandaluyong CIty</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel: 5795665   Fax: 4511056</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.3895in</Top>
+          <Left>3.11458in</Left>
+          <Height>0.39583in</Height>
+          <Width>3.35417in</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

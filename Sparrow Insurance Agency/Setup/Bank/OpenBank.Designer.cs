@@ -64,6 +64,7 @@
             // 
             this.txtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxName.Location = new System.Drawing.Point(78, 9);
+            this.txtBoxName.MaxLength = 100;
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(233, 26);
             this.txtBoxName.TabIndex = 29;

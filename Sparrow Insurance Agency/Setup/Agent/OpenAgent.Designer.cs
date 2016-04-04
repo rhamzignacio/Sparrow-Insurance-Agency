@@ -44,6 +44,7 @@
             // 
             this.txtBoxAgentNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxAgentNo.Location = new System.Drawing.Point(121, 15);
+            this.txtBoxAgentNo.MaxLength = 10;
             this.txtBoxAgentNo.Name = "txtBoxAgentNo";
             this.txtBoxAgentNo.Size = new System.Drawing.Size(233, 26);
             this.txtBoxAgentNo.TabIndex = 19;
@@ -97,6 +98,7 @@
             // 
             this.txtBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxFirstName.Location = new System.Drawing.Point(121, 47);
+            this.txtBoxFirstName.MaxLength = 80;
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(233, 26);
             this.txtBoxFirstName.TabIndex = 23;
@@ -106,6 +108,7 @@
             // 
             this.txtBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLastName.Location = new System.Drawing.Point(121, 79);
+            this.txtBoxLastName.MaxLength = 80;
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Size = new System.Drawing.Size(233, 26);
             this.txtBoxLastName.TabIndex = 24;
@@ -115,6 +118,7 @@
             // 
             this.txtBoxMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMiddleName.Location = new System.Drawing.Point(121, 111);
+            this.txtBoxMiddleName.MaxLength = 80;
             this.txtBoxMiddleName.Name = "txtBoxMiddleName";
             this.txtBoxMiddleName.Size = new System.Drawing.Size(233, 26);
             this.txtBoxMiddleName.TabIndex = 25;

@@ -800,7 +800,7 @@
   <Width>9.05208in</Width>
   <Page>
     <PageHeader>
-      <Height>1.61333in</Height>
+      <Height>1.50916in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -824,7 +824,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.94667in</Top>
+          <Top>0.82167in</Top>
           <Left>3.38542in</Left>
           <Height>0.36458in</Height>
           <Width>2.48958in</Width>
@@ -853,7 +853,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.34944in</Top>
+          <Top>1.22444in</Top>
           <Height>0.25in</Height>
           <Width>4.7825in</Width>
           <ZIndex>1</ZIndex>
@@ -887,11 +887,53 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.125in</Top>
           <Left>2.79167in</Left>
           <Height>0.36458in</Height>
           <Width>3.95833in</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>641 Sto Nino St. Brgy Plainview Mandaluyong CIty</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel: 5795665   Fax: 4511056</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.30902in</Top>
+          <Left>3.02083in</Left>
+          <Height>0.39583in</Height>
+          <Width>3.35417in</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

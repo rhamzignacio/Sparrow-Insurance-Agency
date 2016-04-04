@@ -40,6 +40,7 @@
             // 
             this.txtBoxRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxRemarks.Location = new System.Drawing.Point(85, 44);
+            this.txtBoxRemarks.MaxLength = 200;
             this.txtBoxRemarks.Name = "txtBoxRemarks";
             this.txtBoxRemarks.Size = new System.Drawing.Size(583, 26);
             this.txtBoxRemarks.TabIndex = 23;
