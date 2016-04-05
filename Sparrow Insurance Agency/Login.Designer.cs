@@ -82,7 +82,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.PaleGreen;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(190, 93);
+            this.btnLogin.Location = new System.Drawing.Point(199, 93);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 32);
             this.btnLogin.TabIndex = 14;
@@ -98,16 +98,18 @@
             this.lblConnection.Size = new System.Drawing.Size(74, 13);
             this.lblConnection.TabIndex = 17;
             this.lblConnection.Text = "Connected. . .";
+            this.lblConnection.Click += new System.EventHandler(this.lblConnection_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(292, 154);
+            this.label3.Location = new System.Drawing.Point(291, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Powered By: RSI Development Solutions";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Login
             // 
@@ -128,6 +130,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

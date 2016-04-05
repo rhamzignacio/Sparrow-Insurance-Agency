@@ -21,22 +21,10 @@ namespace Sparrow_Insurance_Agency
         {
             InitializeComponent();
 
-            if (CheckConnection())
-            {
-                lblConnection.Text = "Connected. . .";
-                Enabled = true;
-                lblConnection.ForeColor = Color.Green;
-            }
-            else
-            {
-                Enabled = false;
-                lblConnection.Text = "Disconnected. . .";
-                lblConnection.ForeColor = Color.Red;
-                MessageBox.Show("Cannot connect to database\n", "Error");
-            }
+            CheckConnection();
         }
 
-        private bool CheckConnection()
+        private void CheckConnection()
         {
             try
             {
@@ -44,11 +32,18 @@ namespace Sparrow_Insurance_Agency
 
                 db.Database.Connection.Open();
 
-                return true;
+                lblConnection.Text = "Connected. . .";
+
+                Enabled = true;
+
+                lblConnection.ForeColor = Color.Green;
             }
             catch //Database connection issue
             {
-                return false;
+                Enabled = false;
+                lblConnection.Text = "Disconnected. . .";
+                lblConnection.ForeColor = Color.Red;
+                MessageBox.Show("Cannot connect to database\n", "Error");
             }
         }
 
@@ -98,19 +93,29 @@ namespace Sparrow_Insurance_Agency
     
         }
 
-        private void btnRSI_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("\n"
-                +"RSI Development Solutions are group of part-time freelancer\n"
-                +"Who developed high quality and affordable software\n"
-                +"You can contact us at \n\n"
-                +"Email: ramil.charles.ignacio@gmail.com\n"
-                +"Contact No: 09175214703", "RSI Development Solutions");
-        }
-
         private void btnDatabaseConfiguration_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("\n"
+               + "RSI Development Solutions are group of part-time freelancer\n"
+               + "Who developed high quality and affordable softwares\n"
+               + "You can contact us at \n\n"
+               + "Email: ramil.charles.ignacio@gmail.com\n"
+               + "Contact No: 09175214703", "RSI Development Solutions");
+        }
+
+        private void lblConnection_Click(object sender, EventArgs e)
+        {
+            CheckConnection();
         }
     }
 }

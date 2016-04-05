@@ -19,10 +19,10 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\philscan\Documents\Repository\SparrowInstaller\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
+    <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -30,7 +30,6 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://rsidevelopmentsolutions.blob.core.windows.net/sparrow/</InstallUrl>
     <UpdateUrl>https://rsidevelopmentsolutions.blob.core.windows.net/sparrow/</UpdateUrl>
     <ProductName>Sparrow Insurance Agency</ProductName>
     <PublisherName>RSI Development Solutions</PublisherName>
