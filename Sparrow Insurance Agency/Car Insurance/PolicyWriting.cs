@@ -149,6 +149,7 @@ namespace Sparrow_Insurance_Agency
                 txtBoxSerialNo.Text = policy.SerialNo;
                 txtBoxUnit.Text = policy.Unit;
                 txtBoxYearModel.Text = policy.YearModel;
+                txtBoxColor.Text = policy.Color;
 
                 //ComboBox
                 cmbBoxCategory.Text = policy.Category;
@@ -387,7 +388,6 @@ namespace Sparrow_Insurance_Agency
                         policy.Payment_Method = "CHECK";
 
                     //Amounts
-
                     policy.Paid = 0;
 
                     if (txtBoxTotalAnnualPremium.Text != "")
@@ -455,8 +455,6 @@ namespace Sparrow_Insurance_Agency
 
                     try
                     {
-                        
-
                         decimal totalPaid = 0;
 
                         //Save Payments

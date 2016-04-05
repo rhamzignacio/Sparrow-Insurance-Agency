@@ -38,7 +38,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <ApplicationVersion>1.3.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -379,6 +379,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\CarInsuranceListReport.rdlc" />
     <EmbeddedResource Include="Reports\PaymentSummary.rdlc" />
@@ -457,10 +458,37 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\src\Add-icon.png" />
+    <Content Include="Image\src\Administrator-icon.png" />
+    <Content Include="Image\src\Applications-Cascade-icon.png" />
+    <Content Include="Image\src\Car-icon.png" />
+    <Content Include="Image\src\Chat-icon.png" />
+    <Content Include="Image\src\Clients-icon.png" />
+    <Content Include="Image\src\Close-2-icon.png" />
+    <Content Include="Image\src\Close-icon.png" />
+    <Content Include="Image\src\Contract-icon.png" />
+    <Content Include="Image\src\Copy-icon.png" />
+    <Content Include="Image\src\Document-Blank-icon.png" />
+    <Content Include="Image\src\Folder-icon.png" />
+    <Content Include="Image\src\Folder-Open-icon.png" />
+    <Content Include="Image\src\Gear-icon.png" />
+    <Content Include="Image\src\Home-icon.png" />
+    <Content Include="Image\src\Mail-icon.png" />
+    <Content Include="Image\src\Money-icon.png" />
+    <Content Include="Image\src\Monitor-icon.png" />
+    <Content Include="Image\src\Network-icon.png" />
+    <Content Include="Image\src\Notes-icon.png" />
+    <Content Include="Image\src\Ok-icon.png" />
+    <Content Include="Image\src\Pen-icon.png" />
+    <Content Include="Image\src\print-icon.png" />
     <Content Include="Image\src\sparrow.ico" />
     <Content Include="Image\src\sparrow.jpg" />
+    <Content Include="Image\src\Statistics-icon.png" />
+    <Content Include="Image\src\Text-Bubble-icon.png" />
+    <Content Include="Image\src\Zoom-icon.png" />
     <Content Include="Notes.txt" />
     <Content Include="Database Schema.sql" />
+    <Content Include="ProgramInfo.txt" />
     <Content Include="SparrowEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SparrowEntities.edmx</DependentUpon>

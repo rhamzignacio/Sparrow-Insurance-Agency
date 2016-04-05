@@ -134,6 +134,10 @@ namespace Sparrow_Insurance_Agency.Setup.UserProfile
                                 db.Entry(user).State = EntityState.Modified;
                             }
                             db.SaveChanges();
+
+                            MessageBox.Show("Successfully saved");
+
+                            Close();
                         }
                     }
                     else

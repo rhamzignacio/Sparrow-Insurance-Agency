@@ -26,9 +26,11 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
 
         private void GetAgents(string searchKey)
         {
+            listViewAgent.Items.Clear(); //clear list
+
             using(var db = new SparrowEntities())
             {
-                var agents = db.SalesAgent.OrderBy(r => r.LastName).AsQueryable();
+                var agents = db.SalesAgent.ToList().AsQueryable();
 
                 if(searchKey != "")
                 {

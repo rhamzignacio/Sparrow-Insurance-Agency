@@ -379,7 +379,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PolicyNo</rd:DefaultName>
@@ -410,7 +412,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Assured</rd:DefaultName>
@@ -441,7 +445,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PlateNo</rd:DefaultName>
@@ -472,7 +478,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>YearModel</rd:DefaultName>
@@ -503,7 +511,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Deductible</rd:DefaultName>
@@ -782,8 +792,8 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <Top>1.64583in</Top>
-        <Left>5.58729in</Left>
+        <Top>3.01389in</Top>
+        <Left>5.63937in</Left>
         <Height>0.28125in</Height>
         <Width>3.41271in</Width>
         <ZIndex>1</ZIndex>
@@ -794,7 +804,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3.36458in</Height>
     <Style />
   </Body>
   <Width>9.05208in</Width>

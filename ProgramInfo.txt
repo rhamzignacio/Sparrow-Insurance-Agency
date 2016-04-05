@@ -1,0 +1,6 @@
+Version 1.3.0 - 4/5/2016
+	-UI improvement (added icons)
+	-Sales agent searching fixed
+	-Policy Writing saving fixed
+	-Added max lengths on all textbox based on database field length
+	-Report Design improvement (added address and included RSI advertisement)

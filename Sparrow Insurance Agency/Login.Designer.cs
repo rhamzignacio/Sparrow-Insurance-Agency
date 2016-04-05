@@ -35,8 +35,7 @@
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblConnection = new System.Windows.Forms.Label();
-            this.btnRSI = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRSI)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtBoxUsername
@@ -83,7 +82,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.PaleGreen;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(189, 105);
+            this.btnLogin.Location = new System.Drawing.Point(190, 93);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 32);
             this.btnLogin.TabIndex = 14;
@@ -94,30 +93,29 @@
             // lblConnection
             // 
             this.lblConnection.AutoSize = true;
-            this.lblConnection.Location = new System.Drawing.Point(12, 149);
+            this.lblConnection.Location = new System.Drawing.Point(3, 153);
             this.lblConnection.Name = "lblConnection";
             this.lblConnection.Size = new System.Drawing.Size(74, 13);
             this.lblConnection.TabIndex = 17;
             this.lblConnection.Text = "Connected. . .";
             // 
-            // btnRSI
+            // label3
             // 
-            this.btnRSI.Image = ((System.Drawing.Image)(resources.GetObject("btnRSI.Image")));
-            this.btnRSI.Location = new System.Drawing.Point(431, 131);
-            this.btnRSI.Name = "btnRSI";
-            this.btnRSI.Size = new System.Drawing.Size(45, 40);
-            this.btnRSI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRSI.TabIndex = 18;
-            this.btnRSI.TabStop = false;
-            this.btnRSI.Click += new System.EventHandler(this.btnRSI_Click);
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(292, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Powered By: RSI Development Solutions";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(476, 171);
-            this.Controls.Add(this.btnRSI);
+            this.ClientSize = new System.Drawing.Size(487, 168);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblConnection);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtBoxPassword);
@@ -129,8 +127,7 @@
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.btnRSI)).EndInit();
+            this.Text = "System Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +141,6 @@
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblConnection;
-        private System.Windows.Forms.PictureBox btnRSI;
+        private System.Windows.Forms.Label label3;
     }
 }

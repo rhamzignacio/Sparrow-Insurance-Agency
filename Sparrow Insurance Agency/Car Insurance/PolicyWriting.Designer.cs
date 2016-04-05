@@ -113,6 +113,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxMortage = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -767,6 +770,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.label32);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.btnPrintPayment);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.label12);
@@ -785,13 +791,15 @@
             // 
             // btnPrintPayment
             // 
-            this.btnPrintPayment.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPrintPayment.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrintPayment.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.print_icon;
+            this.btnPrintPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrintPayment.FlatAppearance.BorderSize = 0;
             this.btnPrintPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintPayment.Location = new System.Drawing.Point(791, 184);
+            this.btnPrintPayment.Location = new System.Drawing.Point(791, 204);
             this.btnPrintPayment.Name = "btnPrintPayment";
             this.btnPrintPayment.Size = new System.Drawing.Size(67, 61);
             this.btnPrintPayment.TabIndex = 13;
-            this.btnPrintPayment.Text = "Print";
             this.btnPrintPayment.UseVisualStyleBackColor = false;
             this.btnPrintPayment.Click += new System.EventHandler(this.btnPrintPayment_Click);
             // 
@@ -837,13 +845,15 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Close_icon;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(791, 117);
+            this.btnDelete.Location = new System.Drawing.Point(791, 124);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(67, 61);
             this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -896,13 +906,15 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Add_icon;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(791, 50);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(67, 61);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -950,11 +962,12 @@
             // 
             // btnAddAgent
             // 
+            this.btnAddAgent.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Zoom_icon;
+            this.btnAddAgent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddAgent.Location = new System.Drawing.Point(362, 204);
             this.btnAddAgent.Name = "btnAddAgent";
             this.btnAddAgent.Size = new System.Drawing.Size(27, 26);
             this.btnAddAgent.TabIndex = 176;
-            this.btnAddAgent.Text = "...";
             this.btnAddAgent.UseVisualStyleBackColor = true;
             this.btnAddAgent.Click += new System.EventHandler(this.btnAddAgent_Click);
             // 
@@ -1117,6 +1130,33 @@
             this.panel1.Size = new System.Drawing.Size(917, 48);
             this.panel1.TabIndex = 211;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(812, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Add";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(813, 188);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(25, 13);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Edit";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(812, 268);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(28, 13);
+            this.label32.TabIndex = 16;
+            this.label32.Text = "Print";
+            // 
             // PolicyWriting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1250,6 +1290,9 @@
         private System.Windows.Forms.Button btnPrintPayment;
         private System.Windows.Forms.ComboBox txtBoxMortage;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label11;
     }
 }
 

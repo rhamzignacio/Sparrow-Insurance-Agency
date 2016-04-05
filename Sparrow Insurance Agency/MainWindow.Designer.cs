@@ -77,8 +77,9 @@
             // 
             // homeToolStripMenuItem
             // 
+            this.homeToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Home_icon;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
@@ -87,8 +88,9 @@
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newClientToolStripMenuItem,
             this.clientListToolStripMenuItem});
+            this.clientToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Car_icon;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.clientToolStripMenuItem.Text = "Car Insurance";
             // 
             // newClientToolStripMenuItem
@@ -107,9 +109,11 @@
             // 
             // housingLoanToolStripMenuItem
             // 
+            this.housingLoanToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Contract_icon;
             this.housingLoanToolStripMenuItem.Name = "housingLoanToolStripMenuItem";
-            this.housingLoanToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.housingLoanToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.housingLoanToolStripMenuItem.Text = "Housing Loan";
+            this.housingLoanToolStripMenuItem.Click += new System.EventHandler(this.housingLoanToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -117,8 +121,9 @@
             this.totalIncomeToolStripMenuItem,
             this.carInsuranceSummaryToolStripMenuItem,
             this.salesAgentCommissionToolStripMenuItem});
+            this.reportsToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Statistics_icon;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // totalIncomeToolStripMenuItem
@@ -150,8 +155,9 @@
             this.makeToolStripMenuItem,
             this.salesAgentToolStripMenuItem,
             this.historyToolStripMenuItem});
+            this.setupToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Gear_icon;
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
-            this.setupToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.setupToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.setupToolStripMenuItem.Text = "Setup";
             // 
             // newUserToolStripMenuItem
@@ -255,8 +261,9 @@
             // 
             // logoutToolStripMenuItem
             // 
+            this.logoutToolStripMenuItem.Image = global::Sparrow_Insurance_Agency.Properties.Resources.Close_2_icon;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -279,7 +286,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
-            this.Text = "Sparrow Insurance Agency";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sparrow Insurance Agency 1.3.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.menuStrip1.ResumeLayout(false);

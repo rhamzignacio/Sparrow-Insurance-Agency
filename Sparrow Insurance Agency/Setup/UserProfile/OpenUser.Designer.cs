@@ -76,7 +76,7 @@
             this.txtBoxConfirmPassword.Name = "txtBoxConfirmPassword";
             this.txtBoxConfirmPassword.PasswordChar = '*';
             this.txtBoxConfirmPassword.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxConfirmPassword.TabIndex = 57;
+            this.txtBoxConfirmPassword.TabIndex = 3;
             // 
             // label6
             // 
@@ -95,7 +95,7 @@
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '*';
             this.txtBoxPassword.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxPassword.TabIndex = 55;
+            this.txtBoxPassword.TabIndex = 2;
             // 
             // label5
             // 
@@ -139,7 +139,7 @@
             this.txtBoxMiddleName.Location = new System.Drawing.Point(152, 172);
             this.txtBoxMiddleName.Name = "txtBoxMiddleName";
             this.txtBoxMiddleName.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxMiddleName.TabIndex = 51;
+            this.txtBoxMiddleName.TabIndex = 6;
             // 
             // txtBoxLastName
             // 
@@ -147,7 +147,7 @@
             this.txtBoxLastName.Location = new System.Drawing.Point(152, 140);
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxLastName.TabIndex = 50;
+            this.txtBoxLastName.TabIndex = 5;
             // 
             // txtBoxFirstName
             // 
@@ -155,7 +155,7 @@
             this.txtBoxFirstName.Location = new System.Drawing.Point(152, 108);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxFirstName.TabIndex = 49;
+            this.txtBoxFirstName.TabIndex = 4;
             // 
             // label4
             // 
@@ -193,7 +193,7 @@
             this.txtBoxUsername.Location = new System.Drawing.Point(152, 12);
             this.txtBoxUsername.Name = "txtBoxUsername";
             this.txtBoxUsername.Size = new System.Drawing.Size(233, 26);
-            this.txtBoxUsername.TabIndex = 45;
+            this.txtBoxUsername.TabIndex = 1;
             // 
             // label2
             // 

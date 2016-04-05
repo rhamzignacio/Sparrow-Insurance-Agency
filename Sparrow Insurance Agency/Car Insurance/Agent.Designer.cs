@@ -56,20 +56,20 @@
             this.txtBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxSearch.Location = new System.Drawing.Point(78, 6);
             this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.Size = new System.Drawing.Size(311, 26);
+            this.txtBoxSearch.Size = new System.Drawing.Size(360, 26);
             this.txtBoxSearch.TabIndex = 1;
             this.txtBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxSearch_KeyUp);
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSearch.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Zoom_icon;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(395, 7);
+            this.btnSearch.Location = new System.Drawing.Point(444, 6);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 26);
+            this.btnSearch.Size = new System.Drawing.Size(35, 26);
             this.btnSearch.TabIndex = 105;
-            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -106,6 +106,7 @@
             // btnOkay
             // 
             this.btnOkay.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnOkay.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Ok_icon;
             this.btnOkay.FlatAppearance.BorderSize = 0;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOkay.Location = new System.Drawing.Point(395, 354);
