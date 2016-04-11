@@ -1,6 +1,6 @@
 ﻿namespace Sparrow_Insurance_Agency.Car_Insurance.Report
 {
-    partial class SalesAgentIncome
+    partial class SalesAgentIncomeByCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.GetSalesAgentReport_ResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBoxAgentID = new System.Windows.Forms.TextBox();
+            this.cmbBoxCategory = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSearchAgent = new System.Windows.Forms.Button();
             this.txtBoxAgent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,18 +42,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.datePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.datePickerTo = new System.Windows.Forms.DateTimePicker();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.GetSalesAgentReport_ResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.getSalesAgentReportByCategoryResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GetIncomeReport_ResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtBoxAgentID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.GetSalesAgentReport_ResultBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GetSalesAgentReport_ResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getSalesAgentReportByCategoryResultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GetIncomeReport_ResultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtBoxAgentID);
+            this.panel1.Controls.Add(this.cmbBoxCategory);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnSearchAgent);
             this.panel1.Controls.Add(this.txtBoxAgent);
             this.panel1.Controls.Add(this.label3);
@@ -63,25 +66,56 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 45);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(1038, 69);
+            this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtBoxAgentID
+            // 
+            this.txtBoxAgentID.Enabled = false;
+            this.txtBoxAgentID.Location = new System.Drawing.Point(300, 41);
+            this.txtBoxAgentID.Name = "txtBoxAgentID";
+            this.txtBoxAgentID.Size = new System.Drawing.Size(200, 20);
+            this.txtBoxAgentID.TabIndex = 14;
+            this.txtBoxAgentID.Visible = false;
+            // 
+            // cmbBoxCategory
+            // 
+            this.cmbBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxCategory.FormattingEnabled = true;
+            this.cmbBoxCategory.Items.AddRange(new object[] {
+            "CV",
+            "PC",
+            "LTO"});
+            this.cmbBoxCategory.Location = new System.Drawing.Point(569, 14);
+            this.cmbBoxCategory.Name = "cmbBoxCategory";
+            this.cmbBoxCategory.Size = new System.Drawing.Size(175, 21);
+            this.cmbBoxCategory.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(514, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Category";
             // 
             // btnSearchAgent
             // 
             this.btnSearchAgent.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Zoom_icon;
             this.btnSearchAgent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchAgent.Location = new System.Drawing.Point(758, 12);
+            this.btnSearchAgent.Location = new System.Drawing.Point(263, 39);
             this.btnSearchAgent.Name = "btnSearchAgent";
             this.btnSearchAgent.Size = new System.Drawing.Size(31, 23);
             this.btnSearchAgent.TabIndex = 11;
             this.btnSearchAgent.UseVisualStyleBackColor = true;
-            this.btnSearchAgent.Click += new System.EventHandler(this.btnSearchAgent_Click_1);
+            this.btnSearchAgent.Click += new System.EventHandler(this.btnSearchAgent_Click);
             // 
             // txtBoxAgent
             // 
             this.txtBoxAgent.Enabled = false;
-            this.txtBoxAgent.Location = new System.Drawing.Point(558, 14);
+            this.txtBoxAgent.Location = new System.Drawing.Point(63, 41);
             this.txtBoxAgent.Name = "txtBoxAgent";
             this.txtBoxAgent.Size = new System.Drawing.Size(200, 20);
             this.txtBoxAgent.TabIndex = 10;
@@ -89,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(517, 17);
+            this.label3.Location = new System.Drawing.Point(22, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 9;
@@ -97,7 +131,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(795, 12);
+            this.button1.Location = new System.Drawing.Point(750, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -137,70 +171,54 @@
             this.datePickerTo.Size = new System.Drawing.Size(200, 20);
             this.datePickerTo.TabIndex = 1;
             // 
-            // reportViewer1
+            // reportViewer
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "EchoDataset";
-            reportDataSource1.Value = this.GetSalesAgentReport_ResultBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Sparrow_Insurance_Agency.Reports.SalesAgentIncomeReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 45);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1057, 479);
-            this.reportViewer1.TabIndex = 6;
+            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "SalesAgentIncomeByCategory";
+            reportDataSource1.Value = this.getSalesAgentReportByCategoryResultBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Sparrow_Insurance_Agency.Reports.SalesAgentIncomeByCategoryReport.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(0, 69);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Size = new System.Drawing.Size(1038, 446);
+            this.reportViewer.TabIndex = 8;
             // 
             // getSalesAgentReportByCategoryResultBindingSource
             // 
             this.getSalesAgentReportByCategoryResultBindingSource.DataSource = typeof(Sparrow_Insurance_Agency.GetSalesAgentReportByCategory_Result);
             // 
-            // GetIncomeReport_ResultBindingSource
-            // 
-            this.GetIncomeReport_ResultBindingSource.DataSource = typeof(Sparrow_Insurance_Agency.GetIncomeReport_Result);
-            // 
-            // txtBoxAgentID
-            // 
-            this.txtBoxAgentID.Enabled = false;
-            this.txtBoxAgentID.Location = new System.Drawing.Point(629, 177);
-            this.txtBoxAgentID.Name = "txtBoxAgentID";
-            this.txtBoxAgentID.Size = new System.Drawing.Size(200, 20);
-            this.txtBoxAgentID.TabIndex = 11;
-            this.txtBoxAgentID.Visible = false;
-            // 
-            // SalesAgentIncome
+            // SalesAgentIncomeByCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 524);
-            this.Controls.Add(this.txtBoxAgentID);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(1038, 515);
+            this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.panel1);
-            this.Name = "SalesAgentIncome";
-            this.Text = "Sales Agent Income";
-            this.Load += new System.EventHandler(this.SalesAgentIncome_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GetSalesAgentReport_ResultBindingSource)).EndInit();
+            this.Name = "SalesAgentIncomeByCategory";
+            this.Text = "SalesAgentIncomeByCategory";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GetSalesAgentReport_ResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getSalesAgentReportByCategoryResultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GetIncomeReport_ResultBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cmbBoxCategory;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSearchAgent;
+        public System.Windows.Forms.TextBox txtBoxAgent;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker datePickerFrom;
         private System.Windows.Forms.DateTimePicker datePickerTo;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource GetSalesAgentReport_ResultBindingSource;
-        private System.Windows.Forms.Button btnSearchAgent;
-        public  System.Windows.Forms.TextBox txtBoxAgent;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.BindingSource GetIncomeReport_ResultBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
         private System.Windows.Forms.BindingSource getSalesAgentReportByCategoryResultBindingSource;
         public System.Windows.Forms.TextBox txtBoxAgentID;
     }

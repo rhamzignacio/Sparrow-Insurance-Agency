@@ -38,6 +38,8 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totalIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carInsuranceSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesAgentCommissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +57,8 @@
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.allToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.byCategoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,13 +139,33 @@
             // 
             // carInsuranceSummaryToolStripMenuItem
             // 
+            this.carInsuranceSummaryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allToolStripMenuItem,
+            this.byCategoryToolStripMenuItem});
             this.carInsuranceSummaryToolStripMenuItem.Name = "carInsuranceSummaryToolStripMenuItem";
             this.carInsuranceSummaryToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.carInsuranceSummaryToolStripMenuItem.Text = "Car Insurance Summary";
             this.carInsuranceSummaryToolStripMenuItem.Click += new System.EventHandler(this.carInsuranceSummaryToolStripMenuItem_Click);
             // 
+            // allToolStripMenuItem
+            // 
+            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.allToolStripMenuItem.Text = "All";
+            this.allToolStripMenuItem.Click += new System.EventHandler(this.allToolStripMenuItem_Click);
+            // 
+            // byCategoryToolStripMenuItem
+            // 
+            this.byCategoryToolStripMenuItem.Name = "byCategoryToolStripMenuItem";
+            this.byCategoryToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.byCategoryToolStripMenuItem.Text = "By Category";
+            this.byCategoryToolStripMenuItem.Click += new System.EventHandler(this.byCategoryToolStripMenuItem_Click);
+            // 
             // salesAgentCommissionToolStripMenuItem
             // 
+            this.salesAgentCommissionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allToolStripMenuItem1,
+            this.byCategoryToolStripMenuItem1});
             this.salesAgentCommissionToolStripMenuItem.Name = "salesAgentCommissionToolStripMenuItem";
             this.salesAgentCommissionToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.salesAgentCommissionToolStripMenuItem.Text = "Sales Agent Commission";
@@ -166,20 +190,20 @@
             this.newToolStripMenuItem,
             this.userListToolStripMenuItem});
             this.newUserToolStripMenuItem.Name = "newUserToolStripMenuItem";
-            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.newUserToolStripMenuItem.Text = "User";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.newToolStripMenuItem.Text = "New User";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // userListToolStripMenuItem
             // 
             this.userListToolStripMenuItem.Name = "userListToolStripMenuItem";
-            this.userListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userListToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.userListToolStripMenuItem.Text = "User List";
             this.userListToolStripMenuItem.Click += new System.EventHandler(this.userListToolStripMenuItem_Click);
             // 
@@ -189,7 +213,7 @@
             this.newToolStripMenuItem1,
             this.bankListToolStripMenuItem});
             this.bankToolStripMenuItem.Name = "bankToolStripMenuItem";
-            this.bankToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bankToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.bankToolStripMenuItem.Text = "Bank";
             // 
             // newToolStripMenuItem1
@@ -212,7 +236,7 @@
             this.newMakeToolStripMenuItem,
             this.makeListToolStripMenuItem});
             this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.makeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.makeToolStripMenuItem.Text = "Make";
             // 
             // newMakeToolStripMenuItem
@@ -235,7 +259,7 @@
             this.newToolStripMenuItem2,
             this.salesAgentListToolStripMenuItem});
             this.salesAgentToolStripMenuItem.Name = "salesAgentToolStripMenuItem";
-            this.salesAgentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salesAgentToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.salesAgentToolStripMenuItem.Text = "Sales Agent";
             // 
             // newToolStripMenuItem2
@@ -255,7 +279,7 @@
             // historyToolStripMenuItem
             // 
             this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.historyToolStripMenuItem.Text = "History";
             this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
@@ -276,6 +300,20 @@
             this.panelMain.Size = new System.Drawing.Size(1149, 599);
             this.panelMain.TabIndex = 1;
             // 
+            // allToolStripMenuItem1
+            // 
+            this.allToolStripMenuItem1.Name = "allToolStripMenuItem1";
+            this.allToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.allToolStripMenuItem1.Text = "All";
+            this.allToolStripMenuItem1.Click += new System.EventHandler(this.allToolStripMenuItem1_Click);
+            // 
+            // byCategoryToolStripMenuItem1
+            // 
+            this.byCategoryToolStripMenuItem1.Name = "byCategoryToolStripMenuItem1";
+            this.byCategoryToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.byCategoryToolStripMenuItem1.Text = "By Category";
+            this.byCategoryToolStripMenuItem1.Click += new System.EventHandler(this.byCategoryToolStripMenuItem1_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,7 +325,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sparrow Insurance Agency 1.3.0";
+            this.Text = "Sparrow Insurance Agency 1.4.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.menuStrip1.ResumeLayout(false);
@@ -325,5 +363,9 @@
         private System.Windows.Forms.ToolStripMenuItem totalIncomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carInsuranceSummaryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesAgentCommissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem byCategoryToolStripMenuItem1;
     }
 }

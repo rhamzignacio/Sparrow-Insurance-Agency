@@ -4,19 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c37bcb8c4f4b4d758d298429a6221854" Name="Diagram1" ZoomLevel="36">
+      <Diagram DiagramId="2c0b9eec5b254560a38e6d3fef5212d7" Name="Diagram1" ZoomLevel="59">
         <EntityTypeShape EntityType="SparrowModel.BankProfile" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.CarInsuranceCommission" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SparrowModel.CarInsuranceCoverage" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SparrowModel.CarInsuranceCoverage" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.CarInsurancePolicy" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.CarInsurrancePayment" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.MakeProfile" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.Role" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SparrowModel.SalesAgent" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SparrowModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SparrowModel.TransactionHistory" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SparrowModel.User" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SparrowModel.UserRole" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SparrowModel.TransactionHistory" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SparrowModel.User" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SparrowModel.UserRole" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="SparrowModel.FK_CarInsurancePolicy_CarInsuranceCoverage" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

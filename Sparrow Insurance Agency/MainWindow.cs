@@ -138,16 +138,12 @@ namespace Sparrow_Insurance_Agency
 
         private void carInsuranceSummaryToolStripMenuItem_Click(object sender, EventArgs e) //Report - Car Insurance Summary
         {
-            CarInsuranceSummary form = new CarInsuranceSummary();
-
-            form.Show();
+            
         }
 
         private void salesAgentCommissionToolStripMenuItem_Click(object sender, EventArgs e)//Rerpot - Sales Agent Commission
         {
-            SalesAgentIncome form = new SalesAgentIncome();
-
-            form.Show();
+            
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) //Setup - User - New User
@@ -167,6 +163,34 @@ namespace Sparrow_Insurance_Agency
         private void housingLoanToolStripMenuItem_Click(object sender, EventArgs e) //Housing Loan
         {
             MessageBox.Show("Housing-loan module is not yet available on this version", "Warning");
+        }
+
+        private void allToolStripMenuItem_Click(object sender, EventArgs e) //Report - Car Insurance Summary - All
+        {
+            CarInsuranceSummary form = new CarInsuranceSummary();
+
+            form.Show();
+        }
+
+        private void byCategoryToolStripMenuItem_Click(object sender, EventArgs e) //Report - Car Inusrance Summary - By Category
+        {
+            CarInsuranceSummaryByCategory form = new CarInsuranceSummaryByCategory();
+
+            form.Show();
+        }
+
+        private void allToolStripMenuItem1_Click(object sender, EventArgs e) //Report - Sales Agent Income - All
+        {
+            SalesAgentIncome form = new SalesAgentIncome();
+
+            form.Show();
+        }
+
+        private void byCategoryToolStripMenuItem1_Click(object sender, EventArgs e)//Report - Sales Agent Income - By Category
+        {
+            SalesAgentIncomeByCategory form = new SalesAgentIncomeByCategory();
+
+            form.Show();
         }
     }
 }

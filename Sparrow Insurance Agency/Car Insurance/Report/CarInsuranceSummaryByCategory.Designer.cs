@@ -1,6 +1,6 @@
 ﻿namespace Sparrow_Insurance_Agency.Car_Insurance.Report
 {
-    partial class CarInsuranceSummary
+    partial class CarInsuranceSummaryByCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.getCarInsurancePolicyReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.getCarInsurancePolicyReportByCategoryResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbBoxCategory = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.GetIncomeReport_ResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.getCarInsurancePolicyReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getCarInsurancePolicyReportByCategoryResultBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GetIncomeReport_ResultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // getCarInsurancePolicyReportBindingSource
+            // getCarInsurancePolicyReportByCategoryResultBindingSource
             // 
-            this.getCarInsurancePolicyReportBindingSource.DataMember = "GetCarInsurancePolicyReport";
+            this.getCarInsurancePolicyReportByCategoryResultBindingSource.DataSource = typeof(Sparrow_Insurance_Agency.GetCarInsurancePolicyReportByCategory_Result);
+            // 
+            // reportViewer
+            // 
+            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "CarInusranceByCategory";
+            reportDataSource2.Value = this.getCarInsurancePolicyReportByCategoryResultBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Sparrow_Insurance_Agency.Reports.CarInsuranceListByCategoryReport.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Size = new System.Drawing.Size(918, 507);
+            this.reportViewer.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
@@ -57,28 +69,9 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(280, 12);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 1;
-            // 
-            // reportViewer
-            // 
-            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "CarInsuranceList";
-            reportDataSource1.Value = this.getCarInsurancePolicyReportBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "Sparrow_Insurance_Agency.Reports.CarInsuranceListReport.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer.Name = "reportViewer";
-            this.reportViewer.Size = new System.Drawing.Size(1057, 478);
-            this.reportViewer.TabIndex = 2;
-            // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(486, 11);
+            this.btnLoad.Location = new System.Drawing.Point(722, 11);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 3;
@@ -86,8 +79,17 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(280, 12);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 1;
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmbBoxCategory);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -96,9 +98,30 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 46);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(918, 46);
+            this.panel1.TabIndex = 6;
+            // 
+            // cmbBoxCategory
+            // 
+            this.cmbBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxCategory.FormattingEnabled = true;
+            this.cmbBoxCategory.Items.AddRange(new object[] {
+            "CV",
+            "PC",
+            "LTO"});
+            this.cmbBoxCategory.Location = new System.Drawing.Point(541, 11);
+            this.cmbBoxCategory.Name = "cmbBoxCategory";
+            this.cmbBoxCategory.Size = new System.Drawing.Size(175, 21);
+            this.cmbBoxCategory.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(486, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Category";
             // 
             // label2
             // 
@@ -124,39 +147,39 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1057, 478);
-            this.panel2.TabIndex = 5;
+            this.panel2.Size = new System.Drawing.Size(918, 507);
+            this.panel2.TabIndex = 7;
             // 
-            // CarInsuranceSummary
+            // CarInsuranceSummaryByCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 524);
+            this.ClientSize = new System.Drawing.Size(918, 553);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "CarInsuranceSummary";
-            this.Text = "Car Insurance Summary";
-            this.Load += new System.EventHandler(this.Total_Income_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.getCarInsurancePolicyReportBindingSource)).EndInit();
+            this.Name = "CarInsuranceSummaryByCategory";
+            this.Text = "Car Insurance Summary by Category";
+            this.Load += new System.EventHandler(this.CarInsuranceSummaryByCategory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.getCarInsurancePolicyReportByCategoryResultBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GetIncomeReport_ResultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
-        private System.Windows.Forms.BindingSource GetIncomeReport_ResultBindingSource;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cmbBoxCategory;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.BindingSource getCarInsurancePolicyReportBindingSource;
+        private System.Windows.Forms.BindingSource getCarInsurancePolicyReportByCategoryResultBindingSource;
     }
 }

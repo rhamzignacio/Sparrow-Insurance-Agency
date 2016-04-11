@@ -20,17 +20,17 @@ namespace Sparrow_Insurance_Agency {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SparrowDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SparrowDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SparrowDataSet : global::System.Data.DataSet {
+    public partial class SparrowDataSet1 : global::System.Data.DataSet {
         
-        private GetCarInsurancePolicyReportByCategoryDataTable tableGetCarInsurancePolicyReportByCategory;
+        private GetSalesAgentReportByCategoryDataTable tableGetSalesAgentReportByCategory;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public SparrowDataSet() {
+        public SparrowDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Sparrow_Insurance_Agency {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected SparrowDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SparrowDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Sparrow_Insurance_Agency {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["GetCarInsurancePolicyReportByCategory"] != null)) {
-                    base.Tables.Add(new GetCarInsurancePolicyReportByCategoryDataTable(ds.Tables["GetCarInsurancePolicyReportByCategory"]));
+                if ((ds.Tables["GetSalesAgentReportByCategory"] != null)) {
+                    base.Tables.Add(new GetSalesAgentReportByCategoryDataTable(ds.Tables["GetSalesAgentReportByCategory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Sparrow_Insurance_Agency {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GetCarInsurancePolicyReportByCategoryDataTable GetCarInsurancePolicyReportByCategory {
+        public GetSalesAgentReportByCategoryDataTable GetSalesAgentReportByCategory {
             get {
-                return this.tableGetCarInsurancePolicyReportByCategory;
+                return this.tableGetSalesAgentReportByCategory;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Sparrow_Insurance_Agency {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SparrowDataSet cln = ((SparrowDataSet)(base.Clone()));
+            SparrowDataSet1 cln = ((SparrowDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Sparrow_Insurance_Agency {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["GetCarInsurancePolicyReportByCategory"] != null)) {
-                    base.Tables.Add(new GetCarInsurancePolicyReportByCategoryDataTable(ds.Tables["GetCarInsurancePolicyReportByCategory"]));
+                if ((ds.Tables["GetSalesAgentReportByCategory"] != null)) {
+                    base.Tables.Add(new GetSalesAgentReportByCategoryDataTable(ds.Tables["GetSalesAgentReportByCategory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Sparrow_Insurance_Agency {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGetCarInsurancePolicyReportByCategory = ((GetCarInsurancePolicyReportByCategoryDataTable)(base.Tables["GetCarInsurancePolicyReportByCategory"]));
+            this.tableGetSalesAgentReportByCategory = ((GetSalesAgentReportByCategoryDataTable)(base.Tables["GetSalesAgentReportByCategory"]));
             if ((initTable == true)) {
-                if ((this.tableGetCarInsurancePolicyReportByCategory != null)) {
-                    this.tableGetCarInsurancePolicyReportByCategory.InitVars();
+                if ((this.tableGetSalesAgentReportByCategory != null)) {
+                    this.tableGetSalesAgentReportByCategory.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Sparrow_Insurance_Agency {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SparrowDataSet";
+            this.DataSetName = "SparrowDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SparrowDataSet.xsd";
+            this.Namespace = "http://tempuri.org/SparrowDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGetCarInsurancePolicyReportByCategory = new GetCarInsurancePolicyReportByCategoryDataTable();
-            base.Tables.Add(this.tableGetCarInsurancePolicyReportByCategory);
+            this.tableGetSalesAgentReportByCategory = new GetSalesAgentReportByCategoryDataTable();
+            base.Tables.Add(this.tableGetSalesAgentReportByCategory);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeGetCarInsurancePolicyReportByCategory() {
+        private bool ShouldSerializeGetSalesAgentReportByCategory() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Sparrow_Insurance_Agency {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SparrowDataSet ds = new SparrowDataSet();
+            SparrowDataSet1 ds = new SparrowDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,45 @@ namespace Sparrow_Insurance_Agency {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void GetCarInsurancePolicyReportByCategoryRowChangeEventHandler(object sender, GetCarInsurancePolicyReportByCategoryRowChangeEvent e);
+        public delegate void GetSalesAgentReportByCategoryRowChangeEventHandler(object sender, GetSalesAgentReportByCategoryRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GetCarInsurancePolicyReportByCategoryDataTable : global::System.Data.TypedTableBase<GetCarInsurancePolicyReportByCategoryRow> {
-            
-            private global::System.Data.DataColumn columnPlateNo;
+        public partial class GetSalesAgentReportByCategoryDataTable : global::System.Data.TypedTableBase<GetSalesAgentReportByCategoryRow> {
             
             private global::System.Data.DataColumn columnPolicyNo;
             
-            private global::System.Data.DataColumn columnEffectivity;
-            
-            private global::System.Data.DataColumn columnExpiration_Date;
-            
             private global::System.Data.DataColumn columnAssured;
-            
-            private global::System.Data.DataColumn columnCar_Make;
             
             private global::System.Data.DataColumn columnYearModel;
             
-            private global::System.Data.DataColumn columnSerialNo;
+            private global::System.Data.DataColumn columnPlateNo;
             
-            private global::System.Data.DataColumn columnMotorNo;
+            private global::System.Data.DataColumn columnMortagee;
+            
+            private global::System.Data.DataColumn columnDeductible;
+            
+            private global::System.Data.DataColumn columnTotalAnnualPremium;
+            
+            private global::System.Data.DataColumn columnGross;
+            
+            private global::System.Data.DataColumn columnNet;
+            
+            private global::System.Data.DataColumn columnPaid;
+            
+            private global::System.Data.DataColumn columnIncome;
+            
+            private global::System.Data.DataColumn columnAgent;
+            
+            private global::System.Data.DataColumn columnFullName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryDataTable() {
-                this.TableName = "GetCarInsurancePolicyReportByCategory";
+            public GetSalesAgentReportByCategoryDataTable() {
+                this.TableName = "GetSalesAgentReportByCategory";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +316,7 @@ namespace Sparrow_Insurance_Agency {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GetCarInsurancePolicyReportByCategoryDataTable(global::System.Data.DataTable table) {
+            internal GetSalesAgentReportByCategoryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,17 +333,9 @@ namespace Sparrow_Insurance_Agency {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected GetCarInsurancePolicyReportByCategoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GetSalesAgentReportByCategoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PlateNoColumn {
-                get {
-                    return this.columnPlateNo;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -343,22 +343,6 @@ namespace Sparrow_Insurance_Agency {
             public global::System.Data.DataColumn PolicyNoColumn {
                 get {
                     return this.columnPolicyNo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EffectivityColumn {
-                get {
-                    return this.columnEffectivity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Expiration_DateColumn {
-                get {
-                    return this.columnExpiration_Date;
                 }
             }
             
@@ -372,14 +356,6 @@ namespace Sparrow_Insurance_Agency {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Car_MakeColumn {
-                get {
-                    return this.columnCar_Make;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn YearModelColumn {
                 get {
                     return this.columnYearModel;
@@ -388,17 +364,81 @@ namespace Sparrow_Insurance_Agency {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SerialNoColumn {
+            public global::System.Data.DataColumn PlateNoColumn {
                 get {
-                    return this.columnSerialNo;
+                    return this.columnPlateNo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MotorNoColumn {
+            public global::System.Data.DataColumn MortageeColumn {
                 get {
-                    return this.columnMotorNo;
+                    return this.columnMortagee;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DeductibleColumn {
+                get {
+                    return this.columnDeductible;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalAnnualPremiumColumn {
+                get {
+                    return this.columnTotalAnnualPremium;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GrossColumn {
+                get {
+                    return this.columnGross;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NetColumn {
+                get {
+                    return this.columnNet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PaidColumn {
+                get {
+                    return this.columnPaid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IncomeColumn {
+                get {
+                    return this.columnIncome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AgentColumn {
+                get {
+                    return this.columnAgent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FullNameColumn {
+                get {
+                    return this.columnFullName;
                 }
             }
             
@@ -413,53 +453,57 @@ namespace Sparrow_Insurance_Agency {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryRow this[int index] {
+            public GetSalesAgentReportByCategoryRow this[int index] {
                 get {
-                    return ((GetCarInsurancePolicyReportByCategoryRow)(this.Rows[index]));
+                    return ((GetSalesAgentReportByCategoryRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetCarInsurancePolicyReportByCategoryRowChangeEventHandler GetCarInsurancePolicyReportByCategoryRowChanging;
+            public event GetSalesAgentReportByCategoryRowChangeEventHandler GetSalesAgentReportByCategoryRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetCarInsurancePolicyReportByCategoryRowChangeEventHandler GetCarInsurancePolicyReportByCategoryRowChanged;
+            public event GetSalesAgentReportByCategoryRowChangeEventHandler GetSalesAgentReportByCategoryRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetCarInsurancePolicyReportByCategoryRowChangeEventHandler GetCarInsurancePolicyReportByCategoryRowDeleting;
+            public event GetSalesAgentReportByCategoryRowChangeEventHandler GetSalesAgentReportByCategoryRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetCarInsurancePolicyReportByCategoryRowChangeEventHandler GetCarInsurancePolicyReportByCategoryRowDeleted;
+            public event GetSalesAgentReportByCategoryRowChangeEventHandler GetSalesAgentReportByCategoryRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddGetCarInsurancePolicyReportByCategoryRow(GetCarInsurancePolicyReportByCategoryRow row) {
+            public void AddGetSalesAgentReportByCategoryRow(GetSalesAgentReportByCategoryRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryRow AddGetCarInsurancePolicyReportByCategoryRow(string PlateNo, string PolicyNo, string Effectivity, string Expiration_Date, string Assured, string Car_Make, string YearModel, string SerialNo, string MotorNo) {
-                GetCarInsurancePolicyReportByCategoryRow rowGetCarInsurancePolicyReportByCategoryRow = ((GetCarInsurancePolicyReportByCategoryRow)(this.NewRow()));
+            public GetSalesAgentReportByCategoryRow AddGetSalesAgentReportByCategoryRow(string PolicyNo, string Assured, string YearModel, string PlateNo, string Mortagee, string Deductible, decimal TotalAnnualPremium, decimal Gross, decimal Net, decimal Paid, decimal Income, System.Guid Agent, string FullName) {
+                GetSalesAgentReportByCategoryRow rowGetSalesAgentReportByCategoryRow = ((GetSalesAgentReportByCategoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        PlateNo,
                         PolicyNo,
-                        Effectivity,
-                        Expiration_Date,
                         Assured,
-                        Car_Make,
                         YearModel,
-                        SerialNo,
-                        MotorNo};
-                rowGetCarInsurancePolicyReportByCategoryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGetCarInsurancePolicyReportByCategoryRow);
-                return rowGetCarInsurancePolicyReportByCategoryRow;
+                        PlateNo,
+                        Mortagee,
+                        Deductible,
+                        TotalAnnualPremium,
+                        Gross,
+                        Net,
+                        Paid,
+                        Income,
+                        Agent,
+                        FullName};
+                rowGetSalesAgentReportByCategoryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGetSalesAgentReportByCategoryRow);
+                return rowGetSalesAgentReportByCategoryRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GetCarInsurancePolicyReportByCategoryDataTable cln = ((GetCarInsurancePolicyReportByCategoryDataTable)(base.Clone()));
+                GetSalesAgentReportByCategoryDataTable cln = ((GetSalesAgentReportByCategoryDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -467,81 +511,92 @@ namespace Sparrow_Insurance_Agency {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GetCarInsurancePolicyReportByCategoryDataTable();
+                return new GetSalesAgentReportByCategoryDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnPlateNo = base.Columns["PlateNo"];
                 this.columnPolicyNo = base.Columns["PolicyNo"];
-                this.columnEffectivity = base.Columns["Effectivity"];
-                this.columnExpiration_Date = base.Columns["Expiration_Date"];
                 this.columnAssured = base.Columns["Assured"];
-                this.columnCar_Make = base.Columns["Car_Make"];
                 this.columnYearModel = base.Columns["YearModel"];
-                this.columnSerialNo = base.Columns["SerialNo"];
-                this.columnMotorNo = base.Columns["MotorNo"];
+                this.columnPlateNo = base.Columns["PlateNo"];
+                this.columnMortagee = base.Columns["Mortagee"];
+                this.columnDeductible = base.Columns["Deductible"];
+                this.columnTotalAnnualPremium = base.Columns["TotalAnnualPremium"];
+                this.columnGross = base.Columns["Gross"];
+                this.columnNet = base.Columns["Net"];
+                this.columnPaid = base.Columns["Paid"];
+                this.columnIncome = base.Columns["Income"];
+                this.columnAgent = base.Columns["Agent"];
+                this.columnFullName = base.Columns["FullName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnPlateNo = new global::System.Data.DataColumn("PlateNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlateNo);
                 this.columnPolicyNo = new global::System.Data.DataColumn("PolicyNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPolicyNo);
-                this.columnEffectivity = new global::System.Data.DataColumn("Effectivity", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEffectivity);
-                this.columnExpiration_Date = new global::System.Data.DataColumn("Expiration_Date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpiration_Date);
                 this.columnAssured = new global::System.Data.DataColumn("Assured", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssured);
-                this.columnCar_Make = new global::System.Data.DataColumn("Car_Make", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCar_Make);
                 this.columnYearModel = new global::System.Data.DataColumn("YearModel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYearModel);
-                this.columnSerialNo = new global::System.Data.DataColumn("SerialNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSerialNo);
-                this.columnMotorNo = new global::System.Data.DataColumn("MotorNo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMotorNo);
-                this.columnPlateNo.MaxLength = 50;
+                this.columnPlateNo = new global::System.Data.DataColumn("PlateNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlateNo);
+                this.columnMortagee = new global::System.Data.DataColumn("Mortagee", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMortagee);
+                this.columnDeductible = new global::System.Data.DataColumn("Deductible", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDeductible);
+                this.columnTotalAnnualPremium = new global::System.Data.DataColumn("TotalAnnualPremium", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalAnnualPremium);
+                this.columnGross = new global::System.Data.DataColumn("Gross", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGross);
+                this.columnNet = new global::System.Data.DataColumn("Net", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNet);
+                this.columnPaid = new global::System.Data.DataColumn("Paid", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaid);
+                this.columnIncome = new global::System.Data.DataColumn("Income", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIncome);
+                this.columnAgent = new global::System.Data.DataColumn("Agent", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAgent);
+                this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullName);
                 this.columnPolicyNo.MaxLength = 50;
-                this.columnEffectivity.ReadOnly = true;
-                this.columnEffectivity.MaxLength = 30;
-                this.columnExpiration_Date.ReadOnly = true;
-                this.columnExpiration_Date.MaxLength = 30;
                 this.columnAssured.MaxLength = 150;
-                this.columnCar_Make.MaxLength = 100;
                 this.columnYearModel.MaxLength = 5;
-                this.columnSerialNo.MaxLength = 50;
-                this.columnMotorNo.MaxLength = 50;
+                this.columnPlateNo.MaxLength = 50;
+                this.columnMortagee.MaxLength = 50;
+                this.columnDeductible.MaxLength = 50;
+                this.columnPaid.AllowDBNull = false;
+                this.columnIncome.ReadOnly = true;
+                this.columnAgent.AllowDBNull = false;
+                this.columnFullName.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryRow NewGetCarInsurancePolicyReportByCategoryRow() {
-                return ((GetCarInsurancePolicyReportByCategoryRow)(this.NewRow()));
+            public GetSalesAgentReportByCategoryRow NewGetSalesAgentReportByCategoryRow() {
+                return ((GetSalesAgentReportByCategoryRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GetCarInsurancePolicyReportByCategoryRow(builder);
+                return new GetSalesAgentReportByCategoryRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GetCarInsurancePolicyReportByCategoryRow);
+                return typeof(GetSalesAgentReportByCategoryRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GetCarInsurancePolicyReportByCategoryRowChanged != null)) {
-                    this.GetCarInsurancePolicyReportByCategoryRowChanged(this, new GetCarInsurancePolicyReportByCategoryRowChangeEvent(((GetCarInsurancePolicyReportByCategoryRow)(e.Row)), e.Action));
+                if ((this.GetSalesAgentReportByCategoryRowChanged != null)) {
+                    this.GetSalesAgentReportByCategoryRowChanged(this, new GetSalesAgentReportByCategoryRowChangeEvent(((GetSalesAgentReportByCategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -549,8 +604,8 @@ namespace Sparrow_Insurance_Agency {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GetCarInsurancePolicyReportByCategoryRowChanging != null)) {
-                    this.GetCarInsurancePolicyReportByCategoryRowChanging(this, new GetCarInsurancePolicyReportByCategoryRowChangeEvent(((GetCarInsurancePolicyReportByCategoryRow)(e.Row)), e.Action));
+                if ((this.GetSalesAgentReportByCategoryRowChanging != null)) {
+                    this.GetSalesAgentReportByCategoryRowChanging(this, new GetSalesAgentReportByCategoryRowChangeEvent(((GetSalesAgentReportByCategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -558,8 +613,8 @@ namespace Sparrow_Insurance_Agency {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GetCarInsurancePolicyReportByCategoryRowDeleted != null)) {
-                    this.GetCarInsurancePolicyReportByCategoryRowDeleted(this, new GetCarInsurancePolicyReportByCategoryRowChangeEvent(((GetCarInsurancePolicyReportByCategoryRow)(e.Row)), e.Action));
+                if ((this.GetSalesAgentReportByCategoryRowDeleted != null)) {
+                    this.GetSalesAgentReportByCategoryRowDeleted(this, new GetSalesAgentReportByCategoryRowChangeEvent(((GetSalesAgentReportByCategoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -567,14 +622,14 @@ namespace Sparrow_Insurance_Agency {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GetCarInsurancePolicyReportByCategoryRowDeleting != null)) {
-                    this.GetCarInsurancePolicyReportByCategoryRowDeleting(this, new GetCarInsurancePolicyReportByCategoryRowChangeEvent(((GetCarInsurancePolicyReportByCategoryRow)(e.Row)), e.Action));
+                if ((this.GetSalesAgentReportByCategoryRowDeleting != null)) {
+                    this.GetSalesAgentReportByCategoryRowDeleting(this, new GetSalesAgentReportByCategoryRowChangeEvent(((GetSalesAgentReportByCategoryRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveGetCarInsurancePolicyReportByCategoryRow(GetCarInsurancePolicyReportByCategoryRow row) {
+            public void RemoveGetSalesAgentReportByCategoryRow(GetSalesAgentReportByCategoryRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -583,7 +638,7 @@ namespace Sparrow_Insurance_Agency {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SparrowDataSet ds = new SparrowDataSet();
+                SparrowDataSet1 ds = new SparrowDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -601,7 +656,7 @@ namespace Sparrow_Insurance_Agency {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GetCarInsurancePolicyReportByCategoryDataTable";
+                attribute2.FixedValue = "GetSalesAgentReportByCategoryDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -645,32 +700,15 @@ namespace Sparrow_Insurance_Agency {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GetCarInsurancePolicyReportByCategoryRow : global::System.Data.DataRow {
+        public partial class GetSalesAgentReportByCategoryRow : global::System.Data.DataRow {
             
-            private GetCarInsurancePolicyReportByCategoryDataTable tableGetCarInsurancePolicyReportByCategory;
+            private GetSalesAgentReportByCategoryDataTable tableGetSalesAgentReportByCategory;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GetCarInsurancePolicyReportByCategoryRow(global::System.Data.DataRowBuilder rb) : 
+            internal GetSalesAgentReportByCategoryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGetCarInsurancePolicyReportByCategory = ((GetCarInsurancePolicyReportByCategoryDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PlateNo {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.PlateNoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PlateNo\' in table \'GetCarInsurancePolicyReportByCategory\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.PlateNoColumn] = value;
-                }
+                this.tableGetSalesAgentReportByCategory = ((GetSalesAgentReportByCategoryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -678,49 +716,15 @@ namespace Sparrow_Insurance_Agency {
             public string PolicyNo {
                 get {
                     try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.PolicyNoColumn]));
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.PolicyNoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PolicyNo\' in table \'GetCarInsurancePolicyReportByCategory\' " +
-                                "is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PolicyNo\' in table \'GetSalesAgentReportByCategory\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.PolicyNoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Effectivity {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.EffectivityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Effectivity\' in table \'GetCarInsurancePolicyReportByCategor" +
-                                "y\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.EffectivityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Expiration_Date {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.Expiration_DateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expiration_Date\' in table \'GetCarInsurancePolicyReportByCat" +
-                                "egory\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.Expiration_DateColumn] = value;
+                    this[this.tableGetSalesAgentReportByCategory.PolicyNoColumn] = value;
                 }
             }
             
@@ -729,32 +733,15 @@ namespace Sparrow_Insurance_Agency {
             public string Assured {
                 get {
                     try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.AssuredColumn]));
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.AssuredColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Assured\' in table \'GetCarInsurancePolicyReportByCategory\' i" +
-                                "s DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Assured\' in table \'GetSalesAgentReportByCategory\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.AssuredColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Car_Make {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.Car_MakeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Car_Make\' in table \'GetCarInsurancePolicyReportByCategory\' " +
-                                "is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.Car_MakeColumn] = value;
+                    this[this.tableGetSalesAgentReportByCategory.AssuredColumn] = value;
                 }
             }
             
@@ -763,158 +750,304 @@ namespace Sparrow_Insurance_Agency {
             public string YearModel {
                 get {
                     try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.YearModelColumn]));
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.YearModelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'YearModel\' in table \'GetCarInsurancePolicyReportByCategory\'" +
-                                " is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'YearModel\' in table \'GetSalesAgentReportByCategory\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.YearModelColumn] = value;
+                    this[this.tableGetSalesAgentReportByCategory.YearModelColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SerialNo {
+            public string PlateNo {
                 get {
                     try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.SerialNoColumn]));
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.PlateNoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SerialNo\' in table \'GetCarInsurancePolicyReportByCategory\' " +
-                                "is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PlateNo\' in table \'GetSalesAgentReportByCategory\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.SerialNoColumn] = value;
+                    this[this.tableGetSalesAgentReportByCategory.PlateNoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MotorNo {
+            public string Mortagee {
                 get {
                     try {
-                        return ((string)(this[this.tableGetCarInsurancePolicyReportByCategory.MotorNoColumn]));
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.MortageeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MotorNo\' in table \'GetCarInsurancePolicyReportByCategory\' i" +
-                                "s DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mortagee\' in table \'GetSalesAgentReportByCategory\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableGetCarInsurancePolicyReportByCategory.MotorNoColumn] = value;
+                    this[this.tableGetSalesAgentReportByCategory.MortageeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPlateNoNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.PlateNoColumn);
+            public string Deductible {
+                get {
+                    try {
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.DeductibleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Deductible\' in table \'GetSalesAgentReportByCategory\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.DeductibleColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPlateNoNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.PlateNoColumn] = global::System.Convert.DBNull;
+            public decimal TotalAnnualPremium {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetSalesAgentReportByCategory.TotalAnnualPremiumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAnnualPremium\' in table \'GetSalesAgentReportByCategory" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.TotalAnnualPremiumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Gross {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetSalesAgentReportByCategory.GrossColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gross\' in table \'GetSalesAgentReportByCategory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.GrossColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Net {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetSalesAgentReportByCategory.NetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Net\' in table \'GetSalesAgentReportByCategory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.NetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Paid {
+                get {
+                    return ((decimal)(this[this.tableGetSalesAgentReportByCategory.PaidColumn]));
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.PaidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Income {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetSalesAgentReportByCategory.IncomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Income\' in table \'GetSalesAgentReportByCategory\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.IncomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid Agent {
+                get {
+                    return ((global::System.Guid)(this[this.tableGetSalesAgentReportByCategory.AgentColumn]));
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.AgentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FullName {
+                get {
+                    try {
+                        return ((string)(this[this.tableGetSalesAgentReportByCategory.FullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FullName\' in table \'GetSalesAgentReportByCategory\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetSalesAgentReportByCategory.FullNameColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPolicyNoNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.PolicyNoColumn);
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.PolicyNoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPolicyNoNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.PolicyNoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEffectivityNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.EffectivityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEffectivityNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.EffectivityColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExpiration_DateNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.Expiration_DateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExpiration_DateNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.Expiration_DateColumn] = global::System.Convert.DBNull;
+                this[this.tableGetSalesAgentReportByCategory.PolicyNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAssuredNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.AssuredColumn);
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.AssuredColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAssuredNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.AssuredColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCar_MakeNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.Car_MakeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCar_MakeNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.Car_MakeColumn] = global::System.Convert.DBNull;
+                this[this.tableGetSalesAgentReportByCategory.AssuredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsYearModelNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.YearModelColumn);
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.YearModelColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetYearModelNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.YearModelColumn] = global::System.Convert.DBNull;
+                this[this.tableGetSalesAgentReportByCategory.YearModelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSerialNoNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.SerialNoColumn);
+            public bool IsPlateNoNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.PlateNoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSerialNoNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.SerialNoColumn] = global::System.Convert.DBNull;
+            public void SetPlateNoNull() {
+                this[this.tableGetSalesAgentReportByCategory.PlateNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMotorNoNull() {
-                return this.IsNull(this.tableGetCarInsurancePolicyReportByCategory.MotorNoColumn);
+            public bool IsMortageeNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.MortageeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMotorNoNull() {
-                this[this.tableGetCarInsurancePolicyReportByCategory.MotorNoColumn] = global::System.Convert.DBNull;
+            public void SetMortageeNull() {
+                this[this.tableGetSalesAgentReportByCategory.MortageeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDeductibleNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.DeductibleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDeductibleNull() {
+                this[this.tableGetSalesAgentReportByCategory.DeductibleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalAnnualPremiumNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.TotalAnnualPremiumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalAnnualPremiumNull() {
+                this[this.tableGetSalesAgentReportByCategory.TotalAnnualPremiumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGrossNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.GrossColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGrossNull() {
+                this[this.tableGetSalesAgentReportByCategory.GrossColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNetNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.NetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNetNull() {
+                this[this.tableGetSalesAgentReportByCategory.NetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIncomeNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.IncomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIncomeNull() {
+                this[this.tableGetSalesAgentReportByCategory.IncomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFullNameNull() {
+                return this.IsNull(this.tableGetSalesAgentReportByCategory.FullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFullNameNull() {
+                this[this.tableGetSalesAgentReportByCategory.FullNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -922,22 +1055,22 @@ namespace Sparrow_Insurance_Agency {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class GetCarInsurancePolicyReportByCategoryRowChangeEvent : global::System.EventArgs {
+        public class GetSalesAgentReportByCategoryRowChangeEvent : global::System.EventArgs {
             
-            private GetCarInsurancePolicyReportByCategoryRow eventRow;
+            private GetSalesAgentReportByCategoryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryRowChangeEvent(GetCarInsurancePolicyReportByCategoryRow row, global::System.Data.DataRowAction action) {
+            public GetSalesAgentReportByCategoryRowChangeEvent(GetSalesAgentReportByCategoryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetCarInsurancePolicyReportByCategoryRow Row {
+            public GetSalesAgentReportByCategoryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -953,7 +1086,7 @@ namespace Sparrow_Insurance_Agency {
         }
     }
 }
-namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
+namespace Sparrow_Insurance_Agency.SparrowDataSet1TableAdapters {
     
     
     /// <summary>
@@ -965,7 +1098,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GetCarInsurancePolicyReportByCategoryTableAdapter : global::System.ComponentModel.Component {
+    public partial class GetSalesAgentReportByCategoryTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -979,7 +1112,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GetCarInsurancePolicyReportByCategoryTableAdapter() {
+        public GetSalesAgentReportByCategoryTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1076,16 +1209,20 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GetCarInsurancePolicyReportByCategory";
-            tableMapping.ColumnMappings.Add("PlateNo", "PlateNo");
+            tableMapping.DataSetTable = "GetSalesAgentReportByCategory";
             tableMapping.ColumnMappings.Add("PolicyNo", "PolicyNo");
-            tableMapping.ColumnMappings.Add("Effectivity", "Effectivity");
-            tableMapping.ColumnMappings.Add("Expiration_Date", "Expiration_Date");
             tableMapping.ColumnMappings.Add("Assured", "Assured");
-            tableMapping.ColumnMappings.Add("Car_Make", "Car_Make");
             tableMapping.ColumnMappings.Add("YearModel", "YearModel");
-            tableMapping.ColumnMappings.Add("SerialNo", "SerialNo");
-            tableMapping.ColumnMappings.Add("MotorNo", "MotorNo");
+            tableMapping.ColumnMappings.Add("PlateNo", "PlateNo");
+            tableMapping.ColumnMappings.Add("Mortagee", "Mortagee");
+            tableMapping.ColumnMappings.Add("Deductible", "Deductible");
+            tableMapping.ColumnMappings.Add("TotalAnnualPremium", "TotalAnnualPremium");
+            tableMapping.ColumnMappings.Add("Gross", "Gross");
+            tableMapping.ColumnMappings.Add("Net", "Net");
+            tableMapping.ColumnMappings.Add("Paid", "Paid");
+            tableMapping.ColumnMappings.Add("Income", "Income");
+            tableMapping.ColumnMappings.Add("Agent", "Agent");
+            tableMapping.ColumnMappings.Add("FullName", "FullName");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1102,37 +1239,44 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.GetCarInsurancePolicyReportByCategory";
+            this._commandCollection[0].CommandText = "dbo.GetSalesAgentReportByCategory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SalesAgent", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Category", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Category", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SparrowDataSet.GetCarInsurancePolicyReportByCategoryDataTable dataTable, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Category) {
+        public virtual int Fill(SparrowDataSet1.GetSalesAgentReportByCategoryDataTable dataTable, global::System.Nullable<global::System.Guid> SalesAgent, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Category) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((FromDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            if ((SalesAgent.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.Guid)(SalesAgent.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ToDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FromDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Category == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ToDate.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Category));
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Category == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Category));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1145,27 +1289,33 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SparrowDataSet.GetCarInsurancePolicyReportByCategoryDataTable GetData(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Category) {
+        public virtual SparrowDataSet1.GetSalesAgentReportByCategoryDataTable GetData(global::System.Nullable<global::System.Guid> SalesAgent, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Category) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((FromDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            if ((SalesAgent.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.Guid)(SalesAgent.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ToDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FromDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Category == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ToDate.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Category));
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            SparrowDataSet.GetCarInsurancePolicyReportByCategoryDataTable dataTable = new SparrowDataSet.GetCarInsurancePolicyReportByCategoryDataTable();
+            if ((Category == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Category));
+            }
+            SparrowDataSet1.GetSalesAgentReportByCategoryDataTable dataTable = new SparrowDataSet1.GetSalesAgentReportByCategoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1239,7 +1389,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(SparrowDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SparrowDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1249,7 +1399,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(SparrowDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SparrowDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1259,7 +1409,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(SparrowDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SparrowDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1293,7 +1443,7 @@ namespace Sparrow_Insurance_Agency.SparrowDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(SparrowDataSet dataSet) {
+        public virtual int UpdateAll(SparrowDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

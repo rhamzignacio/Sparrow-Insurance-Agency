@@ -12,18 +12,23 @@ namespace Sparrow_Insurance_Agency.Car_Insurance.Report
 {
     public partial class SalesAgent : Form
     {
-        SalesAgentIncome parentForm;
-        public SalesAgent(SalesAgentIncome form)
+        TextBox agentID;
+        TextBox txtBoxAgent;
+        public SalesAgent(TextBox agentID, TextBox txtBoxAgent)
         {
             InitializeComponent();
 
             GetAgents("");
 
-            parentForm = form;
+            this.agentID = agentID;
+
+            this.txtBoxAgent = txtBoxAgent;
         }
 
         private void GetAgents(string searchKey)
         {
+            listViewAgent.Items.Clear();
+
             using (var db = new SparrowEntities())
             {
                 var agents = db.SalesAgent.OrderBy(r => r.LastName).AsQueryable();
@@ -66,8 +71,8 @@ namespace Sparrow_Insurance_Agency.Car_Insurance.Report
         {
             if (listViewAgent.SelectedItems != null)
             {
-               parentForm.agentID = Guid.Parse(listViewAgent.SelectedItems[0].SubItems[0].Text.ToString());
-               parentForm.txtBoxAgent.Text = listViewAgent.SelectedItems[0].SubItems[2].Text.ToString();
+               agentID.Text = listViewAgent.SelectedItems[0].SubItems[0].Text.ToString();
+               txtBoxAgent.Text = listViewAgent.SelectedItems[0].SubItems[2].Text.ToString();
 
                 Close();
             }

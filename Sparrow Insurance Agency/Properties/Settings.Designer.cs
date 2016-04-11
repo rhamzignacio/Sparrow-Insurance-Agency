@@ -32,5 +32,16 @@ namespace Sparrow_Insurance_Agency.Properties {
                 return ((string)(this["SparrowConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Sparrow;Persist Security Info=True;User ID=sa" +
+            ";Password=secret")]
+        public string SparrowConnectionString1 {
+            get {
+                return ((string)(this["SparrowConnectionString1"]));
+            }
+        }
     }
 }

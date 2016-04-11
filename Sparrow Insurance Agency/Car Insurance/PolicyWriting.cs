@@ -822,7 +822,7 @@ namespace Sparrow_Insurance_Agency
                             MessageBox.Show("Policy No: " + policy.PolicyNo + " successfully canceled");
 
                             lblStatus.Text = "Canceled";
-                            lblStatus.BackColor = Color.Red;
+                            lblStatus.ForeColor = Color.Red;
                         }
                         catch
                         {

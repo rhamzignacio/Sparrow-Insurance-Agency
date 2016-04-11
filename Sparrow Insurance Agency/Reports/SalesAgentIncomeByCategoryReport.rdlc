@@ -2,6 +2,99 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total Income:</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.77084in</Top>
+        <Left>6.78362in</Left>
+        <Height>0.375in</Height>
+        <Width>1.38542in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Gross.Value) - Sum(Fields!Net.Value)</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>2.77084in</Top>
+        <Left>8.23848in</Left>
+        <Height>0.25in</Height>
+        <Width>1.39583in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Agent: " &amp; Parameters!salesAgentName.Value</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.77084in</Top>
+        <Left>0.09487in</Left>
+        <Height>0.375in</Height>
+        <Width>4.71541in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
@@ -388,109 +481,16 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>EchoDataset</DataSetName>
+        <DataSetName>SalesAgentIncomeByCategory</DataSetName>
         <Height>0.5in</Height>
         <Width>8.13541in</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox18">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Total Income:</Value>
-                <Style>
-                  <FontSize>15pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.72222in</Top>
-        <Left>6.82292in</Left>
-        <Height>0.375in</Height>
-        <Width>1.38542in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox19">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!Gross.Value) - Sum(Fields!Net.Value)</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>2.72222in</Top>
-        <Left>8.27778in</Left>
-        <Height>0.25in</Height>
-        <Width>1.39583in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>="Agent: " &amp; Parameters!salesAgentName.Value</Value>
-                <Style>
-                  <FontSize>15pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.72222in</Top>
-        <Left>0.13417in</Left>
-        <Height>0.375in</Height>
-        <Width>5.01166in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>3.16667in</Height>
     <Style />
@@ -517,7 +517,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.32638in</Top>
+          <Top>1.29656in</Top>
+          <Left>0.02778in</Left>
           <Height>0.25in</Height>
           <Width>4.7825in</Width>
           <Style>
@@ -550,8 +551,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.90215in</Top>
-          <Left>3.47917in</Left>
+          <Top>0.87233in</Top>
+          <Left>3.50695in</Left>
           <Height>0.36458in</Height>
           <Width>2.48958in</Width>
           <ZIndex>1</ZIndex>
@@ -585,8 +586,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.08048in</Top>
-          <Left>2.88542in</Left>
+          <Top>0.05066in</Top>
+          <Left>2.9132in</Left>
           <Height>0.36458in</Height>
           <Width>3.95833in</Width>
           <ZIndex>2</ZIndex>
@@ -628,11 +629,41 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>0.3895in</Top>
-          <Left>3.11458in</Left>
+          <Top>0.35968in</Top>
+          <Left>3.14236in</Left>
           <Height>0.39583in</Height>
           <Width>3.35417in</Width>
           <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Category: " &amp; Parameters!category.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox10</rd:DefaultName>
+          <Top>1.27572in</Top>
+          <Left>7.96403in</Left>
+          <Height>0.25in</Height>
+          <Width>1.73736in</Width>
+          <ZIndex>4</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -651,7 +682,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.34375in</Height>
+      <Height>0.25in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -684,8 +715,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.04167in</Top>
-          <Left>7.09944in</Left>
+          <Left>7.0775in</Left>
           <Height>0.25in</Height>
           <Width>2.57417in</Width>
           <Style>
@@ -715,82 +745,89 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Sparrow_Insurance_Agency">
+    <DataSource Name="SparrowDataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>88f5e195-fa8b-4ec6-b332-1111970c3020</rd:DataSourceID>
+      <rd:DataSourceID>03561862-e5c3-4d51-8470-8d5bf2ef2363</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="EchoDataset">
+    <DataSet Name="SalesAgentIncomeByCategory">
       <Query>
-        <DataSourceName>Sparrow_Insurance_Agency</DataSourceName>
+        <DataSourceName>SparrowDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Agent">
-          <DataField>Agent</DataField>
-          <rd:TypeName>System.Guid</rd:TypeName>
+        <Field Name="PolicyNo">
+          <DataField>PolicyNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Assured">
           <DataField>Assured</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YearModel">
+          <DataField>YearModel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlateNo">
+          <DataField>PlateNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mortagee">
+          <DataField>Mortagee</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Deductible">
           <DataField>Deductible</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="FullName">
-          <DataField>FullName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="TotalAnnualPremium">
+          <DataField>TotalAnnualPremium</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Gross">
           <DataField>Gross</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="Income">
-          <DataField>Income</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="Mortagee">
-          <DataField>Mortagee</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Net">
           <DataField>Net</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Paid">
           <DataField>Paid</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="PlateNo">
-          <DataField>PlateNo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Income">
+          <DataField>Income</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="PolicyNo">
-          <DataField>PolicyNo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Agent">
+          <DataField>Agent</DataField>
+          <rd:TypeName>System.Guid</rd:TypeName>
         </Field>
-        <Field Name="TotalAnnualPremium">
-          <DataField>TotalAnnualPremium</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="YearModel">
-          <DataField>YearModel</DataField>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Sparrow_Insurance_Agency</rd:DataSetName>
-        <rd:TableName>GetSalesAgentReport_Result</rd:TableName>
-        <rd:ObjectDataSourceType>Sparrow_Insurance_Agency.GetSalesAgentReport_Result, Sparrow Insurance Agency, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>SparrowDataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\philscan\Documents\Repository\Sparrow-Insurance-Agency\Sparrow Insurance Agency\SparrowDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>GetSalesAgentReportByCategory</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>GetSalesAgentReportByCategoryTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="category">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
     <ReportParameter Name="fromDate">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -809,5 +846,5 @@
     </ReportParameter>
   </ReportParameters>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>05248a1a-aff5-4f46-8966-77d0330af31b</rd:ReportID>
+  <rd:ReportID>b030b122-5bdd-4e20-8b8d-d9f31826d8d0</rd:ReportID>
 </Report>

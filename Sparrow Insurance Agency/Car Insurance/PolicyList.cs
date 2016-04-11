@@ -67,7 +67,10 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
 
                     ListViewItem lvi = new ListViewItem(item.ID.ToString());
 
-                    lvi.SubItems.Add(item.Status);
+                    if (item.Paid >= item.TotalAnnualPremium)
+                        lvi.SubItems.Add("Paid");
+                    else
+                        lvi.SubItems.Add(item.Status);
 
                     lvi.SubItems.Add(item.PolicyNo);
 
@@ -84,6 +87,19 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
                     lvi.SubItems.Add(string.Format("{0:0.00}", item.Paid));
 
                     lvi.SubItems.Add(string.Format("{0:0.00}", item.Balance));
+
+                    if (item.Status == "New" || item.Status == "Unpaid")
+                    {                       
+                        if (item.Paid >= item.TotalAnnualPremium)
+                            lvi.BackColor = Color.PaleGreen;
+                        else
+                            lvi.BackColor = Color.Yellow;
+                    }
+                    else if (item.Status == "Paid")
+                        lvi.BackColor = Color.PaleGreen;
+                    else
+                        lvi.BackColor = Color.Tomato;
+
 
                     listViewPolicy.Items.Add(lvi);
                 });//end of foreach             

@@ -11,49 +11,42 @@ using System.Windows.Forms;
 
 namespace Sparrow_Insurance_Agency.Car_Insurance.Report
 {
-    public partial class SalesAgentIncome : Form
+    public partial class SalesAgentIncomeByCategory : Form
     {
-        public Guid agentID;
-
-        public SalesAgentIncome()
+        public SalesAgentIncomeByCategory()
         {
             InitializeComponent();
-
-        }
-
-        private void SalesAgentIncome_Load(object sender, EventArgs e)
-        {
-
-            //this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtBoxAgent.Text != "")
+            if (txtBoxAgent.Text != "" && cmbBoxCategory.Text != "")
             {
                 using (var db = new SparrowEntities())
                 {
-                    GetSalesAgentReport_ResultBindingSource.DataSource =
-                        db.GetSalesAgentReport(Guid.Parse(txtBoxAgentID.Text), datePickerFrom.Value, datePickerTo.Value).ToList();
+                    getSalesAgentReportByCategoryResultBindingSource.DataSource =
+                        db.GetSalesAgentReportByCategory(Guid.Parse(txtBoxAgentID.Text), datePickerFrom.Value, datePickerTo.Value,
+                            cmbBoxCategory.Text).ToList();
 
                     ReportParameter[] rParams = new ReportParameter[]
                     {
                         new ReportParameter("salesAgent", txtBoxAgentID.Text),
                         new ReportParameter("fromDate", datePickerFrom.Value.Date.ToShortDateString()),
                         new ReportParameter("toDate", datePickerTo.Value.Date.ToShortDateString()),
-                        new ReportParameter("salesAgentName", txtBoxAgent.Text)
+                        new ReportParameter("salesAgentName", txtBoxAgent.Text),
+                        new ReportParameter("category", cmbBoxCategory.Text)
                     };
 
-                    reportViewer1.LocalReport.SetParameters(rParams);
+                    reportViewer.LocalReport.SetParameters(rParams);
 
-                    reportViewer1.RefreshReport();
+                    reportViewer.RefreshReport();
                 }
             }
             else
-                MessageBox.Show("Please select sales agent", "Error");
+                MessageBox.Show("Please select sales agent | category", "Error");
         }
 
-        private void btnSearchAgent_Click_1(object sender, EventArgs e)
+        private void btnSearchAgent_Click(object sender, EventArgs e)
         {
             SalesAgent form = new SalesAgent(txtBoxAgentID, txtBoxAgent);
             form.ShowDialog();

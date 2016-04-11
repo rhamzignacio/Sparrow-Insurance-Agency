@@ -10,11 +10,17 @@
 namespace Sparrow_Insurance_Agency
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class MakeProfile
+    public partial class GetCarInsurancePolicyReportByCategory_Result
     {
-        public System.Guid ID { get; set; }
-        public string Name { get; set; }
+        public string PlateNo { get; set; }
+        public string PolicyNo { get; set; }
+        public string Effectivity { get; set; }
+        public string Expiration_Date { get; set; }
+        public string Assured { get; set; }
+        public string Car_Make { get; set; }
+        public string YearModel { get; set; }
+        public string SerialNo { get; set; }
+        public string MotorNo { get; set; }
     }
 }

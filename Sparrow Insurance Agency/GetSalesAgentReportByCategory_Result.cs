@@ -11,7 +11,7 @@ namespace Sparrow_Insurance_Agency
 {
     using System;
     
-    public partial class GetIncomeReport_Result
+    public partial class GetSalesAgentReportByCategory_Result
     {
         public string PolicyNo { get; set; }
         public string Assured { get; set; }
@@ -24,5 +24,7 @@ namespace Sparrow_Insurance_Agency
         public Nullable<decimal> Net { get; set; }
         public decimal Paid { get; set; }
         public Nullable<decimal> Income { get; set; }
+        public System.Guid Agent { get; set; }
+        public string FullName { get; set; }
     }
 }

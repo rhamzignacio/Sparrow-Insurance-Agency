@@ -49,7 +49,7 @@
             // 
             // GetInsurancePaymentReport_ResultBindingSource
             // 
-            this.GetInsurancePaymentReport_ResultBindingSource.DataSource = typeof(Sparrow_Insurance_Agency.GetInsurancePaymentReport_Result);
+          
             // 
             // InsurancePaymentSummary
             // 

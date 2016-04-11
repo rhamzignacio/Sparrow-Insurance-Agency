@@ -113,7 +113,6 @@
             // 
             // GetIncomeReport_ResultBindingSource
             // 
-            this.GetIncomeReport_ResultBindingSource.DataSource = typeof(Sparrow_Insurance_Agency.GetIncomeReport_Result);
             // 
             // btnLoad
             // 

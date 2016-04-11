@@ -47,13 +47,19 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTotalIncome = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.groupBox1);
             this.panelTop.Controls.Add(this.btnRefresh);
             this.panelTop.Controls.Add(this.btnOpen);
             this.panelTop.Controls.Add(this.btnSearch);
@@ -222,6 +228,51 @@
             this.lblTotalIncome.TabIndex = 0;
             this.lblTotalIncome.Text = "Total Income: 100,000.00";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(240, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(303, 39);
+            this.groupBox1.TabIndex = 71;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Legend";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Tomato;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(6, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(90, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Cancelled";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Yellow;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(102, 13);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "Unpaid";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.PaleGreen;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(198, 13);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(90, 20);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.Text = "Paid";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // PolicyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +287,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +314,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTotalIncome;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

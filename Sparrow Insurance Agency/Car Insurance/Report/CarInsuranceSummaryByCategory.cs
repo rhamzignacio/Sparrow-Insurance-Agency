@@ -11,39 +11,38 @@ using System.Windows.Forms;
 
 namespace Sparrow_Insurance_Agency.Car_Insurance.Report
 {
-    public partial class CarInsuranceSummary : Form
+    public partial class CarInsuranceSummaryByCategory : Form
     {
-        public CarInsuranceSummary()
+        public CarInsuranceSummaryByCategory()
         {
-            InitializeComponent();        
+            InitializeComponent();
         }
 
-        private void Total_Income_Load(object sender, EventArgs e)
+        private void CarInsuranceSummaryByCategory_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            using(var db = new SparrowEntities())
+            using (var db = new SparrowEntities())
             {
-                    getCarInsurancePolicyReportBindingSource.DataSource =
-                        db.GetCarInsurancePolicyReport(dateTimePicker1.Value, dateTimePicker2.Value).ToList();
+                
+                getCarInsurancePolicyReportByCategoryResultBindingSource.DataSource =
+                    db.GetCarInsurancePolicyReportByCategory(dateTimePicker1.Value, dateTimePicker2.Value,
+                        cmbBoxCategory.Text).ToList();
 
                 ReportParameter[] rParams = new ReportParameter[]
                 {
                     new ReportParameter("fromDate",dateTimePicker1.Value.Date.ToShortDateString()),
                     new ReportParameter("toDate", dateTimePicker2.Value.Date.ToShortDateString()),
+                    new ReportParameter("category", cmbBoxCategory.Text)
                 };
 
                 reportViewer.LocalReport.SetParameters(rParams);
 
                 reportViewer.RefreshReport();
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
