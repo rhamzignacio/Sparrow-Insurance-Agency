@@ -66,6 +66,7 @@
             // 
             // cmbBoxBank
             // 
+            this.cmbBoxBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxBank.FormattingEnabled = true;
             this.cmbBoxBank.Location = new System.Drawing.Point(96, 4);
@@ -89,7 +90,7 @@
             this.btnOkay.FlatAppearance.BorderSize = 0;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOkay.Location = new System.Drawing.Point(12, 143);
+            this.btnOkay.Location = new System.Drawing.Point(12, 132);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(91, 29);
             this.btnOkay.TabIndex = 6;
@@ -103,7 +104,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(579, 143);
+            this.btnCancel.Location = new System.Drawing.Point(579, 132);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 29);
             this.btnCancel.TabIndex = 7;
@@ -114,7 +115,7 @@
             // txtBoxCheckNo
             // 
             this.txtBoxCheckNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCheckNo.Location = new System.Drawing.Point(96, 38);
+            this.txtBoxCheckNo.Location = new System.Drawing.Point(96, 32);
             this.txtBoxCheckNo.MaxLength = 50;
             this.txtBoxCheckNo.Name = "txtBoxCheckNo";
             this.txtBoxCheckNo.Size = new System.Drawing.Size(261, 26);
@@ -124,7 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 41);
+            this.label4.Location = new System.Drawing.Point(12, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 9;
@@ -134,7 +135,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 104);
+            this.label5.Location = new System.Drawing.Point(17, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 10;
@@ -143,7 +144,7 @@
             // txtBoxRemarks
             // 
             this.txtBoxRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxRemarks.Location = new System.Drawing.Point(96, 101);
+            this.txtBoxRemarks.Location = new System.Drawing.Point(96, 84);
             this.txtBoxRemarks.MaxLength = 200;
             this.txtBoxRemarks.Name = "txtBoxRemarks";
             this.txtBoxRemarks.Size = new System.Drawing.Size(574, 26);
@@ -153,7 +154,7 @@
             // 
             this.checkDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.checkDatePicker.Location = new System.Drawing.Point(475, 37);
+            this.checkDatePicker.Location = new System.Drawing.Point(475, 31);
             this.checkDatePicker.Name = "checkDatePicker";
             this.checkDatePicker.Size = new System.Drawing.Size(195, 26);
             this.checkDatePicker.TabIndex = 12;
@@ -162,7 +163,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(376, 42);
+            this.label1.Location = new System.Drawing.Point(376, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 13;
@@ -172,7 +173,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(39, 73);
+            this.label6.Location = new System.Drawing.Point(39, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 14;
@@ -181,7 +182,7 @@
             // txtBoxCheckName
             // 
             this.txtBoxCheckName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCheckName.Location = new System.Drawing.Point(96, 70);
+            this.txtBoxCheckName.Location = new System.Drawing.Point(96, 58);
             this.txtBoxCheckName.MaxLength = 150;
             this.txtBoxCheckName.Name = "txtBoxCheckName";
             this.txtBoxCheckName.Size = new System.Drawing.Size(574, 26);
@@ -191,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 183);
+            this.ClientSize = new System.Drawing.Size(687, 172);
             this.Controls.Add(this.txtBoxCheckName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);

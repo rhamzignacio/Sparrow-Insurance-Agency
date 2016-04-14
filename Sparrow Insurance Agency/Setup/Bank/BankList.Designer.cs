@@ -82,9 +82,9 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(78, 12);
+            this.txtSearch.Location = new System.Drawing.Point(76, 12);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(357, 26);
+            this.txtSearch.Size = new System.Drawing.Size(366, 26);
             this.txtSearch.TabIndex = 7;
             // 
             // label1

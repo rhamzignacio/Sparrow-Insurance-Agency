@@ -67,7 +67,7 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
 
                     ListViewItem lvi = new ListViewItem(item.ID.ToString());
 
-                    if (item.Paid >= item.TotalAnnualPremium)
+                    if (item.Paid >= item.TotalAnnualPremium && item.Status == "New")
                         lvi.SubItems.Add("Paid");
                     else
                         lvi.SubItems.Add(item.Status);

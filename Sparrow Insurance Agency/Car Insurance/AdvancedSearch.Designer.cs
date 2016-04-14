@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 75);
+            this.label1.Location = new System.Drawing.Point(15, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 107);
+            this.label2.Location = new System.Drawing.Point(17, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 139);
+            this.label4.Location = new System.Drawing.Point(18, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 3;
@@ -102,7 +102,7 @@
             // txtBoxMotorNo
             // 
             this.txtBoxMotorNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMotorNo.Location = new System.Drawing.Point(104, 72);
+            this.txtBoxMotorNo.Location = new System.Drawing.Point(104, 60);
             this.txtBoxMotorNo.Name = "txtBoxMotorNo";
             this.txtBoxMotorNo.Size = new System.Drawing.Size(280, 26);
             this.txtBoxMotorNo.TabIndex = 5;
@@ -110,7 +110,7 @@
             // txtBoxPlateNo
             // 
             this.txtBoxPlateNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPlateNo.Location = new System.Drawing.Point(104, 104);
+            this.txtBoxPlateNo.Location = new System.Drawing.Point(104, 86);
             this.txtBoxPlateNo.Name = "txtBoxPlateNo";
             this.txtBoxPlateNo.Size = new System.Drawing.Size(280, 26);
             this.txtBoxPlateNo.TabIndex = 6;
@@ -118,7 +118,7 @@
             // txtBoxAssured
             // 
             this.txtBoxAssured.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxAssured.Location = new System.Drawing.Point(104, 136);
+            this.txtBoxAssured.Location = new System.Drawing.Point(104, 112);
             this.txtBoxAssured.Name = "txtBoxAssured";
             this.txtBoxAssured.Size = new System.Drawing.Size(280, 26);
             this.txtBoxAssured.TabIndex = 7;
@@ -128,7 +128,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.PaleGreen;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(15, 215);
+            this.btnSearch.Location = new System.Drawing.Point(16, 184);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 8;
@@ -141,7 +141,7 @@
             this.btnClear.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(309, 215);
+            this.btnClear.Location = new System.Drawing.Point(309, 184);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 9;
@@ -152,7 +152,7 @@
             // txtBoxPolicyNo
             // 
             this.txtBoxPolicyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPolicyNo.Location = new System.Drawing.Point(105, 40);
+            this.txtBoxPolicyNo.Location = new System.Drawing.Point(104, 34);
             this.txtBoxPolicyNo.Name = "txtBoxPolicyNo";
             this.txtBoxPolicyNo.Size = new System.Drawing.Size(280, 26);
             this.txtBoxPolicyNo.TabIndex = 10;
@@ -161,7 +161,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 43);
+            this.label5.Location = new System.Drawing.Point(18, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 11;
@@ -170,7 +170,7 @@
             // txtBoxSerialNo
             // 
             this.txtBoxSerialNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxSerialNo.Location = new System.Drawing.Point(104, 168);
+            this.txtBoxSerialNo.Location = new System.Drawing.Point(104, 139);
             this.txtBoxSerialNo.Name = "txtBoxSerialNo";
             this.txtBoxSerialNo.Size = new System.Drawing.Size(280, 26);
             this.txtBoxSerialNo.TabIndex = 12;
@@ -179,7 +179,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 171);
+            this.label6.Location = new System.Drawing.Point(17, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 20);
             this.label6.TabIndex = 13;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 250);
+            this.ClientSize = new System.Drawing.Size(408, 219);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxSerialNo);
             this.Controls.Add(this.label5);

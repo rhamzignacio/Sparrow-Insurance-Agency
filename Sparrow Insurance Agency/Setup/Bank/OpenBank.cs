@@ -19,7 +19,18 @@ namespace Sparrow_Insurance_Agency.Setup.Bank
             InitializeComponent();
 
             this.bankID = bankID;
+
+            if(bankID != Guid.Empty)
+            {
+                using (var db = new SparrowEntities())
+                {
+                    var bank = db.BankProfile.FirstOrDefault(r => r.ID == bankID);
+
+                    txtBoxName.Text = bank.Name;
+                }
+            }
         }
+
 
        private void SaveUpdateBank()
         {

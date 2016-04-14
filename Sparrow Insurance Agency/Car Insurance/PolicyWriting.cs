@@ -97,6 +97,7 @@ namespace Sparrow_Insurance_Agency
 
                 if (policy.Payment_Method == "CASH")
                 {
+                    radioButtonCash.Checked = true;
                     CreatePaymentColumn("CASH");
                     payments.ToList().ForEach(item =>
                     {
@@ -109,6 +110,7 @@ namespace Sparrow_Insurance_Agency
                 }
                 else
                 {
+                    radioButtonCheck.Checked = true;
                     CreatePaymentColumn("CHECK");
                     payments.ToList().ForEach(item =>
                     {
@@ -119,6 +121,7 @@ namespace Sparrow_Insurance_Agency
                         lvi.SubItems.Add(item.Check_Name);
                         lvi.SubItems.Add(string.Format("{0:0.00}", item.Amount));
                         lvi.SubItems.Add(item.Remarks);
+                        lvi.SubItems.Add(item.BankID.ToString());
 
                         listViewPayment.Items.Add(lvi);
                     });
@@ -150,6 +153,7 @@ namespace Sparrow_Insurance_Agency
                 txtBoxUnit.Text = policy.Unit;
                 txtBoxYearModel.Text = policy.YearModel;
                 txtBoxColor.Text = policy.Color;
+                rchTxtBoxAddress.Text = policy.Address;
 
                 //ComboBox
                 cmbBoxCategory.Text = policy.Category;
@@ -663,7 +667,9 @@ namespace Sparrow_Insurance_Agency
                                         Check_Name = anItem.SubItems[3].Text,
                                         Check_No = anItem.SubItems[2].Text,
                                         Amount = decimal.Parse(anItem.SubItems[4].Text),
-                                        Remarks = anItem.SubItems[5].Text
+                                        Remarks = anItem.SubItems[5].Text,
+                                        CarInsurancePolicyID = policyID,
+                                        Method = method
                                     };
 
                                     totalPaid += checkPayment.Amount;
@@ -1224,6 +1230,9 @@ namespace Sparrow_Insurance_Agency
             }
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
+        }
     }
 }
