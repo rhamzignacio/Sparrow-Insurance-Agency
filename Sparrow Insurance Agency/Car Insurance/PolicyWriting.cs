@@ -56,7 +56,12 @@ namespace Sparrow_Insurance_Agency
                 datePickerExpiryDate.Value = datePickerEffectivity.Value.AddYears(1);
 
                 txtBoxPolicyNo.Focus();
-            }                   
+            }     
+            
+            if(lblStatus.Text == "Void" || lblStatus.Text == "Canceled")
+            {
+                this.Enabled = false;
+            }              
         }
 
         private void GetMortageeDropDown()
@@ -99,6 +104,9 @@ namespace Sparrow_Insurance_Agency
                 {
                     radioButtonCash.Checked = true;
                     CreatePaymentColumn("CASH");
+
+                    payments = payments.OrderBy(r => r.Date); //arrange Ascending base on Created Date
+
                     payments.ToList().ForEach(item =>
                     {
                         ListViewItem lvi = new ListViewItem(item.Date.ToShortDateString());
@@ -111,7 +119,11 @@ namespace Sparrow_Insurance_Agency
                 else
                 {
                     radioButtonCheck.Checked = true;
+
                     CreatePaymentColumn("CHECK");
+
+                    payments = payments.OrderBy(r => r.Check_Date); //arrange ascending base on Check Date
+
                     payments.ToList().ForEach(item =>
                     {
                         var bank = db.BankProfile.FirstOrDefault(r => r.ID == item.BankID);
@@ -155,6 +167,10 @@ namespace Sparrow_Insurance_Agency
                 txtBoxColor.Text = policy.Color;
                 rchTxtBoxAddress.Text = policy.Address;
 
+                datePickerEffectivity.Value = DateTime.Parse(policy.Effectivity.ToString());
+                datePickerExpiryDate.Value = DateTime.Parse(policy.Expiration_Date.ToString());
+                datePickerWritingDate.Value = DateTime.Parse(policy.CreateDate.ToString());
+
                 //ComboBox
                 cmbBoxCategory.Text = policy.Category;
                 cmbBoxClass.Text = policy.Car_Class;
@@ -170,8 +186,7 @@ namespace Sparrow_Insurance_Agency
 
                 lblStatus.Text = policy.Status;
 
-                //Amounts
-                
+                //Amounts               
                 txtBoxPCPTL.Text = string.Format("{0:0.00}", policy.P_CTPL);
                 txtBoxPExcessBodilyInjury.Text = string.Format("{0:0.00}", policy.P_ExcessBodilyInjury);
                 txtBoxPLossAndDamage.Text = string.Format("{0:0.00}", policy.P_LossAndDamage);
@@ -182,6 +197,7 @@ namespace Sparrow_Insurance_Agency
                 txtBoxGross.Text = string.Format("{0:0.00}", policy.Gross);
                 txtBoxNet.Text = string.Format("{0:0.00}", policy.Net);
                 lblPayable.Text = txtBoxGross.Text;
+                lblPaid.Text = string.Format("{0:0.00}",policy.Paid);
                 ComputeGrossAndNet();
             }
         }
@@ -270,7 +286,8 @@ namespace Sparrow_Insurance_Agency
                             Date = DateTime.Parse(anItem.SubItems[0].Text),
                             Amount = decimal.Parse(anItem.SubItems[1].Text),
                             CarInsurancePolicyID = _policyID,
-                            Method = method
+                            Method = method,
+                            Remarks = anItem.SubItems[2].Text
                         };
 
                         db.Entry(payment).State = EntityState.Added;
@@ -299,6 +316,50 @@ namespace Sparrow_Insurance_Agency
             }
         }
 
+        private bool IfPlateNoExist()
+        {
+            using (var db = new SparrowEntities())
+            {
+                var policy = db.CarInsurancePolicy.FirstOrDefault(r => r.PlateNo.ToLower() 
+                    == txtBoxPlateNo.Text.ToLower() && r.ID != policyID);
+
+                if(policy != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        private bool IfSerialNoExist()
+        {
+            using (var db = new SparrowEntities())
+            {
+                var policy = db.CarInsurancePolicy.FirstOrDefault(r => r.SerialNo.ToLower() == txtBoxSerialNo.Text.ToLower()
+                    && r.ID != policyID);
+
+                if(policy != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        private bool IfMotorNoExist()
+        {
+            using (var db = new SparrowEntities())
+            {
+                var policy = db.CarInsurancePolicy.FirstOrDefault(r => r.MotorNo.ToLower() == 
+                    txtBoxMotorNo.Text.ToLower() && r.ID != policyID);
+
+                if(policy != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         #region FunctionsPolicy
         //Functions
 
@@ -333,23 +394,27 @@ namespace Sparrow_Insurance_Agency
             if (txtBoxGross.Text == "")
                 errorMessage += "Gross is required \n";
 
-            if (decimal.Parse(txtBoxNet.Text) < decimal.Parse(txtBoxTotalAnnualPremium.Text))
-                errorMessage += "Actual Total must be greater than or equal to Total Annual Premium \n";
+            if (cmbBoxCategory.Text == "")
+                errorMessage += "Category is required \n";
 
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to save ?", "", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
+            if (txtBoxNet.Text != "" && txtBoxTotalAnnualPremium.Text != "")
             {
-                using (var db = new SparrowEntities())
+                if (decimal.Parse(txtBoxNet.Text) < decimal.Parse(txtBoxTotalAnnualPremium.Text))
+                    errorMessage += "Actual Total must be greater than or equal to Total Annual Premium \n";
+            }
+
+
+            if (errorMessage != "")
+            {
+                MessageBox.Show(errorMessage, "Error on Saving");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to save ?", "", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (errorMessage != "")
-                    {
-                        MessageBox.Show(errorMessage, "Error on Saving");
-                    }
-                    else
-                    {
-                        SavePolicy(); //Save Car insurance Policy
-                    }
+                    SavePolicy(); //Save Car insurance Policy
                 }
             }
         }
@@ -360,345 +425,370 @@ namespace Sparrow_Insurance_Agency
 
             if (!IfPolicyNoExist())
             {
-                if (policyID == Guid.Empty) //New Policy Writing
-                {
-                    CarInsurancePolicy policy = new CarInsurancePolicy();
-
-                    policy.ID = policyID = Guid.NewGuid(); //Creates new Unique Identifier ID
-                    policy.Status = lblStatus.Text;
-                    policy.Assured = txtBoxAssured.Text;
-                    policy.Address = rchTxtBoxAddress.Text;
-                    policy.Mortagee = txtBoxMortage.Text;
-                    policy.Effectivity = datePickerEffectivity.Value;
-                    policy.Expiration_Date = datePickerExpiryDate.Value;
-                    policy.Deductible = txtBoxDeductible.Text;
-                    policy.YearModel = txtBoxYearModel.Text;
-                    policy.Unit = txtBoxUnit.Text;
-                    policy.SerialNo = txtBoxSerialNo.Text;
-                    policy.MotorNo = txtBoxMotorNo.Text;
-                    policy.PlateNo = txtBoxPlateNo.Text;
-                    policy.Others = rchTextBoxOthers.Text;
-                    policy.PolicyNo = txtBoxPolicyNo.Text;
-                    policy.Agent = AgentID;
-                    policy.Car_Class = cmbBoxClass.Text;
-                    policy.Category = cmbBoxCategory.Text;
-                    policy.Car_Make = cmbBoxMake.Text;
-                    policy.Color = txtBoxColor.Text;
-                    policy.CreateDate = datePickerWritingDate.Value;
-
-                    if (radioButtonCash.Checked)
-                        policy.Payment_Method = "CASH";
-                    else
-                        policy.Payment_Method = "CHECK";
-
-                    //Amounts
-                    policy.Paid = 0;
-
-                    if (txtBoxTotalAnnualPremium.Text != "")
-                        policy.TotalAnnualPremium = decimal.Parse(txtBoxTotalAnnualPremium.Text);
-                    else
-                        policy.TotalAnnualPremium = 0;
-
-                    if (txtBoxNet.Text != "")
-                        policy.Amount = policy.Balance = decimal.Parse(txtBoxNet.Text);
-                    else
-                        policy.Amount = policy.Balance = 0;
-
-                    if (txtBoxPLossAndDamage.Text != "")
-                        policy.P_LossAndDamage = decimal.Parse(txtBoxPLossAndDamage.Text);
-                    else
-                        policy.P_LossAndDamage = 0;
-
-                    if (txtBoxPCPTL.Text != "")
-                        policy.P_CTPL = decimal.Parse(txtBoxPCPTL.Text);
-                    else
-                        policy.P_CTPL = 0;
-
-                    if (txtBoxPExcessBodilyInjury.Text != "")
-                        policy.P_ExcessBodilyInjury = decimal.Parse(txtBoxPExcessBodilyInjury.Text);
-                    else
-                        policy.P_ExcessBodilyInjury = 0;
-
-                    if (txtBoxPVolPropertyDamage.Text != "")
-                        policy.P_VolPropertyDamage = decimal.Parse(txtBoxPVolPropertyDamage.Text);
-                    else
-                        policy.P_VolPropertyDamage = 0;
-
-                    if (txtBoxPPersonalAccident.Text != "")
-                        policy.P_PersonalAccident = decimal.Parse(txtBoxPPersonalAccident.Text);
-                    else
-                        policy.P_PersonalAccident = 0;
-
-                    if (txtBoxGross.Text != "")
-                        policy.Gross = decimal.Parse(txtBoxGross.Text);
-                    else
-                        policy.Gross = 0;
-
-                    if (txtBoxNet.Text != "")
-                        policy.Net = decimal.Parse(txtBoxNet.Text);
-                    else
-                        policy.Net = 0;
-
-                    //Checkboxes
-                    if (checkBoxAircon.Checked)
-                        policy.Aircon = "Y";
-                    else
-                        policy.Aircon = "N";
-
-                    if (checkBoxSterioSpeakers.Checked)
-                        policy.SterioSpeakers = "Y";
-                    else
-                        policy.SterioSpeakers = "N";
-
-                    if (checkBoxMagwheels.Checked)
-                        policy.Magwheels = "Y";
-                    else
-                        policy.Magwheels = "N";
-
-                    policy.CreateBy = currentUser;
-
-                    try
-                    {
-                        decimal totalPaid = 0;
-
-                        //Save Payments
-                        foreach (ListViewItem anItem in listViewPayment.Items)
-                        {                         
-                            string method = "";
-
-                            if (radioButtonCash.Checked)
-                                method = "CASH";
-                            else
-                                method = "CHECKED";
-
-                            if (method == "CASH")
+                //if (!IfSerialNoExist())
+                //{
+                //    if (!IfMotorNoExist())
+                //    {
+                //        if (!IfPlateNoExist())
+                //        {
+                            if (policyID == Guid.Empty) //New Policy Writing
                             {
-                                CarInsurrancePayment cashPayment = new CarInsurrancePayment
-                                {
-                                    ID = Guid.NewGuid(),
-                                    Date = DateTime.Now,
-                                    Amount = decimal.Parse(anItem.SubItems[1].Text),
-                                    CarInsurancePolicyID = policyID,
-                                    Method = method
-                                };
+                                CarInsurancePolicy policy = new CarInsurancePolicy();
 
-                                totalPaid += cashPayment.Amount;
+                                policy.ID = policyID = Guid.NewGuid(); //Creates new Unique Identifier ID
+                                policy.Status = lblStatus.Text;
+                                policy.Assured = txtBoxAssured.Text;
+                                policy.Address = rchTxtBoxAddress.Text;
+                                policy.Mortagee = txtBoxMortage.Text;
+                                policy.Effectivity = datePickerEffectivity.Value;
+                                policy.Expiration_Date = datePickerExpiryDate.Value;
+                                policy.Deductible = txtBoxDeductible.Text;
+                                policy.YearModel = txtBoxYearModel.Text;
+                                policy.Unit = txtBoxUnit.Text;
+                                policy.SerialNo = txtBoxSerialNo.Text;
+                                policy.MotorNo = txtBoxMotorNo.Text;
+                                policy.PlateNo = txtBoxPlateNo.Text;
+                                policy.Others = rchTextBoxOthers.Text;
+                                policy.PolicyNo = txtBoxPolicyNo.Text;
+                                policy.Agent = AgentID;
+                                policy.Car_Class = cmbBoxClass.Text;
+                                policy.Category = cmbBoxCategory.Text;
+                                policy.Car_Make = cmbBoxMake.Text;
+                                policy.Color = txtBoxColor.Text;
+                                policy.CreateDate = datePickerWritingDate.Value;
 
-                                db.Entry(cashPayment).State = EntityState.Added;
-                            }
-                            else //Check Payment
-                            {
-                                CarInsurrancePayment checkPayment = new CarInsurrancePayment
-                                {
-                                    ID = Guid.NewGuid(),
-                                    Date = DateTime.Now,
-                                    Check_Date = DateTime.Parse(anItem.SubItems[0].Text),
-                                    BankID = Guid.Parse(anItem.SubItems[6].Text),
-                                    Check_Name = anItem.SubItems[3].Text,
-                                    Check_No = anItem.SubItems[2].Text,
-                                    Amount = decimal.Parse(anItem.SubItems[4].Text),
-                                    Remarks = anItem.SubItems[5].Text,
-                                    CarInsurancePolicyID = policyID,
-                                    Method = method
-                                };
-
-                                totalPaid += checkPayment.Amount;
-
-                                db.Entry(checkPayment).State = EntityState.Added;
-                            }
-                        }//end of foreach
-
-                        //update paid
-                        policy.Paid = totalPaid;
-
-                        db.Entry(policy).State = EntityState.Added;
-
-                        db.SaveChanges();
-
-                        MessageBox.Show("Saved Successfully");
-
-                        EnableDisableButton(true);
-
-                        history.Save("Added New Policy No: " + policy.PolicyNo, currentUser);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Error on saving", "Error");
-                    }
-                }
-                else //Update Policy Writing
-                {
-                    var existingPolicy = db.CarInsurancePolicy.FirstOrDefault(r => r.ID == policyID);
-
-                    if (existingPolicy != null)
-                    {
-                        existingPolicy.Status = lblStatus.Text;
-                        existingPolicy.Assured = txtBoxAssured.Text;
-                        existingPolicy.Address = rchTxtBoxAddress.Text;
-                        existingPolicy.Mortagee = txtBoxMortage.Text;
-                        existingPolicy.Effectivity = datePickerEffectivity.Value;
-                        existingPolicy.Expiration_Date = datePickerExpiryDate.Value;
-                        existingPolicy.Deductible = txtBoxDeductible.Text;
-                        existingPolicy.YearModel = txtBoxYearModel.Text;
-                        existingPolicy.Unit = txtBoxUnit.Text;
-                        existingPolicy.SerialNo = txtBoxSerialNo.Text;
-                        existingPolicy.MotorNo = txtBoxMotorNo.Text;
-                        existingPolicy.PlateNo = txtBoxPlateNo.Text;
-                        existingPolicy.Others = rchTextBoxOthers.Text;
-                        existingPolicy.Agent = AgentID;                  
-                        existingPolicy.CreateDate = datePickerWritingDate.Value;
-                        existingPolicy.PolicyNo = txtBoxPolicyNo.Text;
-                        existingPolicy.Car_Class = cmbBoxClass.Text;
-                        existingPolicy.Category = cmbBoxCategory.Text;
-                        existingPolicy.Car_Make = cmbBoxMake.Text;
-                        existingPolicy.Color = txtBoxColor.Text;
-
-                        if (radioButtonCash.Checked)
-                            existingPolicy.Payment_Method = "CASH";
-                        else
-                            existingPolicy.Payment_Method = "CHECK";
-
-                        //Amounts
-                        if (txtBoxTotalAnnualPremium.Text != "")
-                            existingPolicy.TotalAnnualPremium = decimal.Parse(txtBoxTotalAnnualPremium.Text);
-                        else
-                            existingPolicy.TotalAnnualPremium = 0;
-
-                        if (txtBoxNet.Text != "")
-                            existingPolicy.Amount = decimal.Parse(txtBoxNet.Text);
-                        else
-                            existingPolicy.Amount = 0;
-
-                        if (txtBoxPLossAndDamage.Text != "")
-                            existingPolicy.P_LossAndDamage = decimal.Parse(txtBoxPLossAndDamage.Text);
-                        else
-                            existingPolicy.P_LossAndDamage = 0;
-
-                        if (txtBoxPCPTL.Text != "")
-                            existingPolicy.P_CTPL = decimal.Parse(txtBoxPCPTL.Text);
-                        else
-                            existingPolicy.P_CTPL = 0;
-
-                        if (txtBoxPExcessBodilyInjury.Text != "")
-                            existingPolicy.P_ExcessBodilyInjury = decimal.Parse(txtBoxPExcessBodilyInjury.Text);
-                        else
-                            existingPolicy.P_ExcessBodilyInjury = 0;
-
-                        if (txtBoxPVolPropertyDamage.Text != "")
-                            existingPolicy.P_VolPropertyDamage = decimal.Parse(txtBoxPVolPropertyDamage.Text);
-                        else
-                            existingPolicy.P_VolPropertyDamage = 0;
-
-                        if (txtBoxPPersonalAccident.Text != "")
-                            existingPolicy.P_PersonalAccident = decimal.Parse(txtBoxPPersonalAccident.Text);
-                        else
-                            existingPolicy.P_PersonalAccident = 0;
-
-                        if (txtBoxGross.Text != "")
-                            existingPolicy.Gross = decimal.Parse(txtBoxGross.Text);
-                        else
-                            existingPolicy.Gross = 0;
-
-                        if (txtBoxNet.Text != "")
-                            existingPolicy.Net = decimal.Parse(txtBoxNet.Text);
-                        else
-                            existingPolicy.Net = 0;
-
-                        //Checkboxes
-                        if (checkBoxAircon.Checked)
-                            existingPolicy.Aircon = "Y";
-                        else
-                            existingPolicy.Aircon = "N";
-
-                        if (checkBoxSterioSpeakers.Checked)
-                            existingPolicy.SterioSpeakers = "Y";
-                        else
-                            existingPolicy.SterioSpeakers = "N";
-
-                        if (checkBoxMagwheels.Checked)
-                            existingPolicy.Magwheels = "Y";
-                        else
-                            existingPolicy.Magwheels = "N";
-
-                        try
-                        {                           
-                            //Save Payments
-                            //Delate previous payment first
-                            var payments = db.CarInsurrancePayment.Where(r => r.CarInsurancePolicyID == policyID);
-
-                            payments.ToList().ForEach(item =>
-                            {
-                                db.Entry(item).State = EntityState.Deleted;
-                            });
-
-                            decimal totalPaid = 0;
-
-                            foreach (ListViewItem anItem in listViewPayment.Items)
-                            {
-                                string method = "";
                                 if (radioButtonCash.Checked)
-                                    method = "CASH";
+                                    policy.Payment_Method = "CASH";
                                 else
-                                    method = "CHECKED";
+                                    policy.Payment_Method = "CHECK";
 
-                                if (method == "CASH")
+                                //Amounts
+                                policy.Paid = 0;
+
+                                if (txtBoxTotalAnnualPremium.Text != "")
+                                    policy.TotalAnnualPremium = decimal.Parse(txtBoxTotalAnnualPremium.Text);
+                                else
+                                    policy.TotalAnnualPremium = 0;
+
+                                if (txtBoxNet.Text != "")
+                                    policy.Amount = policy.Balance = decimal.Parse(txtBoxNet.Text);
+                                else
+                                    policy.Amount = policy.Balance = 0;
+
+                                if (txtBoxPLossAndDamage.Text != "")
+                                    policy.P_LossAndDamage = decimal.Parse(txtBoxPLossAndDamage.Text);
+                                else
+                                    policy.P_LossAndDamage = 0;
+
+                                if (txtBoxPCPTL.Text != "")
+                                    policy.P_CTPL = decimal.Parse(txtBoxPCPTL.Text);
+                                else
+                                    policy.P_CTPL = 0;
+
+                                if (txtBoxPExcessBodilyInjury.Text != "")
+                                    policy.P_ExcessBodilyInjury = decimal.Parse(txtBoxPExcessBodilyInjury.Text);
+                                else
+                                    policy.P_ExcessBodilyInjury = 0;
+
+                                if (txtBoxPVolPropertyDamage.Text != "")
+                                    policy.P_VolPropertyDamage = decimal.Parse(txtBoxPVolPropertyDamage.Text);
+                                else
+                                    policy.P_VolPropertyDamage = 0;
+
+                                if (txtBoxPPersonalAccident.Text != "")
+                                    policy.P_PersonalAccident = decimal.Parse(txtBoxPPersonalAccident.Text);
+                                else
+                                    policy.P_PersonalAccident = 0;
+
+                                if (txtBoxGross.Text != "")
+                                    policy.Gross = decimal.Parse(txtBoxGross.Text);
+                                else
+                                    policy.Gross = 0;
+
+                                if (txtBoxNet.Text != "")
+                                    policy.Net = decimal.Parse(txtBoxNet.Text);
+                                else
+                                    policy.Net = 0;
+
+                                //Checkboxes
+                                if (checkBoxAircon.Checked)
+                                    policy.Aircon = "Y";
+                                else
+                                    policy.Aircon = "N";
+
+                                if (checkBoxSterioSpeakers.Checked)
+                                    policy.SterioSpeakers = "Y";
+                                else
+                                    policy.SterioSpeakers = "N";
+
+                                if (checkBoxMagwheels.Checked)
+                                    policy.Magwheels = "Y";
+                                else
+                                    policy.Magwheels = "N";
+
+                                policy.CreateBy = currentUser;
+
+                                try
                                 {
-                                    CarInsurrancePayment cashPayment = new CarInsurrancePayment
+                                    decimal totalPaid = 0;
+
+                                    //Save Payments
+                                    foreach (ListViewItem anItem in listViewPayment.Items)
                                     {
-                                        ID = Guid.NewGuid(),
-                                        Date = DateTime.Now,
-                                        Amount = decimal.Parse(anItem.SubItems[1].Text),
-                                        CarInsurancePolicyID = policyID,
-                                        Method = method
-                                    };
+                                        string method = "";
 
-                                    totalPaid += cashPayment.Amount;
+                                        if (radioButtonCash.Checked)
+                                            method = "CASH";
+                                        else
+                                            method = "CHECKED";
 
-                                    db.Entry(cashPayment).State = EntityState.Added;
+                                        if (method == "CASH")
+                                        {
+                                            CarInsurrancePayment cashPayment = new CarInsurrancePayment
+                                            {
+                                                ID = Guid.NewGuid(),
+                                                Date = DateTime.Now,
+                                                Amount = decimal.Parse(anItem.SubItems[1].Text),
+                                                CarInsurancePolicyID = policyID,
+                                                Method = method,
+                                                Remarks = anItem.SubItems[2].Text
+                                            };
+
+                                            totalPaid += cashPayment.Amount;
+
+                                            db.Entry(cashPayment).State = EntityState.Added;
+                                        }
+                                        else //Check Payment
+                                        {
+                                            CarInsurrancePayment checkPayment = new CarInsurrancePayment
+                                            {
+                                                ID = Guid.NewGuid(),
+                                                Date = DateTime.Now,
+                                                Check_Date = DateTime.Parse(anItem.SubItems[0].Text),
+                                                BankID = Guid.Parse(anItem.SubItems[6].Text),
+                                                Check_Name = anItem.SubItems[3].Text,
+                                                Check_No = anItem.SubItems[2].Text,
+                                                Amount = decimal.Parse(anItem.SubItems[4].Text),
+                                                Remarks = anItem.SubItems[5].Text,
+                                                CarInsurancePolicyID = policyID,
+                                                Method = method
+                                            };
+
+                                            totalPaid += checkPayment.Amount;
+
+                                            db.Entry(checkPayment).State = EntityState.Added;
+                                        }
+                                    }//end of foreach
+
+                                    //update paid
+                                    policy.Paid = totalPaid;
+
+                                    db.Entry(policy).State = EntityState.Added;
+
+                                    db.SaveChanges();
+
+                                    MessageBox.Show("Saved Successfully");
+
+                                    EnableDisableButton(true);
+
+                                    history.Save("Added New Policy No: " + policy.PolicyNo, currentUser);
                                 }
-                                else //Check Payment
+                                catch
                                 {
-                                    CarInsurrancePayment checkPayment = new CarInsurrancePayment
-                                    {
-                                        ID = Guid.NewGuid(),
-                                        Date = DateTime.Now,
-                                        Check_Date = DateTime.Parse(anItem.SubItems[0].Text),
-                                        BankID = Guid.Parse(anItem.SubItems[6].Text),
-                                        Check_Name = anItem.SubItems[3].Text,
-                                        Check_No = anItem.SubItems[2].Text,
-                                        Amount = decimal.Parse(anItem.SubItems[4].Text),
-                                        Remarks = anItem.SubItems[5].Text,
-                                        CarInsurancePolicyID = policyID,
-                                        Method = method
-                                    };
-
-                                    totalPaid += checkPayment.Amount;
-
-                                    db.Entry(checkPayment).State = EntityState.Added;
+                                    MessageBox.Show("Error on saving", "Error");
                                 }
                             }
+                            else //Update Policy Writing
+                            {
+                                var existingPolicy = db.CarInsurancePolicy.FirstOrDefault(r => r.ID == policyID);
 
-                            existingPolicy.Paid = totalPaid;
+                                if (existingPolicy != null)
+                                {
+                                    existingPolicy.Status = lblStatus.Text;
+                                    existingPolicy.Assured = txtBoxAssured.Text;
+                                    existingPolicy.Address = rchTxtBoxAddress.Text;
+                                    existingPolicy.Mortagee = txtBoxMortage.Text;
+                                    existingPolicy.Effectivity = datePickerEffectivity.Value;
+                                    existingPolicy.Expiration_Date = datePickerExpiryDate.Value;
+                                    existingPolicy.Deductible = txtBoxDeductible.Text;
+                                    existingPolicy.YearModel = txtBoxYearModel.Text;
+                                    existingPolicy.Unit = txtBoxUnit.Text;
+                                    existingPolicy.SerialNo = txtBoxSerialNo.Text;
+                                    existingPolicy.MotorNo = txtBoxMotorNo.Text;
+                                    existingPolicy.PlateNo = txtBoxPlateNo.Text;
+                                    existingPolicy.Others = rchTextBoxOthers.Text;
+                                    existingPolicy.Agent = AgentID;
+                                    existingPolicy.CreateDate = datePickerWritingDate.Value;
+                                    existingPolicy.PolicyNo = txtBoxPolicyNo.Text;
+                                    existingPolicy.Car_Class = cmbBoxClass.Text;
+                                    existingPolicy.Category = cmbBoxCategory.Text;
+                                    existingPolicy.Car_Make = cmbBoxMake.Text;
+                                    existingPolicy.Color = txtBoxColor.Text;
 
-                            db.Entry(existingPolicy).State = EntityState.Modified;
+                                    if (radioButtonCash.Checked)
+                                        existingPolicy.Payment_Method = "CASH";
+                                    else
+                                        existingPolicy.Payment_Method = "CHECK";
 
-                            db.SaveChanges();
+                                    //Amounts
+                                    if (txtBoxTotalAnnualPremium.Text != "")
+                                        existingPolicy.TotalAnnualPremium = decimal.Parse(txtBoxTotalAnnualPremium.Text);
+                                    else
+                                        existingPolicy.TotalAnnualPremium = 0;
 
-                            MessageBox.Show("Updated Successfully");
+                                    if (txtBoxNet.Text != "")
+                                        existingPolicy.Amount = decimal.Parse(txtBoxNet.Text);
+                                    else
+                                        existingPolicy.Amount = 0;
 
-                            EnableDisableButton(true);
+                                    if (txtBoxPLossAndDamage.Text != "")
+                                        existingPolicy.P_LossAndDamage = decimal.Parse(txtBoxPLossAndDamage.Text);
+                                    else
+                                        existingPolicy.P_LossAndDamage = 0;
 
-                            history.Save("Modified Policy No: " + existingPolicy.PolicyNo, currentUser);
-                        }
-                        catch (Exception error)
-                        {
-                            MessageBox.Show(error.Message, "Error on Updating");
-                        }
-                    }
-                }
+                                    if (txtBoxPCPTL.Text != "")
+                                        existingPolicy.P_CTPL = decimal.Parse(txtBoxPCPTL.Text);
+                                    else
+                                        existingPolicy.P_CTPL = 0;
+
+                                    if (txtBoxPExcessBodilyInjury.Text != "")
+                                        existingPolicy.P_ExcessBodilyInjury = decimal.Parse(txtBoxPExcessBodilyInjury.Text);
+                                    else
+                                        existingPolicy.P_ExcessBodilyInjury = 0;
+
+                                    if (txtBoxPVolPropertyDamage.Text != "")
+                                        existingPolicy.P_VolPropertyDamage = decimal.Parse(txtBoxPVolPropertyDamage.Text);
+                                    else
+                                        existingPolicy.P_VolPropertyDamage = 0;
+
+                                    if (txtBoxPPersonalAccident.Text != "")
+                                        existingPolicy.P_PersonalAccident = decimal.Parse(txtBoxPPersonalAccident.Text);
+                                    else
+                                        existingPolicy.P_PersonalAccident = 0;
+
+                                    if (txtBoxGross.Text != "")
+                                        existingPolicy.Gross = decimal.Parse(txtBoxGross.Text);
+                                    else
+                                        existingPolicy.Gross = 0;
+
+                                    if (txtBoxNet.Text != "")
+                                        existingPolicy.Net = decimal.Parse(txtBoxNet.Text);
+                                    else
+                                        existingPolicy.Net = 0;
+
+                                    //Checkboxes
+                                    if (checkBoxAircon.Checked)
+                                        existingPolicy.Aircon = "Y";
+                                    else
+                                        existingPolicy.Aircon = "N";
+
+                                    if (checkBoxSterioSpeakers.Checked)
+                                        existingPolicy.SterioSpeakers = "Y";
+                                    else
+                                        existingPolicy.SterioSpeakers = "N";
+
+                                    if (checkBoxMagwheels.Checked)
+                                        existingPolicy.Magwheels = "Y";
+                                    else
+                                        existingPolicy.Magwheels = "N";
+
+                                    try
+                                    {
+                                        //Save Payments
+                                        //Delate previous payment first
+                                        var payments = db.CarInsurrancePayment.Where(r => r.CarInsurancePolicyID == policyID);
+
+                                        payments.ToList().ForEach(item =>
+                                        {
+                                            db.Entry(item).State = EntityState.Deleted;
+                                        });
+
+                                        decimal totalPaid = 0;
+
+                                        foreach (ListViewItem anItem in listViewPayment.Items)
+                                        {
+                                            string method = "";
+                                            if (radioButtonCash.Checked)
+                                                method = "CASH";
+                                            else
+                                                method = "CHECKED";
+
+                                            if (method == "CASH")
+                                            {
+                                                CarInsurrancePayment cashPayment = new CarInsurrancePayment
+                                                {
+                                                    ID = Guid.NewGuid(),
+                                                    Date = DateTime.Now,
+                                                    Amount = decimal.Parse(anItem.SubItems[1].Text),
+                                                    CarInsurancePolicyID = policyID,
+                                                    Method = method,
+                                                    Remarks = anItem.SubItems[2].Text
+                                                };
+
+                                                totalPaid += cashPayment.Amount;
+
+                                                db.Entry(cashPayment).State = EntityState.Added;
+                                            }
+                                            else //Check Payment
+                                            {
+                                                CarInsurrancePayment checkPayment = new CarInsurrancePayment
+                                                {
+                                                    ID = Guid.NewGuid(),
+                                                    Date = DateTime.Now,
+                                                    Check_Date = DateTime.Parse(anItem.SubItems[0].Text),
+                                                    BankID = Guid.Parse(anItem.SubItems[6].Text),
+                                                    Check_Name = anItem.SubItems[3].Text,
+                                                    Check_No = anItem.SubItems[2].Text,
+                                                    Amount = decimal.Parse(anItem.SubItems[4].Text),
+                                                    Remarks = anItem.SubItems[5].Text,
+                                                    CarInsurancePolicyID = policyID,
+                                                    Method = method
+                                                };
+
+                                                totalPaid += checkPayment.Amount;
+
+                                                db.Entry(checkPayment).State = EntityState.Added;
+                                            }
+                                        }
+
+                                        existingPolicy.Paid = totalPaid;
+
+                                        db.Entry(existingPolicy).State = EntityState.Modified;
+
+                                        db.SaveChanges();
+
+                                        MessageBox.Show("Updated Successfully");
+
+                                        EnableDisableButton(true);
+
+                                        history.Save("Modified Policy No: " + existingPolicy.PolicyNo, currentUser);
+                                    }
+                                    catch (Exception error)
+                                    {
+                                        MessageBox.Show(error.Message, "Error on Updating");
+                                    }
+                                }
+                            }
+                        //}
+                //        else //If plate no exist
+                //        {
+                //            MessageBox.Show("Plate no. already exist", "Error on saving");
+                //        }
+                //    }
+                //    else //Motor No exist
+                //    {
+                //        MessageBox.Show("Motor no. already exist", "Error on saving");
+                //    }
+                //}
+                //else //Serial No Exist
+                //{
+                //    MessageBox.Show("Serial no. already exist", "Error on saving");
+                //}
             }
-            else
+            else //Policy No Exists
+            {
                 MessageBox.Show("Policy no. already exist", "Error on saving");
+            }
         }
 
         public void EnableDisableButton(bool input)
@@ -1233,6 +1323,40 @@ namespace Sparrow_Insurance_Agency
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoid_Click(object sender, EventArgs e)
+        {
+            if (policyID != Guid.Empty)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to void?", "", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (var db = new SparrowEntities())
+                    {
+                        try
+                        {
+                            var policy = db.CarInsurancePolicy.First(r => r.ID == policyID);
+
+                            policy.Status = "Void";
+                            db.Entry(policy).State = EntityState.Modified;
+                            db.SaveChanges();
+
+                            MessageBox.Show("Policy No: " + policy.PolicyNo + " successfully voided");
+
+                            lblStatus.Text = "Void";
+                            lblStatus.ForeColor = Color.Red;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Can't void policy some kind of error", "Error");
+                        }
+                    }
+                }
+                else
+                    MessageBox.Show("Policy not yet saved", "Error");
+            }
         }
     }
 }

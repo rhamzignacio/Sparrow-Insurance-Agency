@@ -29,6 +29,23 @@
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxPaid = new System.Windows.Forms.CheckBox();
+            this.checkBoxUnpaid = new System.Windows.Forms.CheckBox();
+            this.checkBoxVoid = new System.Windows.Forms.CheckBox();
+            this.checkBoxCancel = new System.Windows.Forms.CheckBox();
+            this.lblVoidCount = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblPaidCount = new System.Windows.Forms.Label();
+            this.lblUnpaidCount = new System.Windows.Forms.Label();
+            this.lblCancelCount = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -36,7 +53,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listViewPolicy = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,19 +65,15 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTotalIncome = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.label2);
+            this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.groupBox1);
             this.panelTop.Controls.Add(this.btnRefresh);
             this.panelTop.Controls.Add(this.btnOpen);
@@ -67,19 +82,231 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1142, 58);
+            this.panelTop.Size = new System.Drawing.Size(1142, 69);
             this.panelTop.TabIndex = 0;
+            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.lblVoidCount_Paint);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1089, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Search";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1046, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Refresh";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBoxPaid);
+            this.groupBox1.Controls.Add(this.checkBoxUnpaid);
+            this.groupBox1.Controls.Add(this.checkBoxVoid);
+            this.groupBox1.Controls.Add(this.checkBoxCancel);
+            this.groupBox1.Controls.Add(this.lblVoidCount);
+            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.lblTotal);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.lblPaidCount);
+            this.groupBox1.Controls.Add(this.lblUnpaidCount);
+            this.groupBox1.Controls.Add(this.lblCancelCount);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(240, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(579, 56);
+            this.groupBox1.TabIndex = 71;
+            this.groupBox1.TabStop = false;
+            // 
+            // checkBoxPaid
+            // 
+            this.checkBoxPaid.AutoSize = true;
+            this.checkBoxPaid.Checked = true;
+            this.checkBoxPaid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPaid.Location = new System.Drawing.Point(363, 16);
+            this.checkBoxPaid.Name = "checkBoxPaid";
+            this.checkBoxPaid.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxPaid.TabIndex = 77;
+            this.checkBoxPaid.UseVisualStyleBackColor = true;
+            this.checkBoxPaid.CheckedChanged += new System.EventHandler(this.checkBoxPaid_CheckedChanged);
+            // 
+            // checkBoxUnpaid
+            // 
+            this.checkBoxUnpaid.AutoSize = true;
+            this.checkBoxUnpaid.Checked = true;
+            this.checkBoxUnpaid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUnpaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUnpaid.Location = new System.Drawing.Point(246, 16);
+            this.checkBoxUnpaid.Name = "checkBoxUnpaid";
+            this.checkBoxUnpaid.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxUnpaid.TabIndex = 76;
+            this.checkBoxUnpaid.UseVisualStyleBackColor = true;
+            this.checkBoxUnpaid.CheckedChanged += new System.EventHandler(this.checkBoxUnpaid_CheckedChanged);
+            // 
+            // checkBoxVoid
+            // 
+            this.checkBoxVoid.AutoSize = true;
+            this.checkBoxVoid.Checked = true;
+            this.checkBoxVoid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxVoid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxVoid.Location = new System.Drawing.Point(129, 16);
+            this.checkBoxVoid.Name = "checkBoxVoid";
+            this.checkBoxVoid.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxVoid.TabIndex = 75;
+            this.checkBoxVoid.UseVisualStyleBackColor = true;
+            this.checkBoxVoid.CheckedChanged += new System.EventHandler(this.checkBoxVoid_CheckedChanged);
+            // 
+            // checkBoxCancel
+            // 
+            this.checkBoxCancel.AutoSize = true;
+            this.checkBoxCancel.Checked = true;
+            this.checkBoxCancel.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCancel.Location = new System.Drawing.Point(12, 16);
+            this.checkBoxCancel.Name = "checkBoxCancel";
+            this.checkBoxCancel.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxCancel.TabIndex = 74;
+            this.checkBoxCancel.UseVisualStyleBackColor = true;
+            this.checkBoxCancel.CheckedChanged += new System.EventHandler(this.checkBoxCancel_CheckedChanged);
+            // 
+            // lblVoidCount
+            // 
+            this.lblVoidCount.AutoSize = true;
+            this.lblVoidCount.BackColor = System.Drawing.SystemColors.Control;
+            this.lblVoidCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoidCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblVoidCount.Location = new System.Drawing.Point(147, 34);
+            this.lblVoidCount.Name = "lblVoidCount";
+            this.lblVoidCount.Size = new System.Drawing.Size(91, 13);
+            this.lblVoidCount.TabIndex = 8;
+            this.lblVoidCount.Text = "100000000000";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(150, 13);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(90, 20);
+            this.textBox5.TabIndex = 7;
+            this.textBox5.Text = "Void";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTotal.Location = new System.Drawing.Point(480, 33);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(91, 13);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "100000000000";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(481, 13);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(90, 20);
+            this.textBox4.TabIndex = 5;
+            this.textBox4.Text = "Total";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblPaidCount
+            // 
+            this.lblPaidCount.AutoSize = true;
+            this.lblPaidCount.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPaidCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaidCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPaidCount.Location = new System.Drawing.Point(383, 34);
+            this.lblPaidCount.Name = "lblPaidCount";
+            this.lblPaidCount.Size = new System.Drawing.Size(91, 13);
+            this.lblPaidCount.TabIndex = 4;
+            this.lblPaidCount.Text = "100000000000";
+            // 
+            // lblUnpaidCount
+            // 
+            this.lblUnpaidCount.AutoSize = true;
+            this.lblUnpaidCount.BackColor = System.Drawing.SystemColors.Control;
+            this.lblUnpaidCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnpaidCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblUnpaidCount.Location = new System.Drawing.Point(264, 33);
+            this.lblUnpaidCount.Name = "lblUnpaidCount";
+            this.lblUnpaidCount.Size = new System.Drawing.Size(91, 13);
+            this.lblUnpaidCount.TabIndex = 3;
+            this.lblUnpaidCount.Text = "100000000000";
+            // 
+            // lblCancelCount
+            // 
+            this.lblCancelCount.AutoSize = true;
+            this.lblCancelCount.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCancelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCancelCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCancelCount.Location = new System.Drawing.Point(36, 34);
+            this.lblCancelCount.Name = "lblCancelCount";
+            this.lblCancelCount.Size = new System.Drawing.Size(91, 13);
+            this.lblCancelCount.TabIndex = 1;
+            this.lblCancelCount.Text = "100000000000";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.PaleGreen;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(385, 14);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(90, 20);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.Text = "Paid";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Yellow;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(267, 13);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "Unpaid";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Tomato;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(29, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(90, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Canceled";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.LightYellow;
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Button_Refresh_icon;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(944, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(1049, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(72, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(37, 33);
             this.btnRefresh.TabIndex = 70;
-            this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -98,14 +325,16 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Zoom_icon;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(1022, 12);
+            this.btnSearch.Location = new System.Drawing.Point(1092, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(108, 34);
+            this.btnSearch.Size = new System.Drawing.Size(37, 33);
             this.btnSearch.TabIndex = 69;
-            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -126,16 +355,18 @@
             // 
             this.panel1.Controls.Add(this.listViewPolicy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Location = new System.Drawing.Point(0, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 567);
+            this.panel1.Size = new System.Drawing.Size(1142, 556);
             this.panel1.TabIndex = 1;
             // 
             // listViewPolicy
             // 
             this.listViewPolicy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader10,
+            this.columnHeader12,
             this.columnHeader1,
+            this.columnHeader11,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
@@ -150,20 +381,31 @@
             this.listViewPolicy.Location = new System.Drawing.Point(0, 0);
             this.listViewPolicy.MultiSelect = false;
             this.listViewPolicy.Name = "listViewPolicy";
-            this.listViewPolicy.Size = new System.Drawing.Size(1142, 567);
+            this.listViewPolicy.Size = new System.Drawing.Size(1142, 556);
             this.listViewPolicy.TabIndex = 0;
             this.listViewPolicy.UseCompatibleStateImageBehavior = false;
             this.listViewPolicy.View = System.Windows.Forms.View.Details;
+            this.listViewPolicy.DoubleClick += new System.EventHandler(this.listViewPolicy_DoubleClick);
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "ID";
             this.columnHeader10.Width = 0;
             // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "#";
+            this.columnHeader12.Width = 36;
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Status";
             this.columnHeader1.Width = 87;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Classification";
+            this.columnHeader11.Width = 78;
             // 
             // columnHeader2
             // 
@@ -210,68 +452,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblTotalIncome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 625);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1142, 32);
             this.panel2.TabIndex = 2;
-            // 
-            // lblTotalIncome
-            // 
-            this.lblTotalIncome.AutoSize = true;
-            this.lblTotalIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalIncome.ForeColor = System.Drawing.Color.Green;
-            this.lblTotalIncome.Location = new System.Drawing.Point(9, 10);
-            this.lblTotalIncome.Name = "lblTotalIncome";
-            this.lblTotalIncome.Size = new System.Drawing.Size(153, 13);
-            this.lblTotalIncome.TabIndex = 0;
-            this.lblTotalIncome.Text = "Total Income: 100,000.00";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(240, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(303, 39);
-            this.groupBox1.TabIndex = 71;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Legend";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Tomato;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(6, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Cancelled";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Yellow;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(102, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Unpaid";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.PaleGreen;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(198, 13);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Paid";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PolicyList
             // 
@@ -284,11 +469,10 @@
             this.Name = "PolicyList";
             this.Text = "Policy List";
             this.panelTop.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelTop.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -312,11 +496,25 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTotalIncome;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPaidCount;
+        private System.Windows.Forms.Label lblUnpaidCount;
+        private System.Windows.Forms.Label lblCancelCount;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblVoidCount;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.CheckBox checkBoxCancel;
+        private System.Windows.Forms.CheckBox checkBoxPaid;
+        private System.Windows.Forms.CheckBox checkBoxUnpaid;
+        private System.Windows.Forms.CheckBox checkBoxVoid;
     }
 }

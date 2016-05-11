@@ -117,6 +117,7 @@
             this.txtBoxMortage = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVoid = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -132,6 +133,7 @@
             this.btnSave.BackColor = System.Drawing.Color.PaleGreen;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(12, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 34);
@@ -145,6 +147,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(797, 7);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 34);
@@ -158,6 +161,7 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(240, 7);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(108, 34);
@@ -172,6 +176,7 @@
             this.btnRenew.Enabled = false;
             this.btnRenew.FlatAppearance.BorderSize = 0;
             this.btnRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRenew.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRenew.Location = new System.Drawing.Point(126, 7);
             this.btnRenew.Name = "btnRenew";
             this.btnRenew.Size = new System.Drawing.Size(108, 34);
@@ -360,7 +365,8 @@
             this.cmbBoxCategory.Items.AddRange(new object[] {
             "CV",
             "PC",
-            "LTO"});
+            "LTO",
+            "TPL"});
             this.cmbBoxCategory.Location = new System.Drawing.Point(115, 202);
             this.cmbBoxCategory.Name = "cmbBoxCategory";
             this.cmbBoxCategory.Size = new System.Drawing.Size(317, 28);
@@ -794,7 +800,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(812, 268);
+            this.label32.Location = new System.Drawing.Point(824, 222);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(28, 13);
             this.label32.TabIndex = 16;
@@ -803,16 +809,16 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(813, 188);
+            this.label20.Location = new System.Drawing.Point(818, 160);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(25, 13);
+            this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 15;
-            this.label20.Text = "Edit";
+            this.label20.Text = "Delete";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(812, 111);
+            this.label11.Location = new System.Drawing.Point(824, 98);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 14;
@@ -825,9 +831,9 @@
             this.btnPrintPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrintPayment.FlatAppearance.BorderSize = 0;
             this.btnPrintPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintPayment.Location = new System.Drawing.Point(791, 204);
+            this.btnPrintPayment.Location = new System.Drawing.Point(810, 176);
             this.btnPrintPayment.Name = "btnPrintPayment";
-            this.btnPrintPayment.Size = new System.Drawing.Size(67, 61);
+            this.btnPrintPayment.Size = new System.Drawing.Size(54, 43);
             this.btnPrintPayment.TabIndex = 13;
             this.btnPrintPayment.UseVisualStyleBackColor = false;
             this.btnPrintPayment.Click += new System.EventHandler(this.btnPrintPayment_Click);
@@ -879,9 +885,9 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(791, 124);
+            this.btnDelete.Location = new System.Drawing.Point(810, 114);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(67, 61);
+            this.btnDelete.Size = new System.Drawing.Size(54, 43);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -928,7 +934,7 @@
             this.listViewPayment.Location = new System.Drawing.Point(22, 50);
             this.listViewPayment.MultiSelect = false;
             this.listViewPayment.Name = "listViewPayment";
-            this.listViewPayment.Size = new System.Drawing.Size(761, 231);
+            this.listViewPayment.Size = new System.Drawing.Size(782, 231);
             this.listViewPayment.TabIndex = 3;
             this.listViewPayment.UseCompatibleStateImageBehavior = false;
             this.listViewPayment.View = System.Windows.Forms.View.Details;
@@ -940,9 +946,9 @@
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(791, 50);
+            this.btnAdd.Location = new System.Drawing.Point(810, 52);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(67, 61);
+            this.btnAdd.Size = new System.Drawing.Size(54, 43);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -993,9 +999,10 @@
             // 
             this.btnAddAgent.BackgroundImage = global::Sparrow_Insurance_Agency.Properties.Resources.Zoom_icon;
             this.btnAddAgent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddAgent.Location = new System.Drawing.Point(414, 130);
+            this.btnAddAgent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddAgent.Location = new System.Drawing.Point(414, 131);
             this.btnAddAgent.Name = "btnAddAgent";
-            this.btnAddAgent.Size = new System.Drawing.Size(27, 26);
+            this.btnAddAgent.Size = new System.Drawing.Size(27, 25);
             this.btnAddAgent.TabIndex = 176;
             this.btnAddAgent.UseVisualStyleBackColor = true;
             this.btnAddAgent.Click += new System.EventHandler(this.btnAddAgent_Click);
@@ -1004,16 +1011,16 @@
             // 
             this.datePickerWritingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerWritingDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerWritingDate.Location = new System.Drawing.Point(672, 558);
+            this.datePickerWritingDate.Location = new System.Drawing.Point(768, 557);
             this.datePickerWritingDate.Name = "datePickerWritingDate";
-            this.datePickerWritingDate.Size = new System.Drawing.Size(216, 26);
+            this.datePickerWritingDate.Size = new System.Drawing.Size(127, 26);
             this.datePickerWritingDate.TabIndex = 27;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(567, 563);
+            this.label18.Location = new System.Drawing.Point(665, 562);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(97, 20);
             this.label18.TabIndex = 174;
@@ -1149,6 +1156,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnVoid);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnRenew);
             this.panel1.Controls.Add(this.btnBack);
@@ -1175,6 +1183,20 @@
             this.groupBox1.TabIndex = 212;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnVoid
+            // 
+            this.btnVoid.BackColor = System.Drawing.Color.MistyRose;
+            this.btnVoid.FlatAppearance.BorderSize = 0;
+            this.btnVoid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoid.Location = new System.Drawing.Point(683, 7);
+            this.btnVoid.Name = "btnVoid";
+            this.btnVoid.Size = new System.Drawing.Size(108, 34);
+            this.btnVoid.TabIndex = 107;
+            this.btnVoid.Text = "Void";
+            this.btnVoid.UseVisualStyleBackColor = false;
+            this.btnVoid.Click += new System.EventHandler(this.btnVoid_Click);
             // 
             // PolicyWriting
             // 
@@ -1308,6 +1330,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnVoid;
     }
 }
 

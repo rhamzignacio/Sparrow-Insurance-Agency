@@ -93,6 +93,16 @@ namespace Sparrow_Insurance_Agency.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Refresh_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button_Refresh_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Car_icon {
             get {
                 object obj = ResourceManager.GetObject("Car_icon", resourceCulture);
@@ -286,6 +296,16 @@ namespace Sparrow_Insurance_Agency.Properties {
         internal static System.Drawing.Bitmap print_icon {
             get {
                 object obj = ResourceManager.GetObject("print_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RSI_Logo_2016 {
+            get {
+                object obj = ResourceManager.GetObject("RSI_Logo_2016", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

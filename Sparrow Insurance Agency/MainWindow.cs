@@ -22,7 +22,7 @@ namespace Sparrow_Insurance_Agency
             {
                 currentUser = user;
 
-                //HomePage();//show homepage
+                HomePage();//show homepage
             }
         }
 
@@ -33,6 +33,7 @@ namespace Sparrow_Insurance_Agency
             Home form = new Home(currentUser);
             form.TopLevel = false;
             form.Visible = true;
+            form.Dock = DockStyle.Fill;
 
             panelMain.Controls.Add(form);
         }
@@ -49,6 +50,7 @@ namespace Sparrow_Insurance_Agency
             PolicyWriting form = new PolicyWriting(currentUser, Guid.Empty);
             form.TopLevel = false;
             form.Visible = true;
+            form.Dock = DockStyle.Fill;
 
             panelMain.Controls.Add(form);
         }
@@ -60,15 +62,16 @@ namespace Sparrow_Insurance_Agency
             PolicyList form = new PolicyList(currentUser);
             form.TopLevel = false;
             form.Visible = true;
+            form.Dock = DockStyle.Fill;
 
             panelMain.Controls.Add(form);
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e) //Home
         {
-            //HomePage();
+            HomePage();
 
-            panelMain.Controls.Clear(); //Clear loaded form
+           // panelMain.Controls.Clear(); //Clear loaded form
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e) //Logout
@@ -83,6 +86,7 @@ namespace Sparrow_Insurance_Agency
             TransHistoryList form = new TransHistoryList();
             form.TopLevel = false;
             form.Visible = true;
+            form.Dock = DockStyle.Fill;
 
             panelMain.Controls.Add(form);
         }

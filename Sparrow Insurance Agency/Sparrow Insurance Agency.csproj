@@ -36,8 +36,8 @@
     <MinimumRequiredVersion>1.0.0.13</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.5.0.0</ApplicationVersion>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.7.0.4</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -492,9 +492,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\RSI Logo 2016.gif" />
     <Content Include="Image\src\Add-icon.png" />
     <Content Include="Image\src\Administrator-icon.png" />
     <Content Include="Image\src\Applications-Cascade-icon.png" />
+    <Content Include="Image\src\Button-Refresh-icon.png" />
     <Content Include="Image\src\Car-icon.png" />
     <Content Include="Image\src\Chat-icon.png" />
     <Content Include="Image\src\Clients-icon.png" />
@@ -521,7 +523,7 @@
     <Content Include="Image\src\Text-Bubble-icon.png" />
     <Content Include="Image\src\Zoom-icon.png" />
     <Content Include="Notes.txt" />
-    <Content Include="Database Schema.sql" />
+    <Content Include="SQL\Database Schema.sql" />
     <Content Include="ProgramInfo.txt" />
     <Content Include="SparrowEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -533,6 +535,7 @@
       <DependentUpon>SparrowEntities.edmx</DependentUpon>
       <LastGenOutput>SparrowEntities.cs</LastGenOutput>
     </Content>
+    <Content Include="SQL\Stored Procedure\Stored Proc.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

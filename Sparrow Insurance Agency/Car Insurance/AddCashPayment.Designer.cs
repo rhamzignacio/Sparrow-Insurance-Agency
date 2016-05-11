@@ -42,7 +42,7 @@
             this.txtBoxRemarks.Location = new System.Drawing.Point(85, 38);
             this.txtBoxRemarks.MaxLength = 200;
             this.txtBoxRemarks.Name = "txtBoxRemarks";
-            this.txtBoxRemarks.Size = new System.Drawing.Size(583, 26);
+            this.txtBoxRemarks.Size = new System.Drawing.Size(410, 26);
             this.txtBoxRemarks.TabIndex = 23;
             // 
             // label5
@@ -61,7 +61,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(577, 70);
+            this.btnCancel.Location = new System.Drawing.Point(404, 70);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 29);
             this.btnCancel.TabIndex = 19;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 111);
+            this.ClientSize = new System.Drawing.Size(504, 111);
             this.Controls.Add(this.txtBoxRemarks);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);

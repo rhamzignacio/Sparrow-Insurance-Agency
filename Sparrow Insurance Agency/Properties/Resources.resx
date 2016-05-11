@@ -202,4 +202,10 @@
   <data name="print_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\src\print-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_Refresh_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\src\button-refresh-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RSI_Logo_2016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\rsi logo 2016.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
