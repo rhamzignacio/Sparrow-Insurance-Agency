@@ -46,7 +46,7 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
         }
 
         public void GetPolicyList(string motorNo = "", string policyNo = "", string assured = "",
-        string plateNo = "",string serialNo = "", string status = "")
+        string plateNo = "",string serialNo = "", string status = "", DateTime? dateFrom = null, DateTime? dateTo =null)
         {
             listViewPolicy.Items.Clear();
 
@@ -76,6 +76,12 @@ namespace Sparrow_Insurance_Agency.Car_Insurance
 
                 if (assured != "")
                     policyLists = policyLists.Where(r => r.Assured.ToLower().Contains(assured.ToLower()));
+
+                if (dateFrom != null && dateTo == null)//Exact Date
+                    policyLists = policyLists.Where(r => r.CreateDate.ToString().Contains(dateFrom.ToString()));
+
+                if (dateFrom != null && dateTo != null)//Date Range
+                    policyLists = policyLists.Where(r => r.CreateDate >= dateFrom && r.CreateDate <= dateTo);
 
 
                 var list = policyLists.OrderByDescending(r=>r.PolicyNo).ToList();
